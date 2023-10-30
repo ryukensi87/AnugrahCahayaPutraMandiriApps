@@ -356,7 +356,7 @@ class _ProduklistWidgetState extends State<ProduklistWidget>
                   padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
                   child: Container(
                     width: double.infinity,
-                    height: 400.0,
+                    height: 350.0,
                     decoration: BoxDecoration(
                       color: FlutterFlowTheme.of(context).secondaryBackground,
                       borderRadius: BorderRadius.only(
@@ -548,8 +548,7 @@ class _ProduklistWidgetState extends State<ProduklistWidget>
                   ),
                 ),
                 Padding(
-                  padding:
-                      EdgeInsetsDirectional.fromSTEB(16.0, 20.0, 16.0, 20.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(16.0, 5.0, 16.0, 5.0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,

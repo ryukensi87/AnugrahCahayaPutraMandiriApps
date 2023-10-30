@@ -12,14 +12,7 @@ import 'mesin_r_o_detail_model.dart';
 export 'mesin_r_o_detail_model.dart';
 
 class MesinRODetailWidget extends StatefulWidget {
-  const MesinRODetailWidget({
-    Key? key,
-    this.nmbarang,
-    this.hrgbarang,
-  }) : super(key: key);
-
-  final String? nmbarang;
-  final double? hrgbarang;
+  const MesinRODetailWidget({Key? key}) : super(key: key);
 
   @override
   _MesinRODetailWidgetState createState() => _MesinRODetailWidgetState();
@@ -158,28 +151,24 @@ class _MesinRODetailWidgetState extends State<MesinRODetailWidget> {
                                             type: PageTransitionType.fade,
                                             child: FlutterFlowExpandedImageView(
                                               image: Image.network(
-                                                FFAppState()
-                                                    .cargambarbarang
-                                                    .first,
+                                                'https://picsum.photos/seed/422/600',
                                                 fit: BoxFit.contain,
                                               ),
                                               allowRotation: true,
-                                              tag: FFAppState()
-                                                  .cargambarbarang
-                                                  .first,
+                                              tag: 'imageTag',
                                               useHeroAnimation: true,
                                             ),
                                           ),
                                         );
                                       },
                                       child: Hero(
-                                        tag: FFAppState().cargambarbarang.first,
+                                        tag: 'imageTag',
                                         transitionOnUserGestures: true,
                                         child: ClipRRect(
                                           borderRadius:
                                               BorderRadius.circular(8.0),
                                           child: Image.network(
-                                            FFAppState().cargambarbarang.first,
+                                            'https://picsum.photos/seed/422/600',
                                             width: 200.0,
                                             height: 200.0,
                                             fit: BoxFit.contain,
@@ -216,7 +205,7 @@ class _MesinRODetailWidgetState extends State<MesinRODetailWidget> {
                                             ],
                                           ),
                                           Text(
-                                            widget.nmbarang!,
+                                            'Hello World',
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(
@@ -248,13 +237,7 @@ class _MesinRODetailWidgetState extends State<MesinRODetailWidget> {
                                                 EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 0.0, 10.0),
                                             child: Text(
-                                              formatNumber(
-                                                widget.hrgbarang,
-                                                formatType: FormatType.decimal,
-                                                decimalType:
-                                                    DecimalType.periodDecimal,
-                                                currency: 'IDR ',
-                                              ),
+                                              'Hello World',
                                               style: FlutterFlowTheme.of(
                                                       context)
                                                   .bodyMedium
