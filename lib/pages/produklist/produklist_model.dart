@@ -1,3 +1,4 @@
+import '/auth/base_auth_user_provider.dart';
 import '/backend/backend.dart';
 import '/component/produk_detail/produk_detail_widget.dart';
 import '/flutter_flow/flutter_flow_animations.dart';

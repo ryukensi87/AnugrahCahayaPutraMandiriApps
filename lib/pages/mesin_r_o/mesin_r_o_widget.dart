@@ -187,7 +187,14 @@ class _MesinROWidgetState extends State<MesinROWidget> {
                                             child: Padding(
                                               padding: MediaQuery.viewInsetsOf(
                                                   context),
-                                              child: MesinRODetailWidget(),
+                                              child: MesinRODetailWidget(
+                                                nmbarang:
+                                                    listViewListMesinRecord
+                                                        .namaMesin,
+                                                hrgbarang:
+                                                    listViewListMesinRecord
+                                                        .hargaMesin,
+                                              ),
                                             ),
                                           );
                                         },

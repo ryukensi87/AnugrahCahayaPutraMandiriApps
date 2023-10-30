@@ -12,7 +12,14 @@ import 'mesin_r_o_detail_model.dart';
 export 'mesin_r_o_detail_model.dart';
 
 class MesinRODetailWidget extends StatefulWidget {
-  const MesinRODetailWidget({Key? key}) : super(key: key);
+  const MesinRODetailWidget({
+    Key? key,
+    this.nmbarang,
+    this.hrgbarang,
+  }) : super(key: key);
+
+  final String? nmbarang;
+  final double? hrgbarang;
 
   @override
   _MesinRODetailWidgetState createState() => _MesinRODetailWidgetState();
@@ -209,7 +216,7 @@ class _MesinRODetailWidgetState extends State<MesinRODetailWidget> {
                                             ],
                                           ),
                                           Text(
-                                            widget.namaBrng!,
+                                            widget.nmbarang!,
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(
@@ -242,7 +249,7 @@ class _MesinRODetailWidgetState extends State<MesinRODetailWidget> {
                                                     0.0, 0.0, 0.0, 10.0),
                                             child: Text(
                                               formatNumber(
-                                                widget.hargaBrng,
+                                                widget.hrgbarang,
                                                 formatType: FormatType.decimal,
                                                 decimalType:
                                                     DecimalType.periodDecimal,

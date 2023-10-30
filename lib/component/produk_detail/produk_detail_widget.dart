@@ -12,7 +12,16 @@ import 'produk_detail_model.dart';
 export 'produk_detail_model.dart';
 
 class ProdukDetailWidget extends StatefulWidget {
-  const ProdukDetailWidget({Key? key}) : super(key: key);
+  const ProdukDetailWidget({
+    Key? key,
+    this.fotoprdk,
+    this.namaprdk,
+    this.hargaprdk,
+  }) : super(key: key);
+
+  final String? fotoprdk;
+  final String? namaprdk;
+  final double? hargaprdk;
 
   @override
   _ProdukDetailWidgetState createState() => _ProdukDetailWidgetState();
@@ -151,24 +160,24 @@ class _ProdukDetailWidgetState extends State<ProdukDetailWidget> {
                                             type: PageTransitionType.fade,
                                             child: FlutterFlowExpandedImageView(
                                               image: Image.network(
-                                                widget.gambarBrng!,
+                                                widget.fotoprdk!,
                                                 fit: BoxFit.contain,
                                               ),
                                               allowRotation: true,
-                                              tag: widget.gambarBrng!,
+                                              tag: widget.fotoprdk!,
                                               useHeroAnimation: true,
                                             ),
                                           ),
                                         );
                                       },
                                       child: Hero(
-                                        tag: widget.gambarBrng!,
+                                        tag: widget.fotoprdk!,
                                         transitionOnUserGestures: true,
                                         child: ClipRRect(
                                           borderRadius:
                                               BorderRadius.circular(8.0),
                                           child: Image.network(
-                                            widget.gambarBrng!,
+                                            widget.fotoprdk!,
                                             width: 200.0,
                                             height: 200.0,
                                             fit: BoxFit.contain,
@@ -203,7 +212,7 @@ class _ProdukDetailWidgetState extends State<ProdukDetailWidget> {
                                                         .bodyMedium,
                                               ),
                                               Text(
-                                                widget.namaBrng!,
+                                                widget.namaprdk!,
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .bodyMedium
@@ -234,7 +243,7 @@ class _ProdukDetailWidgetState extends State<ProdukDetailWidget> {
                                                 ),
                                                 Text(
                                                   formatNumber(
-                                                    widget.hargaBrng,
+                                                    widget.hargaprdk,
                                                     formatType:
                                                         FormatType.decimal,
                                                     decimalType: DecimalType

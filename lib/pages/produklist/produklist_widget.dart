@@ -1,3 +1,4 @@
+import '/auth/base_auth_user_provider.dart';
 import '/backend/backend.dart';
 import '/component/produk_detail/produk_detail_widget.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
@@ -422,7 +423,17 @@ class _ProduklistWidgetState extends State<ProduklistWidget>
                                                             .viewInsetsOf(
                                                                 context),
                                                         child:
-                                                            ProdukDetailWidget(),
+                                                            ProdukDetailWidget(
+                                                          fotoprdk:
+                                                              listViewListProdukRecord
+                                                                  .gambarProduk,
+                                                          namaprdk:
+                                                              listViewListProdukRecord
+                                                                  .namaProduk,
+                                                          hargaprdk:
+                                                              listViewListProdukRecord
+                                                                  .hargaProduk,
+                                                        ),
                                                       ),
                                                     );
                                                   },
@@ -565,11 +576,15 @@ class _ProduklistWidgetState extends State<ProduklistWidget>
                           onPressed: () async {
                             if (isiOS) {
                               await launchUrl(Uri.parse(
-                                  "sms:${'082123852228'}&body=${Uri.encodeComponent('')}"));
+                                  "sms:${'https://wa.me/+6282123852228'}&body=${Uri.encodeComponent('Halo, Saya ${loggedIn.toString()} apakah barang yang dijual ini ready?')}"));
                             } else {
                               await launchUrl(Uri(
                                 scheme: 'sms',
-                                path: '082123852228',
+                                path: 'https://wa.me/+6282123852228',
+                                queryParameters: <String, String>{
+                                  'body':
+                                      'Halo, Saya ${loggedIn.toString()} apakah barang yang dijual ini ready?',
+                                },
                               ));
                             }
                           },
