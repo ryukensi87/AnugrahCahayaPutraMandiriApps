@@ -144,7 +144,10 @@ class _MesinROWidgetState extends State<MesinROWidget>
                       padding:
                           EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 0.0),
                       child: StreamBuilder<List<ListMesinRecord>>(
-                        stream: queryListMesinRecord(),
+                        stream: queryListMesinRecord(
+                          queryBuilder: (listMesinRecord) =>
+                              listMesinRecord.orderBy('nama_mesin'),
+                        ),
                         builder: (context, snapshot) {
                           // Customize what your widget looks like when it's loading.
                           if (!snapshot.hasData) {

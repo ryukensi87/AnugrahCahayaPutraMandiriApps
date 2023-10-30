@@ -374,7 +374,10 @@ class _ProduklistWidgetState extends State<ProduklistWidget>
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 12.0, 0.0, 0.0),
                             child: StreamBuilder<List<ListProdukRecord>>(
-                              stream: queryListProdukRecord(),
+                              stream: queryListProdukRecord(
+                                queryBuilder: (listProdukRecord) =>
+                                    listProdukRecord.orderBy('nama_produk'),
+                              ),
                               builder: (context, snapshot) {
                                 // Customize what your widget looks like when it's loading.
                                 if (!snapshot.hasData) {
