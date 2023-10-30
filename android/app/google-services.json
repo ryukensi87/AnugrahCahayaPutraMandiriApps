@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "675503401155",
+    "firebase_url": "https://anugrahcahayaputramandiriapps-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "anugrahcahayaputramandiriapps",
+    "storage_bucket": "anugrahcahayaputramandiriapps.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:675503401155:android:fe3cea78f9e09f01581a76",
+        "android_client_info": {
+          "package_name": "com.mycompany.anugrahcahayaputramandiri"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAW6N6gKizk010G7CruKf1w7pqlXAu_PvE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:675503401155:android:0dfff75afd0c0326581a76",
+        "android_client_info": {
+          "package_name": "com.mycompany.anugrahcahayaputramandiriapps"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAW6N6gKizk010G7CruKf1w7pqlXAu_PvE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
