@@ -1,4 +1,5 @@
 import '/flutter_flow/flutter_flow_animations.dart';
+import '/flutter_flow/flutter_flow_expanded_image_view.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -11,6 +12,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
 import 'home_page_model.dart';
 export 'home_page_model.dart';
@@ -97,6 +99,32 @@ class _HomePageWidgetState extends State<HomePageWidget>
           duration: 600.ms,
           begin: Offset(30.0, 0.0),
           end: Offset(0.0, 0.0),
+        ),
+      ],
+    ),
+    'containerOnPageLoadAnimation3': AnimationInfo(
+      trigger: AnimationTrigger.onPageLoad,
+      effects: [
+        FadeEffect(
+          curve: Curves.easeInOut,
+          delay: 0.ms,
+          duration: 400.ms,
+          begin: 0.0,
+          end: 1.0,
+        ),
+        MoveEffect(
+          curve: Curves.easeInOut,
+          delay: 0.ms,
+          duration: 400.ms,
+          begin: Offset(0.0, 40.0),
+          end: Offset(0.0, 0.0),
+        ),
+        ScaleEffect(
+          curve: Curves.easeInOut,
+          delay: 0.ms,
+          duration: 400.ms,
+          begin: Offset(0.8, 0.8),
+          end: Offset(1.0, 1.0),
         ),
       ],
     ),
@@ -292,34 +320,172 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                 PageController(initialPage: 0),
                                             scrollDirection: Axis.horizontal,
                                             children: [
-                                              ClipRRect(
-                                                borderRadius:
-                                                    BorderRadius.circular(8.0),
-                                                child: Image.asset(
-                                                  'assets/images/WhatsApp_Image_2019-05-27_at_3.58.02_AM.jpeg',
-                                                  width: 300.0,
-                                                  height: 200.0,
-                                                  fit: BoxFit.cover,
+                                              InkWell(
+                                                splashColor: Colors.transparent,
+                                                focusColor: Colors.transparent,
+                                                hoverColor: Colors.transparent,
+                                                highlightColor:
+                                                    Colors.transparent,
+                                                onTap: () async {
+                                                  await Navigator.push(
+                                                    context,
+                                                    PageTransition(
+                                                      type: PageTransitionType
+                                                          .fade,
+                                                      child:
+                                                          FlutterFlowExpandedImageView(
+                                                        image: Image.asset(
+                                                          'assets/images/IMG-20180526-WA0005.jpg',
+                                                          fit: BoxFit.contain,
+                                                        ),
+                                                        allowRotation: true,
+                                                        tag: 'imageTag1',
+                                                        useHeroAnimation: true,
+                                                      ),
+                                                    ),
+                                                  );
+                                                },
+                                                child: Hero(
+                                                  tag: 'imageTag1',
+                                                  transitionOnUserGestures:
+                                                      true,
+                                                  child: ClipRRect(
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            8.0),
+                                                    child: Image.asset(
+                                                      'assets/images/IMG-20180526-WA0005.jpg',
+                                                      width: 300.0,
+                                                      height: 200.0,
+                                                      fit: BoxFit.cover,
+                                                    ),
+                                                  ),
                                                 ),
                                               ),
-                                              ClipRRect(
-                                                borderRadius:
-                                                    BorderRadius.circular(8.0),
-                                                child: Image.asset(
-                                                  'assets/images/WhatsApp_Image_2019-05-27_at_3.58.01_AM.jpeg',
-                                                  width: 300.0,
-                                                  height: 200.0,
-                                                  fit: BoxFit.cover,
+                                              InkWell(
+                                                splashColor: Colors.transparent,
+                                                focusColor: Colors.transparent,
+                                                hoverColor: Colors.transparent,
+                                                highlightColor:
+                                                    Colors.transparent,
+                                                onTap: () async {
+                                                  await Navigator.push(
+                                                    context,
+                                                    PageTransition(
+                                                      type: PageTransitionType
+                                                          .fade,
+                                                      child:
+                                                          FlutterFlowExpandedImageView(
+                                                        image: Image.asset(
+                                                          'assets/images/WhatsApp_Image_2019-05-27_at_3.57.59_AM.jpeg',
+                                                          fit: BoxFit.contain,
+                                                        ),
+                                                        allowRotation: true,
+                                                        tag: 'imageTag2',
+                                                        useHeroAnimation: true,
+                                                      ),
+                                                    ),
+                                                  );
+                                                },
+                                                child: Hero(
+                                                  tag: 'imageTag2',
+                                                  transitionOnUserGestures:
+                                                      true,
+                                                  child: ClipRRect(
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            8.0),
+                                                    child: Image.asset(
+                                                      'assets/images/WhatsApp_Image_2019-05-27_at_3.57.59_AM.jpeg',
+                                                      width: 300.0,
+                                                      height: 200.0,
+                                                      fit: BoxFit.cover,
+                                                    ),
+                                                  ),
                                                 ),
                                               ),
-                                              ClipRRect(
-                                                borderRadius:
-                                                    BorderRadius.circular(8.0),
-                                                child: Image.asset(
-                                                  'assets/images/WhatsApp_Image_2019-05-27_at_3.52.53_PM.jpeg',
-                                                  width: 300.0,
-                                                  height: 200.0,
-                                                  fit: BoxFit.cover,
+                                              InkWell(
+                                                splashColor: Colors.transparent,
+                                                focusColor: Colors.transparent,
+                                                hoverColor: Colors.transparent,
+                                                highlightColor:
+                                                    Colors.transparent,
+                                                onTap: () async {
+                                                  await Navigator.push(
+                                                    context,
+                                                    PageTransition(
+                                                      type: PageTransitionType
+                                                          .fade,
+                                                      child:
+                                                          FlutterFlowExpandedImageView(
+                                                        image: Image.asset(
+                                                          'assets/images/Mesin_RO_500_Gpd.webp',
+                                                          fit: BoxFit.contain,
+                                                        ),
+                                                        allowRotation: true,
+                                                        tag: 'imageTag3',
+                                                        useHeroAnimation: true,
+                                                      ),
+                                                    ),
+                                                  );
+                                                },
+                                                child: Hero(
+                                                  tag: 'imageTag3',
+                                                  transitionOnUserGestures:
+                                                      true,
+                                                  child: ClipRRect(
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            8.0),
+                                                    child: Image.asset(
+                                                      'assets/images/Mesin_RO_500_Gpd.webp',
+                                                      width: 300.0,
+                                                      height: 200.0,
+                                                      fit: BoxFit.cover,
+                                                    ),
+                                                  ),
+                                                ),
+                                              ),
+                                              InkWell(
+                                                splashColor: Colors.transparent,
+                                                focusColor: Colors.transparent,
+                                                hoverColor: Colors.transparent,
+                                                highlightColor:
+                                                    Colors.transparent,
+                                                onTap: () async {
+                                                  await Navigator.push(
+                                                    context,
+                                                    PageTransition(
+                                                      type: PageTransitionType
+                                                          .fade,
+                                                      child:
+                                                          FlutterFlowExpandedImageView(
+                                                        image: Image.asset(
+                                                          'assets/images/83152ae0de1bde8d6d9219002366f459.jpg',
+                                                          fit: BoxFit.contain,
+                                                        ),
+                                                        allowRotation: true,
+                                                        tag: 'imageTag4',
+                                                        useHeroAnimation: true,
+                                                      ),
+                                                    ),
+                                                  );
+                                                },
+                                                child: Hero(
+                                                  tag: 'imageTag4',
+                                                  transitionOnUserGestures:
+                                                      true,
+                                                  child: ClipRRect(
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            8.0),
+                                                    child: Image.asset(
+                                                      'assets/images/83152ae0de1bde8d6d9219002366f459.jpg',
+                                                      width: 300.0,
+                                                      height: 200.0,
+                                                      fit: BoxFit.cover,
+                                                    ),
+                                                  ),
                                                 ),
                                               ),
                                             ],
@@ -338,7 +504,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                   _model.pageViewController ??=
                                                       PageController(
                                                           initialPage: 0),
-                                              count: 3,
+                                              count: 4,
                                               axisDirection: Axis.horizontal,
                                               onDotClicked: (i) async {
                                                 await _model.pageViewController!
@@ -476,7 +642,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                               hoverColor: Colors.transparent,
                               highlightColor: Colors.transparent,
                               onTap: () async {
-                                context.pushNamed('MesinRO');
+                                context.pushNamed('MesinAir');
                               },
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
@@ -493,7 +659,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                       size: 24.0,
                                     ),
                                     onPressed: () async {
-                                      context.pushNamed('MesinRO');
+                                      context.pushNamed('MesinAir');
                                     },
                                   ),
                                   Padding(
@@ -560,6 +726,327 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                   ),
                         ).animateOnPageLoad(
                             animationsMap['textOnPageLoadAnimation']!),
+                      ],
+                    ),
+                  ),
+                  Padding(
+                    padding:
+                        EdgeInsetsDirectional.fromSTEB(16.0, 10.0, 16.0, 10.0),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.max,
+                      children: [
+                        Expanded(
+                          child: Container(
+                            width: double.infinity,
+                            height: 230.0,
+                            decoration: BoxDecoration(
+                              color: FlutterFlowTheme.of(context)
+                                  .secondaryBackground,
+                              boxShadow: [
+                                BoxShadow(
+                                  blurRadius: 4.0,
+                                  color: Color(0x250F1113),
+                                  offset: Offset(0.0, 1.0),
+                                )
+                              ],
+                              borderRadius: BorderRadius.circular(12.0),
+                            ),
+                            child: SingleChildScrollView(
+                              scrollDirection: Axis.horizontal,
+                              child: Row(
+                                mainAxisSize: MainAxisSize.max,
+                                children: [
+                                  Stack(
+                                    children: [
+                                      Padding(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                            12.0, 12.0, 12.0, 12.0),
+                                        child: Row(
+                                          mainAxisSize: MainAxisSize.max,
+                                          children: [
+                                            Container(
+                                              width: 150.0,
+                                              height: double.infinity,
+                                              decoration: BoxDecoration(
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .secondaryBackground,
+                                                borderRadius:
+                                                    BorderRadius.circular(15.0),
+                                              ),
+                                              child: InkWell(
+                                                splashColor: Colors.transparent,
+                                                focusColor: Colors.transparent,
+                                                hoverColor: Colors.transparent,
+                                                highlightColor:
+                                                    Colors.transparent,
+                                                onTap: () async {
+                                                  await Navigator.push(
+                                                    context,
+                                                    PageTransition(
+                                                      type: PageTransitionType
+                                                          .fade,
+                                                      child:
+                                                          FlutterFlowExpandedImageView(
+                                                        image: Image.asset(
+                                                          'assets/images/49svh_2.png',
+                                                          fit: BoxFit.contain,
+                                                        ),
+                                                        allowRotation: true,
+                                                        tag: 'imageTag5',
+                                                        useHeroAnimation: true,
+                                                      ),
+                                                    ),
+                                                  );
+                                                },
+                                                child: Hero(
+                                                  tag: 'imageTag5',
+                                                  transitionOnUserGestures:
+                                                      true,
+                                                  child: ClipRRect(
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            8.0),
+                                                    child: Image.asset(
+                                                      'assets/images/49svh_2.png',
+                                                      width: 300.0,
+                                                      height: 200.0,
+                                                      fit: BoxFit.cover,
+                                                    ),
+                                                  ),
+                                                ),
+                                              ),
+                                            ),
+                                            Container(
+                                              width: 150.0,
+                                              height: double.infinity,
+                                              decoration: BoxDecoration(
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .secondaryBackground,
+                                              ),
+                                              child: Padding(
+                                                padding: EdgeInsetsDirectional
+                                                    .fromSTEB(
+                                                        10.0, 10.0, 10.0, 10.0),
+                                                child: Column(
+                                                  mainAxisSize:
+                                                      MainAxisSize.max,
+                                                  crossAxisAlignment:
+                                                      CrossAxisAlignment.start,
+                                                  children: [
+                                                    Text(
+                                                      'Catalog Mengenai Beberapa Produk Produk Yang Tersedia di Anugrah Cahaya Putra Mandiri',
+                                                      style:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyMedium,
+                                                    ),
+                                                  ],
+                                                ),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  Stack(
+                                    children: [
+                                      Padding(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                            12.0, 12.0, 12.0, 12.0),
+                                        child: Row(
+                                          mainAxisSize: MainAxisSize.max,
+                                          children: [
+                                            Container(
+                                              width: 150.0,
+                                              height: double.infinity,
+                                              decoration: BoxDecoration(
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .secondaryBackground,
+                                                borderRadius:
+                                                    BorderRadius.circular(15.0),
+                                              ),
+                                              child: InkWell(
+                                                splashColor: Colors.transparent,
+                                                focusColor: Colors.transparent,
+                                                hoverColor: Colors.transparent,
+                                                highlightColor:
+                                                    Colors.transparent,
+                                                onTap: () async {
+                                                  await Navigator.push(
+                                                    context,
+                                                    PageTransition(
+                                                      type: PageTransitionType
+                                                          .fade,
+                                                      child:
+                                                          FlutterFlowExpandedImageView(
+                                                        image: Image.asset(
+                                                          'assets/images/3a9k2_3.png',
+                                                          fit: BoxFit.contain,
+                                                        ),
+                                                        allowRotation: true,
+                                                        tag: 'imageTag6',
+                                                        useHeroAnimation: true,
+                                                      ),
+                                                    ),
+                                                  );
+                                                },
+                                                child: Hero(
+                                                  tag: 'imageTag6',
+                                                  transitionOnUserGestures:
+                                                      true,
+                                                  child: ClipRRect(
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            8.0),
+                                                    child: Image.asset(
+                                                      'assets/images/3a9k2_3.png',
+                                                      width: 300.0,
+                                                      height: 200.0,
+                                                      fit: BoxFit.cover,
+                                                    ),
+                                                  ),
+                                                ),
+                                              ),
+                                            ),
+                                            Container(
+                                              width: 150.0,
+                                              height: double.infinity,
+                                              decoration: BoxDecoration(
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .secondaryBackground,
+                                              ),
+                                              child: Padding(
+                                                padding: EdgeInsetsDirectional
+                                                    .fromSTEB(
+                                                        10.0, 10.0, 10.0, 10.0),
+                                                child: Column(
+                                                  mainAxisSize:
+                                                      MainAxisSize.max,
+                                                  crossAxisAlignment:
+                                                      CrossAxisAlignment.start,
+                                                  children: [
+                                                    Text(
+                                                      'Catalog Mengenai Beberapa Produk Produk Yang Tersedia di Anugrah Cahaya Putra Mandiri',
+                                                      style:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyMedium,
+                                                    ),
+                                                  ],
+                                                ),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  Stack(
+                                    children: [
+                                      Padding(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                            12.0, 12.0, 12.0, 12.0),
+                                        child: Row(
+                                          mainAxisSize: MainAxisSize.max,
+                                          children: [
+                                            Container(
+                                              width: 150.0,
+                                              height: double.infinity,
+                                              decoration: BoxDecoration(
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .secondaryBackground,
+                                                borderRadius:
+                                                    BorderRadius.circular(15.0),
+                                              ),
+                                              child: InkWell(
+                                                splashColor: Colors.transparent,
+                                                focusColor: Colors.transparent,
+                                                hoverColor: Colors.transparent,
+                                                highlightColor:
+                                                    Colors.transparent,
+                                                onTap: () async {
+                                                  await Navigator.push(
+                                                    context,
+                                                    PageTransition(
+                                                      type: PageTransitionType
+                                                          .fade,
+                                                      child:
+                                                          FlutterFlowExpandedImageView(
+                                                        image: Image.asset(
+                                                          'assets/images/vnimc_1.png',
+                                                          fit: BoxFit.contain,
+                                                        ),
+                                                        allowRotation: true,
+                                                        tag: 'imageTag7',
+                                                        useHeroAnimation: true,
+                                                      ),
+                                                    ),
+                                                  );
+                                                },
+                                                child: Hero(
+                                                  tag: 'imageTag7',
+                                                  transitionOnUserGestures:
+                                                      true,
+                                                  child: ClipRRect(
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            8.0),
+                                                    child: Image.asset(
+                                                      'assets/images/vnimc_1.png',
+                                                      width: 300.0,
+                                                      height: 200.0,
+                                                      fit: BoxFit.cover,
+                                                    ),
+                                                  ),
+                                                ),
+                                              ),
+                                            ),
+                                            Container(
+                                              width: 150.0,
+                                              height: double.infinity,
+                                              decoration: BoxDecoration(
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .secondaryBackground,
+                                              ),
+                                              child: Padding(
+                                                padding: EdgeInsetsDirectional
+                                                    .fromSTEB(
+                                                        10.0, 10.0, 10.0, 10.0),
+                                                child: Column(
+                                                  mainAxisSize:
+                                                      MainAxisSize.max,
+                                                  crossAxisAlignment:
+                                                      CrossAxisAlignment.start,
+                                                  children: [
+                                                    Text(
+                                                      'Catalog Pemasangan Depot Air Minum Isi Ulang terbaru update 2023',
+                                                      style:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyMedium,
+                                                    ),
+                                                  ],
+                                                ),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ).animateOnPageLoad(
+                              animationsMap['containerOnPageLoadAnimation3']!),
+                        ),
                       ],
                     ),
                   ),
