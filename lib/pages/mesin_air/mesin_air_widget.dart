@@ -59,9 +59,9 @@ class _MesinAirWidgetState extends State<MesinAirWidget> {
           : FocusScope.of(context).unfocus(),
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: FlutterFlowTheme.of(context).secondary,
+        backgroundColor: Color(0xFF0099FF),
         appBar: AppBar(
-          backgroundColor: Color(0xFF3FC5E5),
+          backgroundColor: Color(0xFF0099FF),
           automaticallyImplyLeading: false,
           leading: InkWell(
             splashColor: Colors.transparent,
@@ -104,7 +104,7 @@ class _MesinAirWidgetState extends State<MesinAirWidget> {
             width: double.infinity,
             height: double.infinity,
             decoration: BoxDecoration(
-              color: FlutterFlowTheme.of(context).secondaryBackground,
+              color: Color(0xFF0099FF),
               image: DecorationImage(
                 fit: BoxFit.cover,
                 image: Image.asset(
@@ -300,7 +300,7 @@ class _MesinAirWidgetState extends State<MesinAirWidget> {
                                                                           FlutterFlowExpandedImageView(
                                                                         image: Image
                                                                             .asset(
-                                                                          'assets/images/IMG-20180526-WA0003.jpg',
+                                                                          'assets/images/IMG-20180526-WA0005.jpg',
                                                                           fit: BoxFit
                                                                               .contain,
                                                                         ),
@@ -326,7 +326,184 @@ class _MesinAirWidgetState extends State<MesinAirWidget> {
                                                                             8.0),
                                                                     child: Image
                                                                         .asset(
-                                                                      'assets/images/IMG-20180526-WA0003.jpg',
+                                                                      'assets/images/IMG-20180526-WA0005.jpg',
+                                                                      width:
+                                                                          300.0,
+                                                                      height:
+                                                                          200.0,
+                                                                      fit: BoxFit
+                                                                          .cover,
+                                                                    ),
+                                                                  ),
+                                                                ),
+                                                              ),
+                                                              InkWell(
+                                                                splashColor: Colors
+                                                                    .transparent,
+                                                                focusColor: Colors
+                                                                    .transparent,
+                                                                hoverColor: Colors
+                                                                    .transparent,
+                                                                highlightColor:
+                                                                    Colors
+                                                                        .transparent,
+                                                                onTap:
+                                                                    () async {
+                                                                  await Navigator
+                                                                      .push(
+                                                                    context,
+                                                                    PageTransition(
+                                                                      type: PageTransitionType
+                                                                          .fade,
+                                                                      child:
+                                                                          FlutterFlowExpandedImageView(
+                                                                        image: Image
+                                                                            .asset(
+                                                                          'assets/images/IMG-20180526-WA0009.jpg',
+                                                                          fit: BoxFit
+                                                                              .contain,
+                                                                        ),
+                                                                        allowRotation:
+                                                                            true,
+                                                                        tag:
+                                                                            'imageTag2',
+                                                                        useHeroAnimation:
+                                                                            true,
+                                                                      ),
+                                                                    ),
+                                                                  );
+                                                                },
+                                                                child: Hero(
+                                                                  tag:
+                                                                      'imageTag2',
+                                                                  transitionOnUserGestures:
+                                                                      true,
+                                                                  child:
+                                                                      ClipRRect(
+                                                                    borderRadius:
+                                                                        BorderRadius.circular(
+                                                                            8.0),
+                                                                    child: Image
+                                                                        .asset(
+                                                                      'assets/images/IMG-20180526-WA0009.jpg',
+                                                                      width:
+                                                                          200.0,
+                                                                      height:
+                                                                          200.0,
+                                                                      fit: BoxFit
+                                                                          .cover,
+                                                                    ),
+                                                                  ),
+                                                                ),
+                                                              ),
+                                                              InkWell(
+                                                                splashColor: Colors
+                                                                    .transparent,
+                                                                focusColor: Colors
+                                                                    .transparent,
+                                                                hoverColor: Colors
+                                                                    .transparent,
+                                                                highlightColor:
+                                                                    Colors
+                                                                        .transparent,
+                                                                onTap:
+                                                                    () async {
+                                                                  await Navigator
+                                                                      .push(
+                                                                    context,
+                                                                    PageTransition(
+                                                                      type: PageTransitionType
+                                                                          .fade,
+                                                                      child:
+                                                                          FlutterFlowExpandedImageView(
+                                                                        image: Image
+                                                                            .asset(
+                                                                          'assets/images/IMG-20180526-WA0006.jpg',
+                                                                          fit: BoxFit
+                                                                              .contain,
+                                                                        ),
+                                                                        allowRotation:
+                                                                            false,
+                                                                        tag:
+                                                                            'imageTag3',
+                                                                        useHeroAnimation:
+                                                                            true,
+                                                                      ),
+                                                                    ),
+                                                                  );
+                                                                },
+                                                                child: Hero(
+                                                                  tag:
+                                                                      'imageTag3',
+                                                                  transitionOnUserGestures:
+                                                                      true,
+                                                                  child:
+                                                                      ClipRRect(
+                                                                    borderRadius:
+                                                                        BorderRadius.circular(
+                                                                            8.0),
+                                                                    child: Image
+                                                                        .asset(
+                                                                      'assets/images/IMG-20180526-WA0006.jpg',
+                                                                      width:
+                                                                          300.0,
+                                                                      height:
+                                                                          200.0,
+                                                                      fit: BoxFit
+                                                                          .cover,
+                                                                    ),
+                                                                  ),
+                                                                ),
+                                                              ),
+                                                              InkWell(
+                                                                splashColor: Colors
+                                                                    .transparent,
+                                                                focusColor: Colors
+                                                                    .transparent,
+                                                                hoverColor: Colors
+                                                                    .transparent,
+                                                                highlightColor:
+                                                                    Colors
+                                                                        .transparent,
+                                                                onTap:
+                                                                    () async {
+                                                                  await Navigator
+                                                                      .push(
+                                                                    context,
+                                                                    PageTransition(
+                                                                      type: PageTransitionType
+                                                                          .fade,
+                                                                      child:
+                                                                          FlutterFlowExpandedImageView(
+                                                                        image: Image
+                                                                            .asset(
+                                                                          'assets/images/IMG-20180526-WA0008.jpg',
+                                                                          fit: BoxFit
+                                                                              .contain,
+                                                                        ),
+                                                                        allowRotation:
+                                                                            true,
+                                                                        tag:
+                                                                            'imageTag4',
+                                                                        useHeroAnimation:
+                                                                            true,
+                                                                      ),
+                                                                    ),
+                                                                  );
+                                                                },
+                                                                child: Hero(
+                                                                  tag:
+                                                                      'imageTag4',
+                                                                  transitionOnUserGestures:
+                                                                      true,
+                                                                  child:
+                                                                      ClipRRect(
+                                                                    borderRadius:
+                                                                        BorderRadius.circular(
+                                                                            8.0),
+                                                                    child: Image
+                                                                        .asset(
+                                                                      'assets/images/IMG-20180526-WA0008.jpg',
                                                                       width:
                                                                           300.0,
                                                                       height:
@@ -366,7 +543,7 @@ class _MesinAirWidgetState extends State<MesinAirWidget> {
                                                                         allowRotation:
                                                                             true,
                                                                         tag:
-                                                                            'imageTag2',
+                                                                            'imageTag5',
                                                                         useHeroAnimation:
                                                                             true,
                                                                       ),
@@ -375,7 +552,7 @@ class _MesinAirWidgetState extends State<MesinAirWidget> {
                                                                 },
                                                                 child: Hero(
                                                                   tag:
-                                                                      'imageTag2',
+                                                                      'imageTag5',
                                                                   transitionOnUserGestures:
                                                                       true,
                                                                   child:
@@ -387,7 +564,7 @@ class _MesinAirWidgetState extends State<MesinAirWidget> {
                                                                         .asset(
                                                                       'assets/images/WhatsApp_Image_2022-09-18_at_19.57.30.jpeg',
                                                                       width:
-                                                                          200.0,
+                                                                          300.0,
                                                                       height:
                                                                           200.0,
                                                                       fit: BoxFit
@@ -423,9 +600,9 @@ class _MesinAirWidgetState extends State<MesinAirWidget> {
                                                                               .contain,
                                                                         ),
                                                                         allowRotation:
-                                                                            false,
+                                                                            true,
                                                                         tag:
-                                                                            'imageTag3',
+                                                                            'imageTag6',
                                                                         useHeroAnimation:
                                                                             true,
                                                                       ),
@@ -434,7 +611,7 @@ class _MesinAirWidgetState extends State<MesinAirWidget> {
                                                                 },
                                                                 child: Hero(
                                                                   tag:
-                                                                      'imageTag3',
+                                                                      'imageTag6',
                                                                   transitionOnUserGestures:
                                                                       true,
                                                                   child:
@@ -477,14 +654,14 @@ class _MesinAirWidgetState extends State<MesinAirWidget> {
                                                                           FlutterFlowExpandedImageView(
                                                                         image: Image
                                                                             .asset(
-                                                                          'assets/images/IMG-20180526-WA0009.jpg',
+                                                                          'assets/images/WhatsApp_Image_2022-09-18_at_19.57.30_(1).jpeg',
                                                                           fit: BoxFit
                                                                               .contain,
                                                                         ),
                                                                         allowRotation:
                                                                             true,
                                                                         tag:
-                                                                            'imageTag4',
+                                                                            'imageTag7',
                                                                         useHeroAnimation:
                                                                             true,
                                                                       ),
@@ -493,7 +670,7 @@ class _MesinAirWidgetState extends State<MesinAirWidget> {
                                                                 },
                                                                 child: Hero(
                                                                   tag:
-                                                                      'imageTag4',
+                                                                      'imageTag7',
                                                                   transitionOnUserGestures:
                                                                       true,
                                                                   child:
@@ -503,66 +680,7 @@ class _MesinAirWidgetState extends State<MesinAirWidget> {
                                                                             8.0),
                                                                     child: Image
                                                                         .asset(
-                                                                      'assets/images/IMG-20180526-WA0009.jpg',
-                                                                      width:
-                                                                          300.0,
-                                                                      height:
-                                                                          200.0,
-                                                                      fit: BoxFit
-                                                                          .cover,
-                                                                    ),
-                                                                  ),
-                                                                ),
-                                                              ),
-                                                              InkWell(
-                                                                splashColor: Colors
-                                                                    .transparent,
-                                                                focusColor: Colors
-                                                                    .transparent,
-                                                                hoverColor: Colors
-                                                                    .transparent,
-                                                                highlightColor:
-                                                                    Colors
-                                                                        .transparent,
-                                                                onTap:
-                                                                    () async {
-                                                                  await Navigator
-                                                                      .push(
-                                                                    context,
-                                                                    PageTransition(
-                                                                      type: PageTransitionType
-                                                                          .fade,
-                                                                      child:
-                                                                          FlutterFlowExpandedImageView(
-                                                                        image: Image
-                                                                            .asset(
-                                                                          'assets/images/IMG-20180526-WA0006.jpg',
-                                                                          fit: BoxFit
-                                                                              .contain,
-                                                                        ),
-                                                                        allowRotation:
-                                                                            true,
-                                                                        tag:
-                                                                            'imageTag5',
-                                                                        useHeroAnimation:
-                                                                            true,
-                                                                      ),
-                                                                    ),
-                                                                  );
-                                                                },
-                                                                child: Hero(
-                                                                  tag:
-                                                                      'imageTag5',
-                                                                  transitionOnUserGestures:
-                                                                      true,
-                                                                  child:
-                                                                      ClipRRect(
-                                                                    borderRadius:
-                                                                        BorderRadius.circular(
-                                                                            8.0),
-                                                                    child: Image
-                                                                        .asset(
-                                                                      'assets/images/IMG-20180526-WA0006.jpg',
+                                                                      'assets/images/WhatsApp_Image_2022-09-18_at_19.57.30_(1).jpeg',
                                                                       width:
                                                                           300.0,
                                                                       height:
@@ -595,7 +713,7 @@ class _MesinAirWidgetState extends State<MesinAirWidget> {
                                                                   PageController(
                                                                       initialPage:
                                                                           0),
-                                                              count: 5,
+                                                              count: 7,
                                                               axisDirection: Axis
                                                                   .horizontal,
                                                               onDotClicked:
@@ -796,130 +914,12 @@ class _MesinAirWidgetState extends State<MesinAirWidget> {
                                                                           FlutterFlowExpandedImageView(
                                                                         image: Image
                                                                             .asset(
-                                                                          'assets/images/19(211).jpg',
+                                                                          'assets/images/Mesin_RO_500_Gpd.webp',
                                                                           fit: BoxFit
                                                                               .contain,
                                                                         ),
                                                                         allowRotation:
                                                                             false,
-                                                                        tag:
-                                                                            'imageTag6',
-                                                                        useHeroAnimation:
-                                                                            true,
-                                                                      ),
-                                                                    ),
-                                                                  );
-                                                                },
-                                                                child: Hero(
-                                                                  tag:
-                                                                      'imageTag6',
-                                                                  transitionOnUserGestures:
-                                                                      true,
-                                                                  child:
-                                                                      ClipRRect(
-                                                                    borderRadius:
-                                                                        BorderRadius.circular(
-                                                                            8.0),
-                                                                    child: Image
-                                                                        .asset(
-                                                                      'assets/images/19(211).jpg',
-                                                                      width:
-                                                                          300.0,
-                                                                      height:
-                                                                          200.0,
-                                                                      fit: BoxFit
-                                                                          .cover,
-                                                                    ),
-                                                                  ),
-                                                                ),
-                                                              ),
-                                                              InkWell(
-                                                                splashColor: Colors
-                                                                    .transparent,
-                                                                focusColor: Colors
-                                                                    .transparent,
-                                                                hoverColor: Colors
-                                                                    .transparent,
-                                                                highlightColor:
-                                                                    Colors
-                                                                        .transparent,
-                                                                onTap:
-                                                                    () async {
-                                                                  await Navigator
-                                                                      .push(
-                                                                    context,
-                                                                    PageTransition(
-                                                                      type: PageTransitionType
-                                                                          .fade,
-                                                                      child:
-                                                                          FlutterFlowExpandedImageView(
-                                                                        image: Image
-                                                                            .asset(
-                                                                          'assets/images/WhatsApp_Image_2022-09-18_at_18.33.59.jpeg',
-                                                                          fit: BoxFit
-                                                                              .contain,
-                                                                        ),
-                                                                        allowRotation:
-                                                                            true,
-                                                                        tag:
-                                                                            'imageTag7',
-                                                                        useHeroAnimation:
-                                                                            true,
-                                                                      ),
-                                                                    ),
-                                                                  );
-                                                                },
-                                                                child: Hero(
-                                                                  tag:
-                                                                      'imageTag7',
-                                                                  transitionOnUserGestures:
-                                                                      true,
-                                                                  child:
-                                                                      ClipRRect(
-                                                                    borderRadius:
-                                                                        BorderRadius.circular(
-                                                                            8.0),
-                                                                    child: Image
-                                                                        .asset(
-                                                                      'assets/images/WhatsApp_Image_2022-09-18_at_18.33.59.jpeg',
-                                                                      width:
-                                                                          300.0,
-                                                                      height:
-                                                                          200.0,
-                                                                      fit: BoxFit
-                                                                          .cover,
-                                                                    ),
-                                                                  ),
-                                                                ),
-                                                              ),
-                                                              InkWell(
-                                                                splashColor: Colors
-                                                                    .transparent,
-                                                                focusColor: Colors
-                                                                    .transparent,
-                                                                hoverColor: Colors
-                                                                    .transparent,
-                                                                highlightColor:
-                                                                    Colors
-                                                                        .transparent,
-                                                                onTap:
-                                                                    () async {
-                                                                  await Navigator
-                                                                      .push(
-                                                                    context,
-                                                                    PageTransition(
-                                                                      type: PageTransitionType
-                                                                          .fade,
-                                                                      child:
-                                                                          FlutterFlowExpandedImageView(
-                                                                        image: Image
-                                                                            .asset(
-                                                                          'assets/images/Mesin_RO.jpeg',
-                                                                          fit: BoxFit
-                                                                              .contain,
-                                                                        ),
-                                                                        allowRotation:
-                                                                            true,
                                                                         tag:
                                                                             'imageTag8',
                                                                         useHeroAnimation:
@@ -940,9 +940,9 @@ class _MesinAirWidgetState extends State<MesinAirWidget> {
                                                                             8.0),
                                                                     child: Image
                                                                         .asset(
-                                                                      'assets/images/Mesin_RO.jpeg',
+                                                                      'assets/images/Mesin_RO_500_Gpd.webp',
                                                                       width:
-                                                                          200.0,
+                                                                          300.0,
                                                                       height:
                                                                           200.0,
                                                                       fit: BoxFit
@@ -973,7 +973,7 @@ class _MesinAirWidgetState extends State<MesinAirWidget> {
                                                                           FlutterFlowExpandedImageView(
                                                                         image: Image
                                                                             .asset(
-                                                                          'assets/images/2907693_41f863f4-61d1-41cb-85ad-fccf91293bb1_958_958.jpg',
+                                                                          'assets/images/Mesin_Ro_400_Gpd.webp',
                                                                           fit: BoxFit
                                                                               .contain,
                                                                         ),
@@ -999,7 +999,7 @@ class _MesinAirWidgetState extends State<MesinAirWidget> {
                                                                             8.0),
                                                                     child: Image
                                                                         .asset(
-                                                                      'assets/images/2907693_41f863f4-61d1-41cb-85ad-fccf91293bb1_958_958.jpg',
+                                                                      'assets/images/Mesin_Ro_400_Gpd.webp',
                                                                       width:
                                                                           300.0,
                                                                       height:
@@ -1032,7 +1032,7 @@ class _MesinAirWidgetState extends State<MesinAirWidget> {
                                                                           FlutterFlowExpandedImageView(
                                                                         image: Image
                                                                             .asset(
-                                                                          'assets/images/oem_oem_full01.webp',
+                                                                          'assets/images/Mesin_RO_2000_Gpd.jpg',
                                                                           fit: BoxFit
                                                                               .contain,
                                                                         ),
@@ -1058,7 +1058,125 @@ class _MesinAirWidgetState extends State<MesinAirWidget> {
                                                                             8.0),
                                                                     child: Image
                                                                         .asset(
-                                                                      'assets/images/oem_oem_full01.webp',
+                                                                      'assets/images/Mesin_RO_2000_Gpd.jpg',
+                                                                      width:
+                                                                          200.0,
+                                                                      height:
+                                                                          200.0,
+                                                                      fit: BoxFit
+                                                                          .cover,
+                                                                    ),
+                                                                  ),
+                                                                ),
+                                                              ),
+                                                              InkWell(
+                                                                splashColor: Colors
+                                                                    .transparent,
+                                                                focusColor: Colors
+                                                                    .transparent,
+                                                                hoverColor: Colors
+                                                                    .transparent,
+                                                                highlightColor:
+                                                                    Colors
+                                                                        .transparent,
+                                                                onTap:
+                                                                    () async {
+                                                                  await Navigator
+                                                                      .push(
+                                                                    context,
+                                                                    PageTransition(
+                                                                      type: PageTransitionType
+                                                                          .fade,
+                                                                      child:
+                                                                          FlutterFlowExpandedImageView(
+                                                                        image: Image
+                                                                            .asset(
+                                                                          'assets/images/Mesin_RO_1000_Gpd.jpg',
+                                                                          fit: BoxFit
+                                                                              .contain,
+                                                                        ),
+                                                                        allowRotation:
+                                                                            true,
+                                                                        tag:
+                                                                            'imageTag11',
+                                                                        useHeroAnimation:
+                                                                            true,
+                                                                      ),
+                                                                    ),
+                                                                  );
+                                                                },
+                                                                child: Hero(
+                                                                  tag:
+                                                                      'imageTag11',
+                                                                  transitionOnUserGestures:
+                                                                      true,
+                                                                  child:
+                                                                      ClipRRect(
+                                                                    borderRadius:
+                                                                        BorderRadius.circular(
+                                                                            8.0),
+                                                                    child: Image
+                                                                        .asset(
+                                                                      'assets/images/Mesin_RO_1000_Gpd.jpg',
+                                                                      width:
+                                                                          300.0,
+                                                                      height:
+                                                                          200.0,
+                                                                      fit: BoxFit
+                                                                          .cover,
+                                                                    ),
+                                                                  ),
+                                                                ),
+                                                              ),
+                                                              InkWell(
+                                                                splashColor: Colors
+                                                                    .transparent,
+                                                                focusColor: Colors
+                                                                    .transparent,
+                                                                hoverColor: Colors
+                                                                    .transparent,
+                                                                highlightColor:
+                                                                    Colors
+                                                                        .transparent,
+                                                                onTap:
+                                                                    () async {
+                                                                  await Navigator
+                                                                      .push(
+                                                                    context,
+                                                                    PageTransition(
+                                                                      type: PageTransitionType
+                                                                          .fade,
+                                                                      child:
+                                                                          FlutterFlowExpandedImageView(
+                                                                        image: Image
+                                                                            .asset(
+                                                                          'assets/images/Mesin_RO_8000_GPD.webp',
+                                                                          fit: BoxFit
+                                                                              .contain,
+                                                                        ),
+                                                                        allowRotation:
+                                                                            true,
+                                                                        tag:
+                                                                            'imageTag12',
+                                                                        useHeroAnimation:
+                                                                            true,
+                                                                      ),
+                                                                    ),
+                                                                  );
+                                                                },
+                                                                child: Hero(
+                                                                  tag:
+                                                                      'imageTag12',
+                                                                  transitionOnUserGestures:
+                                                                      true,
+                                                                  child:
+                                                                      ClipRRect(
+                                                                    borderRadius:
+                                                                        BorderRadius.circular(
+                                                                            8.0),
+                                                                    child: Image
+                                                                        .asset(
+                                                                      'assets/images/Mesin_RO_8000_GPD.webp',
                                                                       width:
                                                                           300.0,
                                                                       height:

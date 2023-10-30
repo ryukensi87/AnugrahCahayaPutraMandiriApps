@@ -143,19 +143,22 @@ class _HomePageWidgetState extends State<HomePageWidget>
           : FocusScope.of(context).unfocus(),
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+        backgroundColor: Color(0xFF0099FF),
         appBar: AppBar(
-          backgroundColor: Color(0xFF3FC5E5),
+          backgroundColor: Color(0xFF0099FF),
           automaticallyImplyLeading: false,
-          title: Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(0.0, 24.0, 0.0, 0.0),
-            child: Text(
-              'Anugrah Cahaya Putra Mandiri',
-              style: FlutterFlowTheme.of(context).labelMedium.override(
-                    fontFamily: 'Readex Pro',
-                    color: FlutterFlowTheme.of(context).secondaryBackground,
-                    fontSize: 15.0,
-                  ),
+          title: Align(
+            alignment: AlignmentDirectional(-1.00, 0.00),
+            child: Padding(
+              padding: EdgeInsetsDirectional.fromSTEB(0.0, 24.0, 0.0, 0.0),
+              child: Text(
+                'Anugrah Cahaya Putra Mandiri',
+                style: FlutterFlowTheme.of(context).labelMedium.override(
+                      fontFamily: 'Readex Pro',
+                      color: FlutterFlowTheme.of(context).secondaryBackground,
+                      fontSize: 15.0,
+                    ),
+              ),
             ),
           ),
           actions: [

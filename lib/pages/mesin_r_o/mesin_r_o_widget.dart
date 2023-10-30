@@ -56,9 +56,9 @@ class _MesinROWidgetState extends State<MesinROWidget> {
           : FocusScope.of(context).unfocus(),
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+        backgroundColor: Color(0xFF0099FF),
         appBar: AppBar(
-          backgroundColor: Color(0xFF3FC5E5),
+          backgroundColor: Color(0xFF0099FF),
           automaticallyImplyLeading: false,
           leading: InkWell(
             splashColor: Colors.transparent,
@@ -101,7 +101,7 @@ class _MesinROWidgetState extends State<MesinROWidget> {
             width: double.infinity,
             height: double.infinity,
             decoration: BoxDecoration(
-              color: FlutterFlowTheme.of(context).secondaryBackground,
+              color: Color(0xFF0099FF),
               image: DecorationImage(
                 fit: BoxFit.cover,
                 image: Image.asset(

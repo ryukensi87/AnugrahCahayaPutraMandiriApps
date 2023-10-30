@@ -6,6 +6,7 @@ import '/flutter_flow/flutter_flow_expanded_image_view.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
@@ -31,7 +32,7 @@ class _ProduklistWidgetState extends State<ProduklistWidget>
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   final animationsMap = {
-    'containerOnPageLoadAnimation': AnimationInfo(
+    'containerOnPageLoadAnimation1': AnimationInfo(
       trigger: AnimationTrigger.onPageLoad,
       effects: [
         FadeEffect(
@@ -54,6 +55,25 @@ class _ProduklistWidgetState extends State<ProduklistWidget>
           duration: 400.ms,
           begin: Offset(0.8, 0.8),
           end: Offset(1.0, 1.0),
+        ),
+      ],
+    ),
+    'containerOnPageLoadAnimation2': AnimationInfo(
+      trigger: AnimationTrigger.onPageLoad,
+      effects: [
+        FadeEffect(
+          curve: Curves.easeInOut,
+          delay: 0.ms,
+          duration: 600.ms,
+          begin: 0.0,
+          end: 1.0,
+        ),
+        MoveEffect(
+          curve: Curves.easeInOut,
+          delay: 0.ms,
+          duration: 600.ms,
+          begin: Offset(0.0, 50.0),
+          end: Offset(0.0, 0.0),
         ),
       ],
     ),
@@ -100,9 +120,9 @@ class _ProduklistWidgetState extends State<ProduklistWidget>
           : FocusScope.of(context).unfocus(),
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+        backgroundColor: Color(0xFF0099FF),
         appBar: AppBar(
-          backgroundColor: Color(0xFF3FC5E5),
+          backgroundColor: Color(0xFF0099FF),
           automaticallyImplyLeading: false,
           leading: InkWell(
             splashColor: Colors.transparent,
@@ -145,7 +165,7 @@ class _ProduklistWidgetState extends State<ProduklistWidget>
             width: double.infinity,
             height: double.infinity,
             decoration: BoxDecoration(
-              color: FlutterFlowTheme.of(context).secondaryBackground,
+              color: Color(0xFF0099FF),
               image: DecorationImage(
                 fit: BoxFit.cover,
                 image: Image.asset(
@@ -330,7 +350,7 @@ class _ProduklistWidgetState extends State<ProduklistWidget>
                       },
                     ),
                   ).animateOnPageLoad(
-                      animationsMap['containerOnPageLoadAnimation']!),
+                      animationsMap['containerOnPageLoadAnimation1']!),
                 ),
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
@@ -385,137 +405,137 @@ class _ProduklistWidgetState extends State<ProduklistWidget>
                                     final listViewListProdukRecord =
                                         listViewListProdukRecordList[
                                             listViewIndex];
-                                    return Row(
-                                      mainAxisSize: MainAxisSize.max,
-                                      children: [
-                                        Expanded(
+                                    return Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          10.0, 12.0, 10.0, 0.0),
+                                      child: InkWell(
+                                        splashColor: Colors.transparent,
+                                        focusColor: Colors.transparent,
+                                        hoverColor: Colors.transparent,
+                                        highlightColor: Colors.transparent,
+                                        onTap: () async {
+                                          await showModalBottomSheet(
+                                            isScrollControlled: true,
+                                            backgroundColor: Colors.transparent,
+                                            enableDrag: false,
+                                            context: context,
+                                            builder: (context) {
+                                              return GestureDetector(
+                                                onTap: () => _model.unfocusNode
+                                                        .canRequestFocus
+                                                    ? FocusScope.of(context)
+                                                        .requestFocus(
+                                                            _model.unfocusNode)
+                                                    : FocusScope.of(context)
+                                                        .unfocus(),
+                                                child: Padding(
+                                                  padding:
+                                                      MediaQuery.viewInsetsOf(
+                                                          context),
+                                                  child: ProdukDetailWidget(
+                                                    fotoprdk:
+                                                        listViewListProdukRecord
+                                                            .gambarProduk,
+                                                    namaprdk:
+                                                        listViewListProdukRecord
+                                                            .namaProduk,
+                                                    hargaprdk:
+                                                        listViewListProdukRecord
+                                                            .hargaProduk,
+                                                  ),
+                                                ),
+                                              );
+                                            },
+                                          ).then(
+                                              (value) => safeSetState(() {}));
+                                        },
+                                        child: Container(
+                                          width: double.infinity,
+                                          decoration: BoxDecoration(
+                                            color: FlutterFlowTheme.of(context)
+                                                .secondaryBackground,
+                                            boxShadow: [
+                                              BoxShadow(
+                                                blurRadius: 2.0,
+                                                color: Color(0x520E151B),
+                                                offset: Offset(0.0, 1.0),
+                                              )
+                                            ],
+                                            borderRadius:
+                                                BorderRadius.circular(12.0),
+                                          ),
                                           child: Padding(
                                             padding:
                                                 EdgeInsetsDirectional.fromSTEB(
-                                                    16.0, 0.0, 16.0, 8.0),
-                                            child: InkWell(
-                                              splashColor: Colors.transparent,
-                                              focusColor: Colors.transparent,
-                                              hoverColor: Colors.transparent,
-                                              highlightColor:
-                                                  Colors.transparent,
-                                              onTap: () async {
-                                                await showModalBottomSheet(
-                                                  isScrollControlled: true,
-                                                  backgroundColor:
-                                                      Colors.transparent,
-                                                  enableDrag: false,
-                                                  context: context,
-                                                  builder: (context) {
-                                                    return GestureDetector(
-                                                      onTap: () => _model
-                                                              .unfocusNode
-                                                              .canRequestFocus
-                                                          ? FocusScope.of(
-                                                                  context)
-                                                              .requestFocus(_model
-                                                                  .unfocusNode)
-                                                          : FocusScope.of(
-                                                                  context)
-                                                              .unfocus(),
-                                                      child: Padding(
-                                                        padding: MediaQuery
-                                                            .viewInsetsOf(
-                                                                context),
-                                                        child:
-                                                            ProdukDetailWidget(
-                                                          fotoprdk:
-                                                              listViewListProdukRecord
-                                                                  .gambarProduk,
-                                                          namaprdk:
-                                                              listViewListProdukRecord
-                                                                  .namaProduk,
-                                                          hargaprdk:
-                                                              listViewListProdukRecord
-                                                                  .hargaProduk,
-                                                        ),
-                                                      ),
-                                                    );
-                                                  },
-                                                ).then((value) =>
-                                                    safeSetState(() {}));
-                                              },
-                                              child: Container(
-                                                width: double.infinity,
-                                                decoration: BoxDecoration(
-                                                  color: FlutterFlowTheme.of(
-                                                          context)
-                                                      .secondaryBackground,
-                                                  boxShadow: [
-                                                    BoxShadow(
-                                                      blurRadius: 3.0,
-                                                      color: Color(0x411D2429),
-                                                      offset: Offset(0.0, 1.0),
-                                                    )
-                                                  ],
-                                                  borderRadius:
-                                                      BorderRadius.circular(
-                                                          8.0),
+                                                    0.0, 0.0, 12.0, 0.0),
+                                            child: Row(
+                                              mainAxisSize: MainAxisSize.max,
+                                              children: [
+                                                Hero(
+                                                  tag: listViewListProdukRecord
+                                                      .gambarProduk,
+                                                  transitionOnUserGestures:
+                                                      true,
+                                                  child: ClipRRect(
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            12.0),
+                                                    child: CachedNetworkImage(
+                                                      fadeInDuration: Duration(
+                                                          milliseconds: 500),
+                                                      fadeOutDuration: Duration(
+                                                          milliseconds: 500),
+                                                      imageUrl:
+                                                          listViewListProdukRecord
+                                                              .gambarProduk,
+                                                      width: 100.0,
+                                                      height: 100.0,
+                                                      fit: BoxFit.cover,
+                                                    ),
+                                                  ),
                                                 ),
-                                                child: Padding(
-                                                  padding: EdgeInsetsDirectional
-                                                      .fromSTEB(
-                                                          8.0, 8.0, 8.0, 8.0),
-                                                  child: Row(
-                                                    mainAxisSize:
-                                                        MainAxisSize.max,
-                                                    crossAxisAlignment:
-                                                        CrossAxisAlignment
-                                                            .start,
-                                                    children: [
-                                                      Expanded(
-                                                        child: Padding(
+                                                Expanded(
+                                                  child: Padding(
+                                                    padding:
+                                                        EdgeInsetsDirectional
+                                                            .fromSTEB(12.0, 0.0,
+                                                                8.0, 0.0),
+                                                    child: Column(
+                                                      mainAxisSize:
+                                                          MainAxisSize.max,
+                                                      mainAxisAlignment:
+                                                          MainAxisAlignment
+                                                              .center,
+                                                      crossAxisAlignment:
+                                                          CrossAxisAlignment
+                                                              .start,
+                                                      children: [
+                                                        Padding(
                                                           padding:
                                                               EdgeInsetsDirectional
                                                                   .fromSTEB(
-                                                                      8.0,
-                                                                      8.0,
-                                                                      4.0,
-                                                                      0.0),
-                                                          child: Column(
-                                                            mainAxisSize:
-                                                                MainAxisSize
-                                                                    .max,
-                                                            mainAxisAlignment:
-                                                                MainAxisAlignment
-                                                                    .center,
-                                                            crossAxisAlignment:
-                                                                CrossAxisAlignment
-                                                                    .start,
-                                                            children: [
-                                                              Text(
-                                                                listViewListProdukRecord
-                                                                    .namaProduk,
-                                                                style: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .headlineSmall
-                                                                    .override(
-                                                                      fontFamily:
-                                                                          'Outfit',
-                                                                      fontSize:
-                                                                          16.0,
-                                                                      fontWeight:
-                                                                          FontWeight
-                                                                              .bold,
-                                                                    ),
-                                                              ),
-                                                            ],
+                                                                      0.0,
+                                                                      0.0,
+                                                                      0.0,
+                                                                      4.0),
+                                                          child: Text(
+                                                            listViewListProdukRecord
+                                                                .namaProduk,
+                                                            style: FlutterFlowTheme
+                                                                    .of(context)
+                                                                .titleLarge,
                                                           ),
                                                         ),
-                                                      ),
-                                                    ],
+                                                      ],
+                                                    ),
                                                   ),
                                                 ),
-                                              ),
+                                              ],
                                             ),
                                           ),
                                         ),
-                                      ],
+                                      ).animateOnPageLoad(animationsMap[
+                                          'containerOnPageLoadAnimation2']!),
                                     );
                                   },
                                 );

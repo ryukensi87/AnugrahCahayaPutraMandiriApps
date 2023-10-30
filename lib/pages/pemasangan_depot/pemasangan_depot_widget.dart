@@ -61,9 +61,9 @@ class _PemasanganDepotWidgetState extends State<PemasanganDepotWidget>
           : FocusScope.of(context).unfocus(),
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+        backgroundColor: Color(0xFF0099FF),
         appBar: AppBar(
-          backgroundColor: Color(0xFF3FC5E5),
+          backgroundColor: Color(0xFF0099FF),
           automaticallyImplyLeading: false,
           leading: InkWell(
             splashColor: Colors.transparent,
@@ -106,7 +106,7 @@ class _PemasanganDepotWidgetState extends State<PemasanganDepotWidget>
             width: double.infinity,
             height: double.infinity,
             decoration: BoxDecoration(
-              color: FlutterFlowTheme.of(context).secondaryBackground,
+              color: Color(0xFF0099FF),
               image: DecorationImage(
                 fit: BoxFit.cover,
                 image: Image.asset(
@@ -408,7 +408,7 @@ class _PemasanganDepotWidgetState extends State<PemasanganDepotWidget>
                                                                 FlutterFlowExpandedImageView(
                                                               image:
                                                                   Image.asset(
-                                                                'assets/images/WhatsApp_Image_2019-05-27_at_3.57.59_AM.jpeg',
+                                                                'assets/images/WhatsApp_Image_2019-05-27_at_3.58.01_AM(1).jpeg',
                                                                 fit: BoxFit
                                                                     .contain,
                                                               ),
@@ -423,6 +423,160 @@ class _PemasanganDepotWidgetState extends State<PemasanganDepotWidget>
                                                       },
                                                       child: Hero(
                                                         tag: 'imageTag3',
+                                                        transitionOnUserGestures:
+                                                            true,
+                                                        child: ClipRRect(
+                                                          borderRadius:
+                                                              BorderRadius
+                                                                  .circular(
+                                                                      30.0),
+                                                          child: Image.asset(
+                                                            'assets/images/WhatsApp_Image_2019-05-27_at_3.58.01_AM(1).jpeg',
+                                                            width: 300.0,
+                                                            height: 130.0,
+                                                            fit: BoxFit.cover,
+                                                          ),
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  ],
+                                                ),
+                                              ),
+                                            ),
+                                            Container(
+                                              width: MediaQuery.sizeOf(context)
+                                                      .width *
+                                                  0.4,
+                                              height: 160.0,
+                                              decoration: BoxDecoration(
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .primaryBackground,
+                                                borderRadius:
+                                                    BorderRadius.circular(24.0),
+                                              ),
+                                              child: Padding(
+                                                padding: EdgeInsetsDirectional
+                                                    .fromSTEB(
+                                                        12.0, 12.0, 12.0, 12.0),
+                                                child: Column(
+                                                  mainAxisSize:
+                                                      MainAxisSize.max,
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment.center,
+                                                  children: [
+                                                    InkWell(
+                                                      splashColor:
+                                                          Colors.transparent,
+                                                      focusColor:
+                                                          Colors.transparent,
+                                                      hoverColor:
+                                                          Colors.transparent,
+                                                      highlightColor:
+                                                          Colors.transparent,
+                                                      onTap: () async {
+                                                        await Navigator.push(
+                                                          context,
+                                                          PageTransition(
+                                                            type:
+                                                                PageTransitionType
+                                                                    .fade,
+                                                            child:
+                                                                FlutterFlowExpandedImageView(
+                                                              image:
+                                                                  Image.asset(
+                                                                'assets/images/WhatsApp_Image_2019-05-27_at_3.58.04_AM.jpeg',
+                                                                fit: BoxFit
+                                                                    .contain,
+                                                              ),
+                                                              allowRotation:
+                                                                  true,
+                                                              tag: 'imageTag4',
+                                                              useHeroAnimation:
+                                                                  true,
+                                                            ),
+                                                          ),
+                                                        );
+                                                      },
+                                                      child: Hero(
+                                                        tag: 'imageTag4',
+                                                        transitionOnUserGestures:
+                                                            true,
+                                                        child: ClipRRect(
+                                                          borderRadius:
+                                                              BorderRadius
+                                                                  .circular(
+                                                                      30.0),
+                                                          child: Image.asset(
+                                                            'assets/images/WhatsApp_Image_2019-05-27_at_3.58.04_AM.jpeg',
+                                                            width: 300.0,
+                                                            height: 130.0,
+                                                            fit: BoxFit.cover,
+                                                          ),
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  ],
+                                                ),
+                                              ),
+                                            ),
+                                            Container(
+                                              width: MediaQuery.sizeOf(context)
+                                                      .width *
+                                                  0.4,
+                                              height: 160.0,
+                                              decoration: BoxDecoration(
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .primaryBackground,
+                                                borderRadius:
+                                                    BorderRadius.circular(24.0),
+                                              ),
+                                              child: Padding(
+                                                padding: EdgeInsetsDirectional
+                                                    .fromSTEB(
+                                                        12.0, 12.0, 12.0, 12.0),
+                                                child: Column(
+                                                  mainAxisSize:
+                                                      MainAxisSize.max,
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment.center,
+                                                  children: [
+                                                    InkWell(
+                                                      splashColor:
+                                                          Colors.transparent,
+                                                      focusColor:
+                                                          Colors.transparent,
+                                                      hoverColor:
+                                                          Colors.transparent,
+                                                      highlightColor:
+                                                          Colors.transparent,
+                                                      onTap: () async {
+                                                        await Navigator.push(
+                                                          context,
+                                                          PageTransition(
+                                                            type:
+                                                                PageTransitionType
+                                                                    .fade,
+                                                            child:
+                                                                FlutterFlowExpandedImageView(
+                                                              image:
+                                                                  Image.asset(
+                                                                'assets/images/WhatsApp_Image_2019-05-27_at_3.57.59_AM.jpeg',
+                                                                fit: BoxFit
+                                                                    .contain,
+                                                              ),
+                                                              allowRotation:
+                                                                  true,
+                                                              tag: 'imageTag5',
+                                                              useHeroAnimation:
+                                                                  true,
+                                                            ),
+                                                          ),
+                                                        );
+                                                      },
+                                                      child: Hero(
+                                                        tag: 'imageTag5',
                                                         transitionOnUserGestures:
                                                             true,
                                                         child: ClipRRect(
@@ -491,160 +645,6 @@ class _PemasanganDepotWidgetState extends State<PemasanganDepotWidget>
                                                               ),
                                                               allowRotation:
                                                                   true,
-                                                              tag: 'imageTag4',
-                                                              useHeroAnimation:
-                                                                  true,
-                                                            ),
-                                                          ),
-                                                        );
-                                                      },
-                                                      child: Hero(
-                                                        tag: 'imageTag4',
-                                                        transitionOnUserGestures:
-                                                            true,
-                                                        child: ClipRRect(
-                                                          borderRadius:
-                                                              BorderRadius
-                                                                  .circular(
-                                                                      30.0),
-                                                          child: Image.asset(
-                                                            'assets/images/WhatsApp_Image_2019-05-27_at_3.58.00_AM.jpeg',
-                                                            width: 300.0,
-                                                            height: 130.0,
-                                                            fit: BoxFit.cover,
-                                                          ),
-                                                        ),
-                                                      ),
-                                                    ),
-                                                  ],
-                                                ),
-                                              ),
-                                            ),
-                                            Container(
-                                              width: MediaQuery.sizeOf(context)
-                                                      .width *
-                                                  0.4,
-                                              height: 160.0,
-                                              decoration: BoxDecoration(
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .primaryBackground,
-                                                borderRadius:
-                                                    BorderRadius.circular(24.0),
-                                              ),
-                                              child: Padding(
-                                                padding: EdgeInsetsDirectional
-                                                    .fromSTEB(
-                                                        12.0, 12.0, 12.0, 12.0),
-                                                child: Column(
-                                                  mainAxisSize:
-                                                      MainAxisSize.max,
-                                                  mainAxisAlignment:
-                                                      MainAxisAlignment.center,
-                                                  children: [
-                                                    InkWell(
-                                                      splashColor:
-                                                          Colors.transparent,
-                                                      focusColor:
-                                                          Colors.transparent,
-                                                      hoverColor:
-                                                          Colors.transparent,
-                                                      highlightColor:
-                                                          Colors.transparent,
-                                                      onTap: () async {
-                                                        await Navigator.push(
-                                                          context,
-                                                          PageTransition(
-                                                            type:
-                                                                PageTransitionType
-                                                                    .fade,
-                                                            child:
-                                                                FlutterFlowExpandedImageView(
-                                                              image:
-                                                                  Image.asset(
-                                                                'assets/images/WhatsApp_Image_2019-05-27_at_3.58.01_AM.jpeg',
-                                                                fit: BoxFit
-                                                                    .contain,
-                                                              ),
-                                                              allowRotation:
-                                                                  true,
-                                                              tag: 'imageTag5',
-                                                              useHeroAnimation:
-                                                                  true,
-                                                            ),
-                                                          ),
-                                                        );
-                                                      },
-                                                      child: Hero(
-                                                        tag: 'imageTag5',
-                                                        transitionOnUserGestures:
-                                                            true,
-                                                        child: ClipRRect(
-                                                          borderRadius:
-                                                              BorderRadius
-                                                                  .circular(
-                                                                      30.0),
-                                                          child: Image.asset(
-                                                            'assets/images/WhatsApp_Image_2019-05-27_at_3.58.01_AM.jpeg',
-                                                            width: 300.0,
-                                                            height: 130.0,
-                                                            fit: BoxFit.cover,
-                                                          ),
-                                                        ),
-                                                      ),
-                                                    ),
-                                                  ],
-                                                ),
-                                              ),
-                                            ),
-                                            Container(
-                                              width: MediaQuery.sizeOf(context)
-                                                      .width *
-                                                  0.4,
-                                              height: 160.0,
-                                              decoration: BoxDecoration(
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .primaryBackground,
-                                                borderRadius:
-                                                    BorderRadius.circular(24.0),
-                                              ),
-                                              child: Padding(
-                                                padding: EdgeInsetsDirectional
-                                                    .fromSTEB(
-                                                        12.0, 12.0, 12.0, 12.0),
-                                                child: Column(
-                                                  mainAxisSize:
-                                                      MainAxisSize.max,
-                                                  mainAxisAlignment:
-                                                      MainAxisAlignment.center,
-                                                  children: [
-                                                    InkWell(
-                                                      splashColor:
-                                                          Colors.transparent,
-                                                      focusColor:
-                                                          Colors.transparent,
-                                                      hoverColor:
-                                                          Colors.transparent,
-                                                      highlightColor:
-                                                          Colors.transparent,
-                                                      onTap: () async {
-                                                        await Navigator.push(
-                                                          context,
-                                                          PageTransition(
-                                                            type:
-                                                                PageTransitionType
-                                                                    .fade,
-                                                            child:
-                                                                FlutterFlowExpandedImageView(
-                                                              image:
-                                                                  Image.asset(
-                                                                'assets/images/WhatsApp_Image_2019-05-27_at_3.58.02_AM.jpeg',
-                                                                fit: BoxFit
-                                                                    .contain,
-                                                              ),
-                                                              allowRotation:
-                                                                  true,
                                                               tag: 'imageTag6',
                                                               useHeroAnimation:
                                                                   true,
@@ -662,7 +662,7 @@ class _PemasanganDepotWidgetState extends State<PemasanganDepotWidget>
                                                                   .circular(
                                                                       30.0),
                                                           child: Image.asset(
-                                                            'assets/images/WhatsApp_Image_2019-05-27_at_3.58.02_AM.jpeg',
+                                                            'assets/images/WhatsApp_Image_2019-05-27_at_3.58.00_AM.jpeg',
                                                             width: 300.0,
                                                             height: 130.0,
                                                             fit: BoxFit.cover,
