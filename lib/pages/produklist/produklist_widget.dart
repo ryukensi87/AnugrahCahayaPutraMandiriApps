@@ -33,32 +33,6 @@ class _ProduklistWidgetState extends State<ProduklistWidget>
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   final animationsMap = {
-    'containerOnPageLoadAnimation1': AnimationInfo(
-      trigger: AnimationTrigger.onPageLoad,
-      effects: [
-        FadeEffect(
-          curve: Curves.easeInOut,
-          delay: 0.ms,
-          duration: 400.ms,
-          begin: 0.0,
-          end: 1.0,
-        ),
-        MoveEffect(
-          curve: Curves.easeInOut,
-          delay: 0.ms,
-          duration: 400.ms,
-          begin: Offset(0.0, 40.0),
-          end: Offset(0.0, 0.0),
-        ),
-        ScaleEffect(
-          curve: Curves.easeInOut,
-          delay: 0.ms,
-          duration: 400.ms,
-          begin: Offset(0.8, 0.8),
-          end: Offset(1.0, 1.0),
-        ),
-      ],
-    ),
     'carouselOnPageLoadAnimation': AnimationInfo(
       trigger: AnimationTrigger.onPageLoad,
       effects: [
@@ -85,7 +59,7 @@ class _ProduklistWidgetState extends State<ProduklistWidget>
         ),
       ],
     ),
-    'containerOnPageLoadAnimation2': AnimationInfo(
+    'containerOnPageLoadAnimation': AnimationInfo(
       trigger: AnimationTrigger.onPageLoad,
       effects: [
         FadeEffect(
@@ -270,146 +244,128 @@ class _ProduklistWidgetState extends State<ProduklistWidget>
                   ),
                 ),
                 Padding(
-                  padding:
-                      EdgeInsetsDirectional.fromSTEB(16.0, 12.0, 16.0, 0.0),
-                  child: Container(
-                    width: double.infinity,
-                    height: 230.0,
-                    decoration: BoxDecoration(
-                      color: FlutterFlowTheme.of(context).secondaryBackground,
-                      boxShadow: [
-                        BoxShadow(
-                          blurRadius: 4.0,
-                          color: Color(0x250F1113),
-                          offset: Offset(0.0, 1.0),
-                        )
-                      ],
-                      borderRadius: BorderRadius.circular(12.0),
-                    ),
-                    child: StreamBuilder<List<ListProdukRecord>>(
-                      stream: queryListProdukRecord(),
-                      builder: (context, snapshot) {
-                        // Customize what your widget looks like when it's loading.
-                        if (!snapshot.hasData) {
-                          return Center(
-                            child: SizedBox(
-                              width: 50.0,
-                              height: 50.0,
-                              child: CircularProgressIndicator(
-                                valueColor: AlwaysStoppedAnimation<Color>(
-                                  FlutterFlowTheme.of(context).primary,
-                                ),
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+                  child: StreamBuilder<List<ListProdukRecord>>(
+                    stream: queryListProdukRecord(),
+                    builder: (context, snapshot) {
+                      // Customize what your widget looks like when it's loading.
+                      if (!snapshot.hasData) {
+                        return Center(
+                          child: SizedBox(
+                            width: 50.0,
+                            height: 50.0,
+                            child: CircularProgressIndicator(
+                              valueColor: AlwaysStoppedAnimation<Color>(
+                                FlutterFlowTheme.of(context).primary,
                               ),
                             ),
-                          );
-                        }
-                        List<ListProdukRecord> carouselListProdukRecordList =
-                            snapshot.data!;
-                        return Container(
-                          width: double.infinity,
-                          height: 180.0,
-                          child: CarouselSlider.builder(
-                            itemCount: carouselListProdukRecordList.length,
-                            itemBuilder: (context, carouselIndex, _) {
-                              final carouselListProdukRecord =
-                                  carouselListProdukRecordList[carouselIndex];
-                              return Container(
-                                width: 100.0,
-                                height: 100.0,
-                                decoration: BoxDecoration(
-                                  color: FlutterFlowTheme.of(context)
-                                      .secondaryBackground,
-                                  borderRadius: BorderRadius.circular(8.0),
-                                ),
-                                child: Align(
-                                  alignment: AlignmentDirectional(0.00, 0.00),
-                                  child: Stack(
-                                    children: [
-                                      Column(
-                                        mainAxisSize: MainAxisSize.max,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.center,
-                                        children: [
-                                          InkWell(
-                                            splashColor: Colors.transparent,
-                                            focusColor: Colors.transparent,
-                                            hoverColor: Colors.transparent,
-                                            highlightColor: Colors.transparent,
-                                            onTap: () async {
-                                              await Navigator.push(
-                                                context,
-                                                PageTransition(
-                                                  type: PageTransitionType.fade,
-                                                  child:
-                                                      FlutterFlowExpandedImageView(
-                                                    image: Image.network(
-                                                      carouselListProdukRecord
-                                                          .gambarProduk,
-                                                      fit: BoxFit.contain,
-                                                    ),
-                                                    allowRotation: true,
-                                                    tag:
-                                                        carouselListProdukRecord
-                                                            .gambarProduk,
-                                                    useHeroAnimation: true,
+                          ),
+                        );
+                      }
+                      List<ListProdukRecord> carouselListProdukRecordList =
+                          snapshot.data!;
+                      return Container(
+                        width: double.infinity,
+                        height: 180.0,
+                        child: CarouselSlider.builder(
+                          itemCount: carouselListProdukRecordList.length,
+                          itemBuilder: (context, carouselIndex, _) {
+                            final carouselListProdukRecord =
+                                carouselListProdukRecordList[carouselIndex];
+                            return Container(
+                              width: 100.0,
+                              height: 100.0,
+                              decoration: BoxDecoration(
+                                color: FlutterFlowTheme.of(context)
+                                    .secondaryBackground,
+                                borderRadius: BorderRadius.circular(8.0),
+                              ),
+                              child: Align(
+                                alignment: AlignmentDirectional(0.00, 0.00),
+                                child: Stack(
+                                  children: [
+                                    Column(
+                                      mainAxisSize: MainAxisSize.max,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
+                                      children: [
+                                        InkWell(
+                                          splashColor: Colors.transparent,
+                                          focusColor: Colors.transparent,
+                                          hoverColor: Colors.transparent,
+                                          highlightColor: Colors.transparent,
+                                          onTap: () async {
+                                            await Navigator.push(
+                                              context,
+                                              PageTransition(
+                                                type: PageTransitionType.fade,
+                                                child:
+                                                    FlutterFlowExpandedImageView(
+                                                  image: Image.network(
+                                                    carouselListProdukRecord
+                                                        .gambarProduk,
+                                                    fit: BoxFit.contain,
                                                   ),
-                                                ),
-                                              );
-                                            },
-                                            child: Hero(
-                                              tag: carouselListProdukRecord
-                                                  .gambarProduk,
-                                              transitionOnUserGestures: true,
-                                              child: ClipRRect(
-                                                borderRadius:
-                                                    BorderRadius.circular(8.0),
-                                                child: Image.network(
-                                                  carouselListProdukRecord
+                                                  allowRotation: true,
+                                                  tag: carouselListProdukRecord
                                                       .gambarProduk,
-                                                  width: 200.0,
-                                                  height: 200.0,
-                                                  fit: BoxFit.contain,
+                                                  useHeroAnimation: true,
                                                 ),
+                                              ),
+                                            );
+                                          },
+                                          child: Hero(
+                                            tag: carouselListProdukRecord
+                                                .gambarProduk,
+                                            transitionOnUserGestures: true,
+                                            child: ClipRRect(
+                                              borderRadius:
+                                                  BorderRadius.circular(8.0),
+                                              child: Image.network(
+                                                carouselListProdukRecord
+                                                    .gambarProduk,
+                                                width: 180.0,
+                                                height: 160.0,
+                                                fit: BoxFit.cover,
                                               ),
                                             ),
                                           ),
-                                        ],
-                                      ),
-                                    ],
-                                  ),
+                                        ),
+                                      ],
+                                    ),
+                                  ],
                                 ),
-                              );
-                            },
-                            carouselController: _model.carouselController ??=
-                                CarouselController(),
-                            options: CarouselOptions(
-                              initialPage: min(
-                                  1, carouselListProdukRecordList.length - 1),
-                              viewportFraction: 0.5,
-                              disableCenter: true,
-                              enlargeCenterPage: true,
-                              enlargeFactor: 0.25,
-                              enableInfiniteScroll: true,
-                              scrollDirection: Axis.horizontal,
-                              autoPlay: true,
-                              autoPlayAnimationDuration:
-                                  Duration(milliseconds: 1500),
-                              autoPlayInterval:
-                                  Duration(milliseconds: (1500 + 4000)),
-                              autoPlayCurve: Curves.linear,
-                              pauseAutoPlayInFiniteScroll: true,
-                              onPageChanged: (index, _) =>
-                                  _model.carouselCurrentIndex = index,
-                            ),
+                              ),
+                            );
+                          },
+                          carouselController: _model.carouselController ??=
+                              CarouselController(),
+                          options: CarouselOptions(
+                            initialPage:
+                                min(1, carouselListProdukRecordList.length - 1),
+                            viewportFraction: 0.5,
+                            disableCenter: true,
+                            enlargeCenterPage: true,
+                            enlargeFactor: 0.25,
+                            enableInfiniteScroll: true,
+                            scrollDirection: Axis.horizontal,
+                            autoPlay: true,
+                            autoPlayAnimationDuration:
+                                Duration(milliseconds: 1500),
+                            autoPlayInterval:
+                                Duration(milliseconds: (1500 + 4000)),
+                            autoPlayCurve: Curves.linear,
+                            pauseAutoPlayInFiniteScroll: true,
+                            onPageChanged: (index, _) =>
+                                _model.carouselCurrentIndex = index,
                           ),
-                        ).animateOnPageLoad(
-                            animationsMap['carouselOnPageLoadAnimation']!);
-                      },
-                    ),
-                  ).animateOnPageLoad(
-                      animationsMap['containerOnPageLoadAnimation1']!),
+                        ),
+                      ).animateOnPageLoad(
+                          animationsMap['carouselOnPageLoadAnimation']!);
+                    },
+                  ),
                 ),
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
@@ -612,7 +568,7 @@ class _ProduklistWidgetState extends State<ProduklistWidget>
                                             ),
                                           ),
                                         ).animateOnPageLoad(animationsMap[
-                                            'containerOnPageLoadAnimation2']!),
+                                            'containerOnPageLoadAnimation']!),
                                       );
                                     },
                                   );
