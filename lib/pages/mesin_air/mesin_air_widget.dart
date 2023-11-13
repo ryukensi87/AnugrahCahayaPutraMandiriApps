@@ -162,7 +162,7 @@ class _MesinAirWidgetState extends State<MesinAirWidget> {
                           EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
                       child: Container(
                         width: double.infinity,
-                        height: 400.0,
+                        height: 700.0,
                         decoration: BoxDecoration(
                           color:
                               FlutterFlowTheme.of(context).secondaryBackground,
