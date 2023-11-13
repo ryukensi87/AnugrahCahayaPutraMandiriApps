@@ -11,19 +11,19 @@ import 'package:flutter_animate/flutter_animate.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
-import 'mesin_r_o_model.dart';
-export 'mesin_r_o_model.dart';
+import 'mesin_a_m_d_k_model.dart';
+export 'mesin_a_m_d_k_model.dart';
 
-class MesinROWidget extends StatefulWidget {
-  const MesinROWidget({Key? key}) : super(key: key);
+class MesinAMDKWidget extends StatefulWidget {
+  const MesinAMDKWidget({Key? key}) : super(key: key);
 
   @override
-  _MesinROWidgetState createState() => _MesinROWidgetState();
+  _MesinAMDKWidgetState createState() => _MesinAMDKWidgetState();
 }
 
-class _MesinROWidgetState extends State<MesinROWidget>
+class _MesinAMDKWidgetState extends State<MesinAMDKWidget>
     with TickerProviderStateMixin {
-  late MesinROModel _model;
+  late MesinAMDKModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
@@ -52,7 +52,7 @@ class _MesinROWidgetState extends State<MesinROWidget>
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => MesinROModel());
+    _model = createModel(context, () => MesinAMDKModel());
 
     setupAnimations(
       animationsMap.values.where((anim) =>
@@ -171,7 +171,7 @@ class _MesinROWidgetState extends State<MesinROWidget>
                                 Align(
                                   alignment: AlignmentDirectional(0.00, 0.00),
                                   child: FutureBuilder<int>(
-                                    future: queryListMesinRecordCount(),
+                                    future: queryListMesinAmdkRecordCount(),
                                     builder: (context, snapshot) {
                                       // Customize what your widget looks like when it's loading.
                                       if (!snapshot.hasData) {
@@ -215,10 +215,10 @@ class _MesinROWidgetState extends State<MesinROWidget>
                   Padding(
                     padding:
                         EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 0.0),
-                    child: StreamBuilder<List<ListMesinRecord>>(
-                      stream: queryListMesinRecord(
-                        queryBuilder: (listMesinRecord) =>
-                            listMesinRecord.orderBy('nama_mesin'),
+                    child: StreamBuilder<List<ListMesinAmdkRecord>>(
+                      stream: queryListMesinAmdkRecord(
+                        queryBuilder: (listMesinAmdkRecord) =>
+                            listMesinAmdkRecord.orderBy('nama_mesin'),
                       ),
                       builder: (context, snapshot) {
                         // Customize what your widget looks like when it's loading.
@@ -235,16 +235,16 @@ class _MesinROWidgetState extends State<MesinROWidget>
                             ),
                           );
                         }
-                        List<ListMesinRecord> listViewListMesinRecordList =
-                            snapshot.data!;
+                        List<ListMesinAmdkRecord>
+                            listViewListMesinAmdkRecordList = snapshot.data!;
                         return ListView.builder(
                           padding: EdgeInsets.zero,
                           shrinkWrap: true,
                           scrollDirection: Axis.vertical,
-                          itemCount: listViewListMesinRecordList.length,
+                          itemCount: listViewListMesinAmdkRecordList.length,
                           itemBuilder: (context, listViewIndex) {
-                            final listViewListMesinRecord =
-                                listViewListMesinRecordList[listViewIndex];
+                            final listViewListMesinAmdkRecord =
+                                listViewListMesinAmdkRecordList[listViewIndex];
                             return SingleChildScrollView(
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
@@ -288,13 +288,13 @@ class _MesinROWidgetState extends State<MesinROWidget>
                                                     child:
                                                         FlutterFlowExpandedImageView(
                                                       image: Image.network(
-                                                        listViewListMesinRecord
+                                                        listViewListMesinAmdkRecord
                                                             .gambarMesin,
                                                         fit: BoxFit.contain,
                                                       ),
                                                       allowRotation: true,
                                                       tag:
-                                                          listViewListMesinRecord
+                                                          listViewListMesinAmdkRecord
                                                               .gambarMesin,
                                                       useHeroAnimation: true,
                                                     ),
@@ -302,7 +302,7 @@ class _MesinROWidgetState extends State<MesinROWidget>
                                                 );
                                               },
                                               child: Hero(
-                                                tag: listViewListMesinRecord
+                                                tag: listViewListMesinAmdkRecord
                                                     .gambarMesin,
                                                 transitionOnUserGestures: true,
                                                 child: ClipRRect(
@@ -310,7 +310,7 @@ class _MesinROWidgetState extends State<MesinROWidget>
                                                       BorderRadius.circular(
                                                           12.0),
                                                   child: Image.network(
-                                                    listViewListMesinRecord
+                                                    listViewListMesinAmdkRecord
                                                         .gambarMesin,
                                                     width: 120.0,
                                                     height: 120.0,
@@ -341,7 +341,7 @@ class _MesinROWidgetState extends State<MesinROWidget>
                                                                   0.0,
                                                                   4.0),
                                                       child: Text(
-                                                        listViewListMesinRecord
+                                                        listViewListMesinAmdkRecord
                                                             .namaMesin,
                                                         style:
                                                             FlutterFlowTheme.of(
@@ -350,7 +350,7 @@ class _MesinROWidgetState extends State<MesinROWidget>
                                                       ),
                                                     ),
                                                     Text(
-                                                      listViewListMesinRecord
+                                                      listViewListMesinAmdkRecord
                                                           .kapasitasMesin,
                                                       style:
                                                           FlutterFlowTheme.of(

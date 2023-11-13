@@ -787,6 +787,49 @@ class _MesinAirWidgetState extends State<MesinAirWidget> {
                                           ],
                                         ),
                                       ),
+                                      Padding(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                            0.0, 0.0, 0.0, 15.0),
+                                        child: Row(
+                                          mainAxisSize: MainAxisSize.max,
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.center,
+                                          children: [
+                                            FFButtonWidget(
+                                              onPressed: () async {
+                                                context.pushNamed('MesinAMDK');
+                                              },
+                                              text: 'Jenis AMDK',
+                                              options: FFButtonOptions(
+                                                height: 40.0,
+                                                padding: EdgeInsetsDirectional
+                                                    .fromSTEB(
+                                                        24.0, 0.0, 24.0, 0.0),
+                                                iconPadding:
+                                                    EdgeInsetsDirectional
+                                                        .fromSTEB(
+                                                            0.0, 0.0, 0.0, 0.0),
+                                                color: Color(0xFF0099FF),
+                                                textStyle:
+                                                    FlutterFlowTheme.of(context)
+                                                        .titleSmall
+                                                        .override(
+                                                          fontFamily:
+                                                              'Readex Pro',
+                                                          color: Colors.white,
+                                                        ),
+                                                elevation: 3.0,
+                                                borderSide: BorderSide(
+                                                  color: Colors.transparent,
+                                                  width: 1.0,
+                                                ),
+                                                borderRadius:
+                                                    BorderRadius.circular(8.0),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
                                     ],
                                   ),
                                 ),
@@ -1277,7 +1320,7 @@ class _MesinAirWidgetState extends State<MesinAirWidget> {
                                                         .secondaryBackground,
                                                   ),
                                                   child: Text(
-                                                    'Jika dijelaskan secara sederhana, reverse osmosis adalah teknologi yang menggunakan membran sebagai filter dan tekanan untuk mendorong cairan / air dari satu sisi ke sisi lainnya. Air yang menembus membran tersebut adalah air yang bersih dan sudah tersaring dari berbagai kontaminan',
+                                                    'Jika dijelaskan secara sederhana, Reverse Osmosis (RO) adalah teknologi yang menggunakan membran sebagai filter dan tekanan untuk mendorong cairan / air dari satu sisi ke sisi lainnya. Air yang menembus membran tersebut adalah air yang bersih dan sudah tersaring dari berbagai kontaminan',
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .bodyMedium,

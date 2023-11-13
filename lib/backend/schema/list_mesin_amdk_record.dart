@@ -8,8 +8,8 @@ import '/backend/schema/util/schema_util.dart';
 import 'index.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 
-class ListMesinRecord extends FirestoreRecord {
-  ListMesinRecord._(
+class ListMesinAmdkRecord extends FirestoreRecord {
+  ListMesinAmdkRecord._(
     DocumentReference reference,
     Map<String, dynamic> data,
   ) : super(reference, data) {
@@ -44,40 +44,40 @@ class ListMesinRecord extends FirestoreRecord {
   }
 
   static CollectionReference get collection =>
-      FirebaseFirestore.instance.collection('list_mesin');
+      FirebaseFirestore.instance.collection('list_mesin_amdk');
 
-  static Stream<ListMesinRecord> getDocument(DocumentReference ref) =>
-      ref.snapshots().map((s) => ListMesinRecord.fromSnapshot(s));
+  static Stream<ListMesinAmdkRecord> getDocument(DocumentReference ref) =>
+      ref.snapshots().map((s) => ListMesinAmdkRecord.fromSnapshot(s));
 
-  static Future<ListMesinRecord> getDocumentOnce(DocumentReference ref) =>
-      ref.get().then((s) => ListMesinRecord.fromSnapshot(s));
+  static Future<ListMesinAmdkRecord> getDocumentOnce(DocumentReference ref) =>
+      ref.get().then((s) => ListMesinAmdkRecord.fromSnapshot(s));
 
-  static ListMesinRecord fromSnapshot(DocumentSnapshot snapshot) =>
-      ListMesinRecord._(
+  static ListMesinAmdkRecord fromSnapshot(DocumentSnapshot snapshot) =>
+      ListMesinAmdkRecord._(
         snapshot.reference,
         mapFromFirestore(snapshot.data() as Map<String, dynamic>),
       );
 
-  static ListMesinRecord getDocumentFromData(
+  static ListMesinAmdkRecord getDocumentFromData(
     Map<String, dynamic> data,
     DocumentReference reference,
   ) =>
-      ListMesinRecord._(reference, mapFromFirestore(data));
+      ListMesinAmdkRecord._(reference, mapFromFirestore(data));
 
   @override
   String toString() =>
-      'ListMesinRecord(reference: ${reference.path}, data: $snapshotData)';
+      'ListMesinAmdkRecord(reference: ${reference.path}, data: $snapshotData)';
 
   @override
   int get hashCode => reference.path.hashCode;
 
   @override
   bool operator ==(other) =>
-      other is ListMesinRecord &&
+      other is ListMesinAmdkRecord &&
       reference.path.hashCode == other.reference.path.hashCode;
 }
 
-Map<String, dynamic> createListMesinRecordData({
+Map<String, dynamic> createListMesinAmdkRecordData({
   String? namaMesin,
   String? gambarMesin,
   String? kapasitasMesin,
@@ -95,11 +95,12 @@ Map<String, dynamic> createListMesinRecordData({
   return firestoreData;
 }
 
-class ListMesinRecordDocumentEquality implements Equality<ListMesinRecord> {
-  const ListMesinRecordDocumentEquality();
+class ListMesinAmdkRecordDocumentEquality
+    implements Equality<ListMesinAmdkRecord> {
+  const ListMesinAmdkRecordDocumentEquality();
 
   @override
-  bool equals(ListMesinRecord? e1, ListMesinRecord? e2) {
+  bool equals(ListMesinAmdkRecord? e1, ListMesinAmdkRecord? e2) {
     return e1?.namaMesin == e2?.namaMesin &&
         e1?.gambarMesin == e2?.gambarMesin &&
         e1?.kapasitasMesin == e2?.kapasitasMesin &&
@@ -107,9 +108,9 @@ class ListMesinRecordDocumentEquality implements Equality<ListMesinRecord> {
   }
 
   @override
-  int hash(ListMesinRecord? e) => const ListEquality()
+  int hash(ListMesinAmdkRecord? e) => const ListEquality()
       .hash([e?.namaMesin, e?.gambarMesin, e?.kapasitasMesin, e?.hargaMesin]);
 
   @override
-  bool isValidKey(Object? o) => o is ListMesinRecord;
+  bool isValidKey(Object? o) => o is ListMesinAmdkRecord;
 }

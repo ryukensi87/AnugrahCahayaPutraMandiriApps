@@ -160,12 +160,6 @@ class _ProduklistWidgetState extends State<ProduklistWidget>
             height: double.infinity,
             decoration: BoxDecoration(
               color: Color(0xFF0099FF),
-              image: DecorationImage(
-                fit: BoxFit.cover,
-                image: Image.asset(
-                  'assets/images/4797.jpg',
-                ).image,
-              ),
             ),
             child: Column(
               mainAxisSize: MainAxisSize.max,
@@ -371,7 +365,7 @@ class _ProduklistWidgetState extends State<ProduklistWidget>
                   padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
                   child: Container(
                     width: double.infinity,
-                    height: 350.0,
+                    height: 400.0,
                     decoration: BoxDecoration(
                       color: FlutterFlowTheme.of(context).secondaryBackground,
                       borderRadius: BorderRadius.only(

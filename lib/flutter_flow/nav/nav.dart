@@ -111,6 +111,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'Produklist',
           path: '/produklist',
           builder: (context, params) => ProduklistWidget(),
+        ),
+        FFRoute(
+          name: 'MesinAMDK',
+          path: '/mesinAMDK',
+          builder: (context, params) => MesinAMDKWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

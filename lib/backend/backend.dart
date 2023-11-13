@@ -7,6 +7,7 @@ import 'schema/util/firestore_util.dart';
 
 import 'schema/list_produk_record.dart';
 import 'schema/list_mesin_record.dart';
+import 'schema/list_mesin_amdk_record.dart';
 
 export 'dart:async' show StreamSubscription;
 export 'package:cloud_firestore/cloud_firestore.dart';
@@ -16,6 +17,7 @@ export 'schema/util/schema_util.dart';
 
 export 'schema/list_produk_record.dart';
 export 'schema/list_mesin_record.dart';
+export 'schema/list_mesin_amdk_record.dart';
 
 /// Functions to query ListProdukRecords (as a Stream and as a Future).
 Future<int> queryListProdukRecordCount({
@@ -86,6 +88,43 @@ Future<List<ListMesinRecord>> queryListMesinRecordOnce({
     queryCollectionOnce(
       ListMesinRecord.collection,
       ListMesinRecord.fromSnapshot,
+      queryBuilder: queryBuilder,
+      limit: limit,
+      singleRecord: singleRecord,
+    );
+
+/// Functions to query ListMesinAmdkRecords (as a Stream and as a Future).
+Future<int> queryListMesinAmdkRecordCount({
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+}) =>
+    queryCollectionCount(
+      ListMesinAmdkRecord.collection,
+      queryBuilder: queryBuilder,
+      limit: limit,
+    );
+
+Stream<List<ListMesinAmdkRecord>> queryListMesinAmdkRecord({
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+  bool singleRecord = false,
+}) =>
+    queryCollection(
+      ListMesinAmdkRecord.collection,
+      ListMesinAmdkRecord.fromSnapshot,
+      queryBuilder: queryBuilder,
+      limit: limit,
+      singleRecord: singleRecord,
+    );
+
+Future<List<ListMesinAmdkRecord>> queryListMesinAmdkRecordOnce({
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+  bool singleRecord = false,
+}) =>
+    queryCollectionOnce(
+      ListMesinAmdkRecord.collection,
+      ListMesinAmdkRecord.fromSnapshot,
       queryBuilder: queryBuilder,
       limit: limit,
       singleRecord: singleRecord,
