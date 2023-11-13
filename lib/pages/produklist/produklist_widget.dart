@@ -585,7 +585,7 @@ class _ProduklistWidgetState extends State<ProduklistWidget>
                   ),
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(16.0, 20.0, 16.0, 5.0),
+                        EdgeInsetsDirectional.fromSTEB(16.0, 10.0, 16.0, 10.0),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
