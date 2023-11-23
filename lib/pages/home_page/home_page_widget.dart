@@ -579,7 +579,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                               hoverColor: Colors.transparent,
                               highlightColor: Colors.transparent,
                               onTap: () async {
-                                context.pushNamed('ProduklistCopy');
+                                context.pushNamed('Produklist');
                               },
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
@@ -597,7 +597,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                       size: 24.0,
                                     ),
                                     onPressed: () async {
-                                      context.pushNamed('ProduklistCopy');
+                                      context.pushNamed('Produklist');
                                     },
                                   ),
                                   Padding(
@@ -612,34 +612,43 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                 ],
                               ),
                             ),
-                            Column(
-                              mainAxisSize: MainAxisSize.max,
-                              children: [
-                                FlutterFlowIconButton(
-                                  borderColor: Color(0x004B39EF),
-                                  borderRadius: 20.0,
-                                  buttonSize: 40.0,
-                                  fillColor: Color(0x004B39EF),
-                                  icon: Icon(
-                                    Icons.description,
-                                    color: FlutterFlowTheme.of(context)
-                                        .primaryText,
-                                    size: 24.0,
+                            InkWell(
+                              splashColor: Colors.transparent,
+                              focusColor: Colors.transparent,
+                              hoverColor: Colors.transparent,
+                              highlightColor: Colors.transparent,
+                              onTap: () async {
+                                context.pushNamed('PemasanganDepot');
+                              },
+                              child: Column(
+                                mainAxisSize: MainAxisSize.max,
+                                children: [
+                                  FlutterFlowIconButton(
+                                    borderColor: Color(0x004B39EF),
+                                    borderRadius: 20.0,
+                                    buttonSize: 40.0,
+                                    fillColor: Color(0x004B39EF),
+                                    icon: Icon(
+                                      Icons.description,
+                                      color: FlutterFlowTheme.of(context)
+                                          .primaryText,
+                                      size: 24.0,
+                                    ),
+                                    onPressed: () async {
+                                      context.pushNamed('PemasanganDepot');
+                                    },
                                   ),
-                                  onPressed: () async {
-                                    context.pushNamed('PemasanganDepot');
-                                  },
-                                ),
-                                Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      0.0, 5.0, 0.0, 0.0),
-                                  child: Text(
-                                    'Depot',
-                                    style:
-                                        FlutterFlowTheme.of(context).bodyMedium,
+                                  Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        0.0, 5.0, 0.0, 0.0),
+                                    child: Text(
+                                      'Depot',
+                                      style: FlutterFlowTheme.of(context)
+                                          .bodyMedium,
+                                    ),
                                   ),
-                                ),
-                              ],
+                                ],
+                              ),
                             ),
                             InkWell(
                               splashColor: Colors.transparent,
