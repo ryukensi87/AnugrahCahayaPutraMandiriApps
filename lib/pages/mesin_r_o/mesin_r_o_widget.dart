@@ -1,13 +1,11 @@
 import '/backend/backend.dart';
-import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_expanded_image_view.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_animate/flutter_animate.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
@@ -21,45 +19,15 @@ class MesinROWidget extends StatefulWidget {
   _MesinROWidgetState createState() => _MesinROWidgetState();
 }
 
-class _MesinROWidgetState extends State<MesinROWidget>
-    with TickerProviderStateMixin {
+class _MesinROWidgetState extends State<MesinROWidget> {
   late MesinROModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
-
-  final animationsMap = {
-    'containerOnPageLoadAnimation': AnimationInfo(
-      trigger: AnimationTrigger.onPageLoad,
-      effects: [
-        FadeEffect(
-          curve: Curves.easeInOut,
-          delay: 0.ms,
-          duration: 600.ms,
-          begin: 0.0,
-          end: 1.0,
-        ),
-        MoveEffect(
-          curve: Curves.easeInOut,
-          delay: 0.ms,
-          duration: 600.ms,
-          begin: Offset(0.0, 50.0),
-          end: Offset(0.0, 0.0),
-        ),
-      ],
-    ),
-  };
 
   @override
   void initState() {
     super.initState();
     _model = createModel(context, () => MesinROModel());
-
-    setupAnimations(
-      animationsMap.values.where((anim) =>
-          anim.trigger == AnimationTrigger.onActionTrigger ||
-          !anim.applyInitialState),
-      this,
-    );
 
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
@@ -214,200 +182,196 @@ class _MesinROWidgetState extends State<MesinROWidget>
                   ),
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
-                    child: Container(
-                      width: double.infinity,
-                      height: 700.0,
-                      decoration: BoxDecoration(
-                        color: FlutterFlowTheme.of(context).secondaryBackground,
-                      ),
-                      child: Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
-                            10.0, 10.0, 10.0, 10.0),
-                        child: SingleChildScrollView(
-                          child: Column(
-                            mainAxisSize: MainAxisSize.max,
-                            children: [
-                              Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
-                                    10.0, 0.0, 10.0, 0.0),
-                                child: StreamBuilder<List<ListMesinRecord>>(
-                                  stream: queryListMesinRecord(
-                                    queryBuilder: (listMesinRecord) =>
-                                        listMesinRecord.orderBy('nama_mesin'),
-                                  ),
-                                  builder: (context, snapshot) {
-                                    // Customize what your widget looks like when it's loading.
-                                    if (!snapshot.hasData) {
-                                      return Center(
-                                        child: SizedBox(
-                                          width: 50.0,
-                                          height: 50.0,
-                                          child: CircularProgressIndicator(
-                                            valueColor:
-                                                AlwaysStoppedAnimation<Color>(
-                                              FlutterFlowTheme.of(context)
-                                                  .primary,
+                        EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 20.0),
+                    child: StreamBuilder<List<ListMesinRecord>>(
+                      stream: queryListMesinRecord(),
+                      builder: (context, snapshot) {
+                        // Customize what your widget looks like when it's loading.
+                        if (!snapshot.hasData) {
+                          return Center(
+                            child: SizedBox(
+                              width: 50.0,
+                              height: 50.0,
+                              child: CircularProgressIndicator(
+                                valueColor: AlwaysStoppedAnimation<Color>(
+                                  FlutterFlowTheme.of(context).primary,
+                                ),
+                              ),
+                            ),
+                          );
+                        }
+                        List<ListMesinRecord> carouselListMesinRecordList =
+                            snapshot.data!;
+                        return Container(
+                          width: double.infinity,
+                          height: 320.0,
+                          child: CarouselSlider.builder(
+                            itemCount: carouselListMesinRecordList.length,
+                            itemBuilder: (context, carouselIndex, _) {
+                              final carouselListMesinRecord =
+                                  carouselListMesinRecordList[carouselIndex];
+                              return Container(
+                                width: 300.0,
+                                height: 100.0,
+                                decoration: BoxDecoration(
+                                  color: FlutterFlowTheme.of(context)
+                                      .secondaryBackground,
+                                  borderRadius: BorderRadius.circular(30.0),
+                                ),
+                                child: Column(
+                                  mainAxisSize: MainAxisSize.max,
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: [
+                                    Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          10.0, 10.0, 10.0, 10.0),
+                                      child: InkWell(
+                                        splashColor: Colors.transparent,
+                                        focusColor: Colors.transparent,
+                                        hoverColor: Colors.transparent,
+                                        highlightColor: Colors.transparent,
+                                        onTap: () async {
+                                          await Navigator.push(
+                                            context,
+                                            PageTransition(
+                                              type: PageTransitionType.fade,
+                                              child:
+                                                  FlutterFlowExpandedImageView(
+                                                image: Image.network(
+                                                  carouselListMesinRecord
+                                                      .gambarMesin,
+                                                  fit: BoxFit.contain,
+                                                ),
+                                                allowRotation: true,
+                                                tag: carouselListMesinRecord
+                                                    .gambarMesin,
+                                                useHeroAnimation: true,
+                                              ),
+                                            ),
+                                          );
+                                        },
+                                        child: Hero(
+                                          tag: carouselListMesinRecord
+                                              .gambarMesin,
+                                          transitionOnUserGestures: true,
+                                          child: ClipRRect(
+                                            borderRadius: BorderRadius.only(
+                                              bottomLeft: Radius.circular(0.0),
+                                              bottomRight: Radius.circular(0.0),
+                                              topLeft: Radius.circular(15.0),
+                                              topRight: Radius.circular(15.0),
+                                            ),
+                                            child: Image.network(
+                                              carouselListMesinRecord
+                                                  .gambarMesin,
+                                              width: 200.0,
+                                              height: 200.0,
+                                              fit: BoxFit.cover,
                                             ),
                                           ),
                                         ),
-                                      );
-                                    }
-                                    List<ListMesinRecord>
-                                        listViewListMesinRecordList =
-                                        snapshot.data!;
-                                    return ListView.builder(
-                                      padding: EdgeInsets.zero,
-                                      shrinkWrap: true,
-                                      scrollDirection: Axis.vertical,
-                                      itemCount:
-                                          listViewListMesinRecordList.length,
-                                      itemBuilder: (context, listViewIndex) {
-                                        final listViewListMesinRecord =
-                                            listViewListMesinRecordList[
-                                                listViewIndex];
-                                        return Padding(
-                                          padding:
-                                              EdgeInsetsDirectional.fromSTEB(
-                                                  4.0, 12.0, 4.0, 0.0),
-                                          child: Container(
-                                            width: double.infinity,
-                                            decoration: BoxDecoration(
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .secondaryBackground,
-                                              boxShadow: [
-                                                BoxShadow(
-                                                  blurRadius: 2.0,
-                                                  color: Color(0x520E151B),
-                                                  offset: Offset(0.0, 1.0),
-                                                )
-                                              ],
-                                              borderRadius:
-                                                  BorderRadius.circular(12.0),
-                                            ),
-                                            child: Padding(
+                                      ),
+                                    ),
+                                    Row(
+                                      mainAxisSize: MainAxisSize.max,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        Text(
+                                          carouselListMesinRecord.namaMesin,
+                                          textAlign: TextAlign.start,
+                                          style: FlutterFlowTheme.of(context)
+                                              .bodyMedium
+                                              .override(
+                                                fontFamily: 'Readex Pro',
+                                                fontSize: 14.0,
+                                                fontWeight: FontWeight.bold,
+                                              ),
+                                        ),
+                                      ],
+                                    ),
+                                    Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          5.0, 10.0, 5.0, 0.0),
+                                      child: Text(
+                                        'Kapasitas Mesin :',
+                                        textAlign: TextAlign.start,
+                                        style: FlutterFlowTheme.of(context)
+                                            .bodyMedium,
+                                      ),
+                                    ),
+                                    Expanded(
+                                      child: Padding(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                            0.0, 5.0, 0.0, 0.0),
+                                        child: Row(
+                                          mainAxisSize: MainAxisSize.max,
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.center,
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: [
+                                            Padding(
                                               padding: EdgeInsetsDirectional
-                                                  .fromSTEB(
-                                                      0.0, 0.0, 16.0, 0.0),
-                                              child: Row(
-                                                mainAxisSize: MainAxisSize.max,
-                                                children: [
-                                                  InkWell(
-                                                    splashColor:
-                                                        Colors.transparent,
-                                                    focusColor:
-                                                        Colors.transparent,
-                                                    hoverColor:
-                                                        Colors.transparent,
-                                                    highlightColor:
-                                                        Colors.transparent,
-                                                    onTap: () async {
-                                                      await Navigator.push(
-                                                        context,
-                                                        PageTransition(
-                                                          type:
-                                                              PageTransitionType
-                                                                  .fade,
-                                                          child:
-                                                              FlutterFlowExpandedImageView(
-                                                            image:
-                                                                Image.network(
-                                                              listViewListMesinRecord
-                                                                  .gambarMesin,
-                                                              fit: BoxFit
-                                                                  .contain,
-                                                            ),
-                                                            allowRotation: true,
-                                                            tag: listViewListMesinRecord
-                                                                .gambarMesin,
-                                                            useHeroAnimation:
-                                                                true,
-                                                          ),
+                                                  .fromSTEB(5.0, 0.0, 5.0, 0.0),
+                                              child: Container(
+                                                decoration: BoxDecoration(
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .secondaryBackground,
+                                                ),
+                                                child: Padding(
+                                                  padding: EdgeInsetsDirectional
+                                                      .fromSTEB(
+                                                          10.0, 0.0, 10.0, 0.0),
+                                                  child: Text(
+                                                    carouselListMesinRecord
+                                                        .kapasitasMesin,
+                                                    textAlign: TextAlign.center,
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
+                                                        .bodyMedium
+                                                        .override(
+                                                          fontFamily:
+                                                              'Readex Pro',
+                                                          fontSize: 12.0,
                                                         ),
-                                                      );
-                                                    },
-                                                    child: Hero(
-                                                      tag:
-                                                          listViewListMesinRecord
-                                                              .gambarMesin,
-                                                      transitionOnUserGestures:
-                                                          true,
-                                                      child: ClipRRect(
-                                                        borderRadius:
-                                                            BorderRadius
-                                                                .circular(12.0),
-                                                        child: Image.network(
-                                                          listViewListMesinRecord
-                                                              .gambarMesin,
-                                                          width: 120.0,
-                                                          height: 120.0,
-                                                          fit: BoxFit.cover,
-                                                        ),
-                                                      ),
-                                                    ),
                                                   ),
-                                                  Expanded(
-                                                    child: Padding(
-                                                      padding:
-                                                          EdgeInsetsDirectional
-                                                              .fromSTEB(
-                                                                  16.0,
-                                                                  0.0,
-                                                                  16.0,
-                                                                  0.0),
-                                                      child: Column(
-                                                        mainAxisSize:
-                                                            MainAxisSize.max,
-                                                        mainAxisAlignment:
-                                                            MainAxisAlignment
-                                                                .center,
-                                                        crossAxisAlignment:
-                                                            CrossAxisAlignment
-                                                                .start,
-                                                        children: [
-                                                          Padding(
-                                                            padding:
-                                                                EdgeInsetsDirectional
-                                                                    .fromSTEB(
-                                                                        0.0,
-                                                                        0.0,
-                                                                        0.0,
-                                                                        4.0),
-                                                            child: Text(
-                                                              listViewListMesinRecord
-                                                                  .namaMesin,
-                                                              style: FlutterFlowTheme
-                                                                      .of(context)
-                                                                  .titleLarge,
-                                                            ),
-                                                          ),
-                                                          Text(
-                                                            listViewListMesinRecord
-                                                                .kapasitasMesin,
-                                                            style: FlutterFlowTheme
-                                                                    .of(context)
-                                                                .bodyMedium,
-                                                          ),
-                                                        ],
-                                                      ),
-                                                    ),
-                                                  ),
-                                                ],
+                                                ),
                                               ),
                                             ),
-                                          ).animateOnPageLoad(animationsMap[
-                                              'containerOnPageLoadAnimation']!),
-                                        );
-                                      },
-                                    );
-                                  },
+                                          ],
+                                        ),
+                                      ),
+                                    ),
+                                  ],
                                 ),
-                              ),
-                            ],
+                              );
+                            },
+                            carouselController: _model.carouselController ??=
+                                CarouselController(),
+                            options: CarouselOptions(
+                              initialPage: min(
+                                  1, carouselListMesinRecordList.length - 1),
+                              viewportFraction: 0.5,
+                              disableCenter: true,
+                              enlargeCenterPage: true,
+                              enlargeFactor: 0.25,
+                              enableInfiniteScroll: true,
+                              scrollDirection: Axis.horizontal,
+                              autoPlay: true,
+                              autoPlayAnimationDuration:
+                                  Duration(milliseconds: 1000),
+                              autoPlayInterval:
+                                  Duration(milliseconds: (1000 + 4000)),
+                              autoPlayCurve: Curves.linear,
+                              pauseAutoPlayInFiniteScroll: true,
+                              onPageChanged: (index, _) =>
+                                  _model.carouselCurrentIndex = index,
+                            ),
                           ),
-                        ),
-                      ),
+                        );
+                      },
                     ),
                   ),
                 ],

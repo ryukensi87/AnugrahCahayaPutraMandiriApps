@@ -579,7 +579,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                               hoverColor: Colors.transparent,
                               highlightColor: Colors.transparent,
                               onTap: () async {
-                                context.pushNamed('Produklist');
+                                context.pushNamed('ProduklistCopy');
                               },
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
@@ -597,7 +597,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                       size: 24.0,
                                     ),
                                     onPressed: () async {
-                                      context.pushNamed('Produklist');
+                                      context.pushNamed('ProduklistCopy');
                                     },
                                   ),
                                   Padding(

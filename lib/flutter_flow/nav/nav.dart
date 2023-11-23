@@ -98,11 +98,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => MesinAirWidget(),
         ),
         FFRoute(
-          name: 'MesinRO',
-          path: '/mesinRO',
-          builder: (context, params) => MesinROWidget(),
-        ),
-        FFRoute(
           name: 'PemasanganDepot',
           path: '/pemasanganDepot',
           builder: (context, params) => PemasanganDepotWidget(),
@@ -113,9 +108,19 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => ProduklistWidget(),
         ),
         FFRoute(
+          name: 'MesinRO',
+          path: '/mesinRO',
+          builder: (context, params) => MesinROWidget(),
+        ),
+        FFRoute(
           name: 'MesinAMDK',
           path: '/mesinAMDK',
           builder: (context, params) => MesinAMDKWidget(),
+        ),
+        FFRoute(
+          name: 'ProduklistCopy',
+          path: '/produklistCopy',
+          builder: (context, params) => ProduklistCopyWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

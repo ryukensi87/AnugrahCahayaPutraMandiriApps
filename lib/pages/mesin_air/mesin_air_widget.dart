@@ -797,7 +797,18 @@ class _MesinAirWidgetState extends State<MesinAirWidget> {
                                           children: [
                                             FFButtonWidget(
                                               onPressed: () async {
-                                                context.pushNamed('MesinAMDK');
+                                                context.pushNamed(
+                                                  'MesinAMDK',
+                                                  extra: <String, dynamic>{
+                                                    kTransitionInfoKey:
+                                                        TransitionInfo(
+                                                      hasTransition: true,
+                                                      transitionType:
+                                                          PageTransitionType
+                                                              .bottomToTop,
+                                                    ),
+                                                  },
+                                                );
                                               },
                                               text: 'Jenis AMDK',
                                               options: FFButtonOptions(
@@ -1341,7 +1352,18 @@ class _MesinAirWidgetState extends State<MesinAirWidget> {
                                           children: [
                                             FFButtonWidget(
                                               onPressed: () async {
-                                                context.pushNamed('MesinRO');
+                                                context.pushNamed(
+                                                  'MesinRO',
+                                                  extra: <String, dynamic>{
+                                                    kTransitionInfoKey:
+                                                        TransitionInfo(
+                                                      hasTransition: true,
+                                                      transitionType:
+                                                          PageTransitionType
+                                                              .bottomToTop,
+                                                    ),
+                                                  },
+                                                );
                                               },
                                               text: 'Jenis Mesin RO',
                                               options: FFButtonOptions(
