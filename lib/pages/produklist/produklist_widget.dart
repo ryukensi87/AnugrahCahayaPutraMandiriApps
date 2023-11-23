@@ -265,7 +265,7 @@ class _ProduklistWidgetState extends State<ProduklistWidget>
                                         borderRadius:
                                             BorderRadius.circular(8.0),
                                         child: Image.network(
-                                          'https://picsum.photos/seed/532/600',
+                                          carouselListProdukRecord.gambarProduk,
                                           width: 300.0,
                                           height: 200.0,
                                           fit: BoxFit.cover,
