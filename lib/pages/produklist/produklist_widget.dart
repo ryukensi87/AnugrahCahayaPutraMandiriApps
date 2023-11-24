@@ -395,7 +395,7 @@ class _ProduklistWidgetState extends State<ProduklistWidget>
                           onPressed: () async {
                             await launchUrl(Uri(
                               scheme: 'tel',
-                              path: '082123852228',
+                              path: '87874094964',
                             ));
                           },
                           text: 'Pesan Sekarang',
@@ -434,14 +434,14 @@ class _ProduklistWidgetState extends State<ProduklistWidget>
                             onPressed: () async {
                               if (isiOS) {
                                 await launchUrl(Uri.parse(
-                                    "sms:${'https://wa.me/+6282123852228'}&body=${Uri.encodeComponent('Halo, Saya ${loggedIn.toString()} apakah barang yang dijual ini ready?')}"));
+                                    "sms:${'https://wa.me/+6287874094964'}&body=${Uri.encodeComponent('Halo, Saya ${loggedIn.toString()} apakah barang yang dijual ready?')}"));
                               } else {
                                 await launchUrl(Uri(
                                   scheme: 'sms',
-                                  path: 'https://wa.me/+6282123852228',
+                                  path: 'https://wa.me/+6287874094964',
                                   queryParameters: <String, String>{
                                     'body':
-                                        'Halo, Saya ${loggedIn.toString()} apakah barang yang dijual ini ready?',
+                                        'Halo, Saya ${loggedIn.toString()} apakah barang yang dijual ready?',
                                   },
                                 ));
                               }
