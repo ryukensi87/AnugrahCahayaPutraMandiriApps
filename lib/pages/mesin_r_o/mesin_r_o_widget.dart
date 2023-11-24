@@ -1,3 +1,4 @@
+import '/auth/base_auth_user_provider.dart';
 import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_expanded_image_view.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
@@ -9,6 +10,7 @@ import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'mesin_r_o_model.dart';
 export 'mesin_r_o_model.dart';
 
@@ -59,6 +61,67 @@ class _MesinROWidgetState extends State<MesinROWidget> {
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: Color(0xFF0099FF),
+        floatingActionButton: FloatingActionButton.extended(
+          onPressed: () {
+            print('FloatingActionButton pressed ...');
+          },
+          backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
+          elevation: 8.0,
+          label: Row(
+            mainAxisSize: MainAxisSize.max,
+            children: [
+              Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
+                child: InkWell(
+                  splashColor: Colors.transparent,
+                  focusColor: Colors.transparent,
+                  hoverColor: Colors.transparent,
+                  highlightColor: Colors.transparent,
+                  onTap: () async {
+                    await launchUrl(Uri(
+                      scheme: 'tel',
+                      path: 'https://wa.me/+6287874094964',
+                    ));
+                  },
+                  child: Icon(
+                    Icons.call,
+                    color: FlutterFlowTheme.of(context).primaryText,
+                    size: 24.0,
+                  ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
+                child: InkWell(
+                  splashColor: Colors.transparent,
+                  focusColor: Colors.transparent,
+                  hoverColor: Colors.transparent,
+                  highlightColor: Colors.transparent,
+                  onTap: () async {
+                    if (isiOS) {
+                      await launchUrl(Uri.parse(
+                          "sms:${'https://wa.me/+6287874094964'}&body=${Uri.encodeComponent('Halo, Saya ${loggedIn.toString()} apakah barang yang dijual ready?')}"));
+                    } else {
+                      await launchUrl(Uri(
+                        scheme: 'sms',
+                        path: 'https://wa.me/+6287874094964',
+                        queryParameters: <String, String>{
+                          'body':
+                              'Halo, Saya ${loggedIn.toString()} apakah barang yang dijual ready?',
+                        },
+                      ));
+                    }
+                  },
+                  child: Icon(
+                    Icons.chat,
+                    color: FlutterFlowTheme.of(context).secondaryText,
+                    size: 24.0,
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
         appBar: AppBar(
           backgroundColor: Color(0xFF0099FF),
           automaticallyImplyLeading: false,

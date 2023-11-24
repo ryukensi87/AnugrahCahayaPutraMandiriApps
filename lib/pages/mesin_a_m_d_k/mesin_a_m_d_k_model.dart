@@ -1,3 +1,4 @@
+import '/auth/base_auth_user_provider.dart';
 import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_expanded_image_view.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
@@ -10,6 +11,7 @@ import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class MesinAMDKModel extends FlutterFlowModel<MesinAMDKWidget> {
   ///  State fields for stateful widgets in this page.
