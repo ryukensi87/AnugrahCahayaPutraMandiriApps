@@ -1,4 +1,5 @@
 import '/auth/base_auth_user_provider.dart';
+import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_expanded_image_view.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
@@ -9,7 +10,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
@@ -31,45 +31,7 @@ class _PemasanganDepotWidgetState extends State<PemasanganDepotWidget>
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   final animationsMap = {
-    'textOnPageLoadAnimation1': AnimationInfo(
-      trigger: AnimationTrigger.onPageLoad,
-      effects: [
-        FadeEffect(
-          curve: Curves.easeInOut,
-          delay: 0.ms,
-          duration: 600.ms,
-          begin: 0.0,
-          end: 1.0,
-        ),
-        MoveEffect(
-          curve: Curves.easeInOut,
-          delay: 0.ms,
-          duration: 600.ms,
-          begin: Offset(30.0, 0.0),
-          end: Offset(0.0, 0.0),
-        ),
-      ],
-    ),
-    'textOnPageLoadAnimation2': AnimationInfo(
-      trigger: AnimationTrigger.onPageLoad,
-      effects: [
-        FadeEffect(
-          curve: Curves.easeInOut,
-          delay: 0.ms,
-          duration: 600.ms,
-          begin: 0.0,
-          end: 1.0,
-        ),
-        MoveEffect(
-          curve: Curves.easeInOut,
-          delay: 0.ms,
-          duration: 600.ms,
-          begin: Offset(30.0, 0.0),
-          end: Offset(0.0, 0.0),
-        ),
-      ],
-    ),
-    'textOnPageLoadAnimation3': AnimationInfo(
+    'textOnPageLoadAnimation': AnimationInfo(
       trigger: AnimationTrigger.onPageLoad,
       effects: [
         FadeEffect(
@@ -246,7 +208,7 @@ class _PemasanganDepotWidgetState extends State<PemasanganDepotWidget>
               ),
             ),
             child: Align(
-              alignment: AlignmentDirectional(0.00, 0.00),
+              alignment: AlignmentDirectional(0.0, 0.0),
               child: SingleChildScrollView(
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
@@ -267,8 +229,7 @@ class _PemasanganDepotWidgetState extends State<PemasanganDepotWidget>
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(
-                          15.0, 15.0, 15.0, 15.0),
+                      padding: EdgeInsets.all(15.0),
                       child: Container(
                         width: double.infinity,
                         decoration: BoxDecoration(
@@ -305,8 +266,7 @@ class _PemasanganDepotWidgetState extends State<PemasanganDepotWidget>
                               borderRadius: BorderRadius.circular(13.0),
                             ),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  5.0, 5.0, 5.0, 5.0),
+                              padding: EdgeInsets.all(5.0),
                               child: InkWell(
                                 splashColor: Colors.transparent,
                                 focusColor: Colors.transparent,
@@ -354,8 +314,7 @@ class _PemasanganDepotWidgetState extends State<PemasanganDepotWidget>
                               borderRadius: BorderRadius.circular(10.0),
                             ),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  5.0, 5.0, 5.0, 5.0),
+                              padding: EdgeInsets.all(5.0),
                               child: InkWell(
                                 splashColor: Colors.transparent,
                                 focusColor: Colors.transparent,
@@ -403,8 +362,7 @@ class _PemasanganDepotWidgetState extends State<PemasanganDepotWidget>
                               borderRadius: BorderRadius.circular(10.0),
                             ),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  5.0, 5.0, 5.0, 5.0),
+                              padding: EdgeInsets.all(5.0),
                               child: InkWell(
                                 splashColor: Colors.transparent,
                                 focusColor: Colors.transparent,
@@ -452,8 +410,7 @@ class _PemasanganDepotWidgetState extends State<PemasanganDepotWidget>
                               borderRadius: BorderRadius.circular(10.0),
                             ),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  5.0, 5.0, 5.0, 5.0),
+                              padding: EdgeInsets.all(5.0),
                               child: InkWell(
                                 splashColor: Colors.transparent,
                                 focusColor: Colors.transparent,
@@ -501,8 +458,7 @@ class _PemasanganDepotWidgetState extends State<PemasanganDepotWidget>
                               borderRadius: BorderRadius.circular(10.0),
                             ),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  5.0, 5.0, 5.0, 5.0),
+                              padding: EdgeInsets.all(5.0),
                               child: InkWell(
                                 splashColor: Colors.transparent,
                                 focusColor: Colors.transparent,
@@ -550,8 +506,7 @@ class _PemasanganDepotWidgetState extends State<PemasanganDepotWidget>
                               borderRadius: BorderRadius.circular(10.0),
                             ),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  5.0, 5.0, 5.0, 5.0),
+                              padding: EdgeInsets.all(5.0),
                               child: InkWell(
                                 splashColor: Colors.transparent,
                                 focusColor: Colors.transparent,
@@ -591,7 +546,7 @@ class _PemasanganDepotWidgetState extends State<PemasanganDepotWidget>
                             ),
                           ),
                         ],
-                        carouselController: _model.carouselController1 ??=
+                        carouselController: _model.carouselController ??=
                             CarouselController(),
                         options: CarouselOptions(
                           initialPage: 1,
@@ -603,7 +558,7 @@ class _PemasanganDepotWidgetState extends State<PemasanganDepotWidget>
                           scrollDirection: Axis.horizontal,
                           autoPlay: false,
                           onPageChanged: (index, _) =>
-                              _model.carouselCurrentIndex1 = index,
+                              _model.carouselCurrentIndex = index,
                         ),
                       ),
                     ),
@@ -618,10 +573,11 @@ class _PemasanganDepotWidgetState extends State<PemasanganDepotWidget>
                         ),
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Padding(
                               padding: EdgeInsetsDirectional.fromSTEB(
-                                  10.0, 5.0, 5.0, 5.0),
+                                  10.0, 5.0, 10.0, 5.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
                                 mainAxisAlignment:
@@ -638,374 +594,138 @@ class _PemasanganDepotWidgetState extends State<PemasanganDepotWidget>
                                           fontWeight: FontWeight.w600,
                                         ),
                                   ).animateOnPageLoad(animationsMap[
-                                      'textOnPageLoadAnimation1']!),
+                                      'textOnPageLoadAnimation']!),
                                 ],
                               ),
                             ),
                             Padding(
                               padding: EdgeInsetsDirectional.fromSTEB(
-                                  0.0, 10.0, 0.0, 10.0),
-                              child: SingleChildScrollView(
-                                scrollDirection: Axis.horizontal,
-                                child: Row(
-                                  mainAxisSize: MainAxisSize.max,
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Container(
-                                      width: 350.0,
-                                      height: 350.0,
-                                      decoration: BoxDecoration(
-                                        color: FlutterFlowTheme.of(context)
-                                            .secondaryBackground,
-                                        borderRadius:
-                                            BorderRadius.circular(30.0),
-                                      ),
-                                      child: Column(
-                                        mainAxisSize: MainAxisSize.max,
-                                        children: [
-                                          Padding(
-                                            padding:
-                                                EdgeInsetsDirectional.fromSTEB(
-                                                    10.0, 20.0, 10.0, 10.0),
-                                            child: Container(
-                                              width: double.infinity,
-                                              height: 180.0,
-                                              child: CarouselSlider(
-                                                items: [
-                                                  InkWell(
-                                                    splashColor:
-                                                        Colors.transparent,
-                                                    focusColor:
-                                                        Colors.transparent,
-                                                    hoverColor:
-                                                        Colors.transparent,
-                                                    highlightColor:
-                                                        Colors.transparent,
-                                                    onTap: () async {
-                                                      await Navigator.push(
-                                                        context,
-                                                        PageTransition(
-                                                          type:
-                                                              PageTransitionType
-                                                                  .fade,
-                                                          child:
-                                                              FlutterFlowExpandedImageView(
-                                                            image: Image.asset(
-                                                              'assets/images/WhatsApp_Image_2023-11-16_at_15.31.51.jpeg',
-                                                              fit: BoxFit
-                                                                  .contain,
-                                                            ),
-                                                            allowRotation: true,
-                                                            tag: 'imageTag7',
-                                                            useHeroAnimation:
-                                                                true,
-                                                          ),
-                                                        ),
-                                                      );
-                                                    },
-                                                    child: Hero(
-                                                      tag: 'imageTag7',
-                                                      transitionOnUserGestures:
-                                                          true,
-                                                      child: ClipRRect(
-                                                        borderRadius:
-                                                            BorderRadius
-                                                                .circular(8.0),
-                                                        child: Image.asset(
-                                                          'assets/images/WhatsApp_Image_2023-11-16_at_15.31.51.jpeg',
-                                                          width: 300.0,
-                                                          height: 200.0,
-                                                          fit: BoxFit.cover,
-                                                        ),
-                                                      ),
-                                                    ),
-                                                  ),
-                                                  InkWell(
-                                                    splashColor:
-                                                        Colors.transparent,
-                                                    focusColor:
-                                                        Colors.transparent,
-                                                    hoverColor:
-                                                        Colors.transparent,
-                                                    highlightColor:
-                                                        Colors.transparent,
-                                                    onTap: () async {
-                                                      await Navigator.push(
-                                                        context,
-                                                        PageTransition(
-                                                          type:
-                                                              PageTransitionType
-                                                                  .fade,
-                                                          child:
-                                                              FlutterFlowExpandedImageView(
-                                                            image: Image.asset(
-                                                              'assets/images/WhatsApp_Image_2023-11-16_at_15.39.37.jpeg',
-                                                              fit: BoxFit
-                                                                  .contain,
-                                                            ),
-                                                            allowRotation: true,
-                                                            tag: 'imageTag8',
-                                                            useHeroAnimation:
-                                                                true,
-                                                          ),
-                                                        ),
-                                                      );
-                                                    },
-                                                    child: Hero(
-                                                      tag: 'imageTag8',
-                                                      transitionOnUserGestures:
-                                                          true,
-                                                      child: ClipRRect(
-                                                        borderRadius:
-                                                            BorderRadius
-                                                                .circular(8.0),
-                                                        child: Image.asset(
-                                                          'assets/images/WhatsApp_Image_2023-11-16_at_15.39.37.jpeg',
-                                                          width: 300.0,
-                                                          height: 200.0,
-                                                          fit: BoxFit.cover,
-                                                        ),
-                                                      ),
-                                                    ),
-                                                  ),
-                                                  InkWell(
-                                                    splashColor:
-                                                        Colors.transparent,
-                                                    focusColor:
-                                                        Colors.transparent,
-                                                    hoverColor:
-                                                        Colors.transparent,
-                                                    highlightColor:
-                                                        Colors.transparent,
-                                                    onTap: () async {
-                                                      await Navigator.push(
-                                                        context,
-                                                        PageTransition(
-                                                          type:
-                                                              PageTransitionType
-                                                                  .fade,
-                                                          child:
-                                                              FlutterFlowExpandedImageView(
-                                                            image: Image.asset(
-                                                              'assets/images/WhatsApp_Image_2023-11-16_at_15.31.52.jpeg',
-                                                              fit: BoxFit
-                                                                  .contain,
-                                                            ),
-                                                            allowRotation:
-                                                                false,
-                                                            tag: 'imageTag9',
-                                                            useHeroAnimation:
-                                                                true,
-                                                          ),
-                                                        ),
-                                                      );
-                                                    },
-                                                    child: Hero(
-                                                      tag: 'imageTag9',
-                                                      transitionOnUserGestures:
-                                                          true,
-                                                      child: ClipRRect(
-                                                        borderRadius:
-                                                            BorderRadius
-                                                                .circular(8.0),
-                                                        child: Image.asset(
-                                                          'assets/images/WhatsApp_Image_2023-11-16_at_15.31.52.jpeg',
-                                                          width: 300.0,
-                                                          height: 200.0,
-                                                          fit: BoxFit.cover,
-                                                        ),
-                                                      ),
-                                                    ),
-                                                  ),
-                                                ],
-                                                carouselController: _model
-                                                        .carouselController2 ??=
-                                                    CarouselController(),
-                                                options: CarouselOptions(
-                                                  initialPage: 1,
-                                                  viewportFraction: 0.5,
-                                                  disableCenter: true,
-                                                  enlargeCenterPage: true,
-                                                  enlargeFactor: 0.25,
-                                                  enableInfiniteScroll: true,
-                                                  scrollDirection:
-                                                      Axis.horizontal,
-                                                  autoPlay: true,
-                                                  autoPlayAnimationDuration:
-                                                      Duration(
-                                                          milliseconds: 800),
-                                                  autoPlayInterval: Duration(
-                                                      milliseconds:
-                                                          (800 + 4000)),
-                                                  autoPlayCurve: Curves.linear,
-                                                  pauseAutoPlayInFiniteScroll:
-                                                      true,
-                                                  onPageChanged: (index, _) =>
-                                                      _model.carouselCurrentIndex2 =
-                                                          index,
-                                                ),
+                                  10.0, 5.0, 10.0, 5.0),
+                              child: Stack(
+                                children: [
+                                  StreamBuilder<
+                                      List<HistoryPemasanganDepotRecord>>(
+                                    stream: queryHistoryPemasanganDepotRecord(
+                                      limit: 5,
+                                    ),
+                                    builder: (context, snapshot) {
+                                      // Customize what your widget looks like when it's loading.
+                                      if (!snapshot.hasData) {
+                                        return Center(
+                                          child: SizedBox(
+                                            width: 50.0,
+                                            height: 50.0,
+                                            child: CircularProgressIndicator(
+                                              valueColor:
+                                                  AlwaysStoppedAnimation<Color>(
+                                                FlutterFlowTheme.of(context)
+                                                    .primary,
                                               ),
                                             ),
                                           ),
-                                          Padding(
-                                            padding:
-                                                EdgeInsetsDirectional.fromSTEB(
-                                                    0.0, 10.0, 0.0, 0.0),
-                                            child: Row(
-                                              mainAxisSize: MainAxisSize.max,
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment.start,
-                                              children: [
-                                                Expanded(
-                                                  child: Padding(
-                                                    padding:
-                                                        EdgeInsetsDirectional
-                                                            .fromSTEB(5.0, 0.0,
-                                                                5.0, 0.0),
-                                                    child: Container(
-                                                      decoration: BoxDecoration(
-                                                        color:
-                                                            Color(0x00FFFFFF),
-                                                      ),
-                                                      child: Column(
-                                                        mainAxisSize:
-                                                            MainAxisSize.max,
-                                                        mainAxisAlignment:
-                                                            MainAxisAlignment
-                                                                .center,
-                                                        crossAxisAlignment:
-                                                            CrossAxisAlignment
-                                                                .center,
-                                                        children: [
-                                                          Row(
-                                                            mainAxisSize:
-                                                                MainAxisSize
-                                                                    .max,
-                                                            mainAxisAlignment:
-                                                                MainAxisAlignment
-                                                                    .center,
-                                                            children: [
-                                                              Padding(
-                                                                padding: EdgeInsetsDirectional
-                                                                    .fromSTEB(
-                                                                        10.0,
-                                                                        0.0,
-                                                                        10.0,
-                                                                        0.0),
-                                                                child: Text(
-                                                                  'Tanggal 16 November 2023',
-                                                                  style: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .labelLarge
-                                                                      .override(
-                                                                        fontFamily:
-                                                                            'Readex Pro',
-                                                                        color: FlutterFlowTheme.of(context)
-                                                                            .primaryText,
-                                                                        fontSize:
-                                                                            14.0,
-                                                                        fontWeight:
-                                                                            FontWeight.bold,
-                                                                      ),
-                                                                ).animateOnPageLoad(
-                                                                    animationsMap[
-                                                                        'textOnPageLoadAnimation2']!),
-                                                              ),
-                                                            ],
-                                                          ),
-                                                          Padding(
-                                                            padding:
-                                                                EdgeInsetsDirectional
-                                                                    .fromSTEB(
-                                                                        0.0,
-                                                                        10.0,
-                                                                        0.0,
-                                                                        0.0),
-                                                            child: Row(
-                                                              mainAxisSize:
-                                                                  MainAxisSize
-                                                                      .max,
-                                                              children: [
-                                                                Padding(
-                                                                  padding: EdgeInsetsDirectional
-                                                                      .fromSTEB(
-                                                                          10.0,
-                                                                          0.0,
-                                                                          10.0,
-                                                                          0.0),
-                                                                  child: Text(
-                                                                    'Alamat : Kp. Parung Kokosan, Kab. Pandeglang, \n               Banten',
-                                                                    style: FlutterFlowTheme.of(
-                                                                            context)
-                                                                        .labelLarge
-                                                                        .override(
-                                                                          fontFamily:
-                                                                              'Readex Pro',
-                                                                          color:
-                                                                              FlutterFlowTheme.of(context).primaryText,
-                                                                          fontSize:
-                                                                              14.0,
-                                                                          fontWeight:
-                                                                              FontWeight.normal,
-                                                                        ),
-                                                                  ).animateOnPageLoad(
-                                                                      animationsMap[
-                                                                          'textOnPageLoadAnimation3']!),
-                                                                ),
-                                                              ],
-                                                            ),
-                                                          ),
-                                                        ],
-                                                      ),
-                                                    ),
-                                                  ),
-                                                ),
-                                              ],
-                                            ),
-                                          ),
-                                          Padding(
-                                            padding:
-                                                EdgeInsetsDirectional.fromSTEB(
-                                                    10.0, 20.0, 10.0, 10.0),
-                                            child: Row(
-                                              mainAxisSize: MainAxisSize.max,
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment.center,
-                                              children: [
-                                                RatingBar.builder(
-                                                  onRatingUpdate: (newValue) =>
-                                                      setState(() => _model
-                                                              .ratingBarValue =
-                                                          newValue),
-                                                  itemBuilder:
-                                                      (context, index) => Icon(
-                                                    Icons.star_rounded,
-                                                    color: FlutterFlowTheme.of(
+                                        );
+                                      }
+                                      List<HistoryPemasanganDepotRecord>
+                                          columnHistoryPemasanganDepotRecordList =
+                                          snapshot.data!;
+                                      return Column(
+                                        mainAxisSize: MainAxisSize.max,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: List.generate(
+                                            columnHistoryPemasanganDepotRecordList
+                                                .length, (columnIndex) {
+                                          final columnHistoryPemasanganDepotRecord =
+                                              columnHistoryPemasanganDepotRecordList[
+                                                  columnIndex];
+                                          return Row(
+                                            mainAxisSize: MainAxisSize.max,
+                                            children: [
+                                              Padding(
+                                                padding: EdgeInsetsDirectional
+                                                    .fromSTEB(
+                                                        0.0, 0.0, 0.0, 5.0),
+                                                child: InkWell(
+                                                  splashColor:
+                                                      Colors.transparent,
+                                                  focusColor:
+                                                      Colors.transparent,
+                                                  hoverColor:
+                                                      Colors.transparent,
+                                                  highlightColor:
+                                                      Colors.transparent,
+                                                  onTap: () async {
+                                                    context.pushNamed(
+                                                      'DetailPemasangan',
+                                                      queryParameters: {
+                                                        'nama': serializeParam(
+                                                          columnHistoryPemasanganDepotRecord
+                                                              .namapemasang,
+                                                          ParamType.String,
+                                                        ),
+                                                        'alamat':
+                                                            serializeParam(
+                                                          columnHistoryPemasanganDepotRecord
+                                                              .alamatpemasang,
+                                                          ParamType.String,
+                                                        ),
+                                                        'tglpemasangan':
+                                                            serializeParam(
+                                                          columnHistoryPemasanganDepotRecord
+                                                              .tanggalpemasangan,
+                                                          ParamType.DateTime,
+                                                        ),
+                                                        'dokumen1':
+                                                            serializeParam(
+                                                          columnHistoryPemasanganDepotRecord
+                                                              .dokumen1,
+                                                          ParamType.String,
+                                                        ),
+                                                        'dokumen2':
+                                                            serializeParam(
+                                                          columnHistoryPemasanganDepotRecord
+                                                              .dokumen2,
+                                                          ParamType.String,
+                                                        ),
+                                                        'dokumen3':
+                                                            serializeParam(
+                                                          columnHistoryPemasanganDepotRecord
+                                                              .dokumen3,
+                                                          ParamType.String,
+                                                        ),
+                                                        'dokumen4':
+                                                            serializeParam(
+                                                          columnHistoryPemasanganDepotRecord
+                                                              .dokumen4,
+                                                          ParamType.String,
+                                                        ),
+                                                      }.withoutNulls,
+                                                    );
+                                                  },
+                                                  child: Text(
+                                                    columnHistoryPemasanganDepotRecord
+                                                        .namapemasang,
+                                                    style: FlutterFlowTheme.of(
                                                             context)
-                                                        .warning,
+                                                        .bodyMedium
+                                                        .override(
+                                                          fontFamily:
+                                                              'Readex Pro',
+                                                          color: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .alternate,
+                                                          fontSize: 16.0,
+                                                        ),
                                                   ),
-                                                  direction: Axis.horizontal,
-                                                  initialRating: _model
-                                                      .ratingBarValue ??= 5.0,
-                                                  unratedColor:
-                                                      FlutterFlowTheme.of(
-                                                              context)
-                                                          .accent3,
-                                                  itemCount: 5,
-                                                  itemSize: 40.0,
-                                                  glowColor:
-                                                      FlutterFlowTheme.of(
-                                                              context)
-                                                          .warning,
                                                 ),
-                                              ],
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ],
-                                ),
+                                              ),
+                                            ],
+                                          );
+                                        }),
+                                      );
+                                    },
+                                  ),
+                                ],
                               ),
                             ),
                           ],

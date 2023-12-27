@@ -6,3 +6,5 @@ export '/pages/produklist/produklist_widget.dart' show ProduklistWidget;
 export '/pages/pemasangan_depot/pemasangan_depot_widget.dart'
     show PemasanganDepotWidget;
 export '/pages/mesin_air/mesin_air_widget.dart' show MesinAirWidget;
+export '/detail_pemasangan/detail_pemasangan_widget.dart'
+    show DetailPemasanganWidget;

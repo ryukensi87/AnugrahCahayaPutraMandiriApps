@@ -116,6 +116,19 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'MesinAir',
           path: '/mesinAir',
           builder: (context, params) => MesinAirWidget(),
+        ),
+        FFRoute(
+          name: 'DetailPemasangan',
+          path: '/detailPemasangan',
+          builder: (context, params) => DetailPemasanganWidget(
+            nama: params.getParam('nama', ParamType.String),
+            alamat: params.getParam('alamat', ParamType.String),
+            tglpemasangan: params.getParam('tglpemasangan', ParamType.DateTime),
+            dokumen1: params.getParam('dokumen1', ParamType.String),
+            dokumen2: params.getParam('dokumen2', ParamType.String),
+            dokumen3: params.getParam('dokumen3', ParamType.String),
+            dokumen4: params.getParam('dokumen4', ParamType.String),
+          ),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
@@ -310,13 +323,20 @@ class FFRoute {
                   key: state.pageKey,
                   child: child,
                   transitionDuration: transitionInfo.duration,
-                  transitionsBuilder: PageTransition(
+                  transitionsBuilder:
+                      (context, animation, secondaryAnimation, child) =>
+                          PageTransition(
                     type: transitionInfo.transitionType,
                     duration: transitionInfo.duration,
                     reverseDuration: transitionInfo.duration,
                     alignment: transitionInfo.alignment,
                     child: child,
-                  ).transitionsBuilder,
+                  ).buildTransitions(
+                    context,
+                    animation,
+                    secondaryAnimation,
+                    child,
+                  ),
                 )
               : MaterialPage(key: state.pageKey, child: child);
         },

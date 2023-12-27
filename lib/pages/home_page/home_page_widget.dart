@@ -231,7 +231,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
           backgroundColor: Color(0xFF0099FF),
           automaticallyImplyLeading: false,
           title: Align(
-            alignment: AlignmentDirectional(-1.00, 0.00),
+            alignment: AlignmentDirectional(-1.0, 0.0),
             child: Padding(
               padding: EdgeInsetsDirectional.fromSTEB(0.0, 24.0, 0.0, 0.0),
               child: Text(
@@ -349,7 +349,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                               borderRadius: BorderRadius.circular(8.0),
                             ),
                             child: Align(
-                              alignment: AlignmentDirectional(0.00, 0.00),
+                              alignment: AlignmentDirectional(0.0, 0.0),
                               child: Stack(
                                 children: [
                                   Column(
@@ -411,7 +411,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                               borderRadius: BorderRadius.circular(8.0),
                             ),
                             child: Align(
-                              alignment: AlignmentDirectional(0.00, 0.00),
+                              alignment: AlignmentDirectional(0.0, 0.0),
                               child: Stack(
                                 children: [
                                   Column(
@@ -473,7 +473,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                               borderRadius: BorderRadius.circular(8.0),
                             ),
                             child: Align(
-                              alignment: AlignmentDirectional(0.00, 0.00),
+                              alignment: AlignmentDirectional(0.0, 0.0),
                               child: Stack(
                                 children: [
                                   Column(
@@ -535,7 +535,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                               borderRadius: BorderRadius.circular(8.0),
                             ),
                             child: Align(
-                              alignment: AlignmentDirectional(0.00, 0.00),
+                              alignment: AlignmentDirectional(0.0, 0.0),
                               child: Stack(
                                 children: [
                                   Column(
@@ -630,8 +630,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                         borderRadius: BorderRadius.circular(12.0),
                       ),
                       child: Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
-                            15.0, 15.0, 15.0, 15.0),
+                        padding: EdgeInsets.all(15.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -836,8 +835,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                   Stack(
                                     children: [
                                       Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            12.0, 12.0, 12.0, 12.0),
+                                        padding: EdgeInsets.all(12.0),
                                         child: Row(
                                           mainAxisSize: MainAxisSize.max,
                                           children: [
@@ -903,9 +901,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                         .secondaryBackground,
                                               ),
                                               child: Padding(
-                                                padding: EdgeInsetsDirectional
-                                                    .fromSTEB(
-                                                        10.0, 10.0, 10.0, 10.0),
+                                                padding: EdgeInsets.all(10.0),
                                                 child: Column(
                                                   mainAxisSize:
                                                       MainAxisSize.max,
@@ -931,8 +927,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                   Stack(
                                     children: [
                                       Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            12.0, 12.0, 12.0, 12.0),
+                                        padding: EdgeInsets.all(12.0),
                                         child: Row(
                                           mainAxisSize: MainAxisSize.max,
                                           children: [
@@ -998,9 +993,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                         .secondaryBackground,
                                               ),
                                               child: Padding(
-                                                padding: EdgeInsetsDirectional
-                                                    .fromSTEB(
-                                                        10.0, 10.0, 10.0, 10.0),
+                                                padding: EdgeInsets.all(10.0),
                                                 child: Column(
                                                   mainAxisSize:
                                                       MainAxisSize.max,
@@ -1026,8 +1019,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                   Stack(
                                     children: [
                                       Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            12.0, 12.0, 12.0, 12.0),
+                                        padding: EdgeInsets.all(12.0),
                                         child: Row(
                                           mainAxisSize: MainAxisSize.max,
                                           children: [
@@ -1093,9 +1085,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                         .secondaryBackground,
                                               ),
                                               child: Padding(
-                                                padding: EdgeInsetsDirectional
-                                                    .fromSTEB(
-                                                        10.0, 10.0, 10.0, 10.0),
+                                                padding: EdgeInsets.all(10.0),
                                                 child: Column(
                                                   mainAxisSize:
                                                       MainAxisSize.max,

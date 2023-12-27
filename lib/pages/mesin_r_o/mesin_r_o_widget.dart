@@ -200,7 +200,7 @@ class _MesinROWidgetState extends State<MesinROWidget> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Align(
-                                  alignment: AlignmentDirectional(0.00, 0.00),
+                                  alignment: AlignmentDirectional(0.0, 0.0),
                                   child: FutureBuilder<int>(
                                     future: queryListMesinRecordCount(),
                                     builder: (context, snapshot) {
@@ -286,8 +286,7 @@ class _MesinROWidgetState extends State<MesinROWidget> {
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   children: [
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          10.0, 10.0, 10.0, 10.0),
+                                      padding: EdgeInsets.all(10.0),
                                       child: InkWell(
                                         splashColor: Colors.transparent,
                                         focusColor: Colors.transparent,

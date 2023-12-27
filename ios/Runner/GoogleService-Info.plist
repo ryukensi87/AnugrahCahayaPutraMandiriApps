@@ -2,18 +2,24 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>CLIENT_ID</key>
+	<string>583321860696-ma63ekfpejmcf145jj1v9gvld7hm8cb1.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.583321860696-ma63ekfpejmcf145jj1v9gvld7hm8cb1</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>583321860696-uop278jikb89a5s4b4e7facmuic93as4.apps.googleusercontent.com</string>
 	<key>API_KEY</key>
-	<string>AIzaSyAzCLzdUHePV6HpM-gvzCtnz1DNOQ072L4</string>
+	<string>AIzaSyCFa_ZIxtT4I8GAQItrvTc0_DhIO8dTrMA</string>
 	<key>GCM_SENDER_ID</key>
-	<string>675503401155</string>
+	<string>583321860696</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>com.mycompany.anugrahcahayaputramandiriapps</string>
 	<key>PROJECT_ID</key>
-	<string>anugrahcahayaputramandiriapps</string>
+	<string>acpm-b6dec</string>
 	<key>STORAGE_BUCKET</key>
-	<string>anugrahcahayaputramandiriapps.appspot.com</string>
+	<string>acpm-b6dec.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -25,8 +31,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:675503401155:ios:5c03b69ec196308d581a76</string>
+	<string>1:583321860696:ios:570c553ffb8a404883e82d</string>
 	<key>DATABASE_URL</key>
-	<string>https://anugrahcahayaputramandiriapps-default-rtdb.asia-southeast1.firebasedatabase.app</string>
+	<string>https://acpm-b6dec-default-rtdb.asia-southeast1.firebasedatabase.app</string>
 </dict>
 </plist>

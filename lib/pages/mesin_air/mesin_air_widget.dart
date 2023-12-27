@@ -175,7 +175,7 @@ class _MesinAirWidgetState extends State<MesinAirWidget> {
               ),
             ),
             child: Align(
-              alignment: AlignmentDirectional(0.00, 0.00),
+              alignment: AlignmentDirectional(0.0, 0.0),
               child: SingleChildScrollView(
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
@@ -196,8 +196,7 @@ class _MesinAirWidgetState extends State<MesinAirWidget> {
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(
-                          15.0, 15.0, 15.0, 15.0),
+                      padding: EdgeInsets.all(15.0),
                       child: Container(
                         width: double.infinity,
                         decoration: BoxDecoration(
@@ -226,8 +225,7 @@ class _MesinAirWidgetState extends State<MesinAirWidget> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
-                                15.0, 15.0, 15.0, 15.0),
+                            padding: EdgeInsets.all(15.0),
                             child: Container(
                               width: double.infinity,
                               decoration: BoxDecoration(
@@ -267,8 +265,7 @@ class _MesinAirWidgetState extends State<MesinAirWidget> {
                                     ),
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        15.0, 15.0, 15.0, 15.0),
+                                    padding: EdgeInsets.all(15.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
                                       children: [
@@ -291,9 +288,7 @@ class _MesinAirWidgetState extends State<MesinAirWidget> {
                                                   BorderRadius.circular(15.0),
                                             ),
                                             child: Padding(
-                                              padding: EdgeInsetsDirectional
-                                                  .fromSTEB(
-                                                      10.0, 10.0, 10.0, 10.0),
+                                              padding: EdgeInsets.all(10.0),
                                               child: Container(
                                                 width: double.infinity,
                                                 height: 500.0,
@@ -713,7 +708,7 @@ class _MesinAirWidgetState extends State<MesinAirWidget> {
                                                     Align(
                                                       alignment:
                                                           AlignmentDirectional(
-                                                              -1.00, 1.00),
+                                                              -1.0, 1.0),
                                                       child: Padding(
                                                         padding:
                                                             EdgeInsetsDirectional
@@ -931,9 +926,7 @@ class _MesinAirWidgetState extends State<MesinAirWidget> {
                                                   BorderRadius.circular(15.0),
                                             ),
                                             child: Padding(
-                                              padding: EdgeInsetsDirectional
-                                                  .fromSTEB(
-                                                      10.0, 10.0, 10.0, 10.0),
+                                              padding: EdgeInsets.all(10.0),
                                               child: Container(
                                                 width: double.infinity,
                                                 height: 500.0,
@@ -1241,7 +1234,7 @@ class _MesinAirWidgetState extends State<MesinAirWidget> {
                                                     Align(
                                                       alignment:
                                                           AlignmentDirectional(
-                                                              -1.00, 1.00),
+                                                              -1.0, 1.0),
                                                       child: Padding(
                                                         padding:
                                                             EdgeInsetsDirectional

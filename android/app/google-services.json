@@ -1,46 +1,52 @@
 {
   "project_info": {
-    "project_number": "675503401155",
-    "firebase_url": "https://anugrahcahayaputramandiriapps-default-rtdb.asia-southeast1.firebasedatabase.app",
-    "project_id": "anugrahcahayaputramandiriapps",
-    "storage_bucket": "anugrahcahayaputramandiriapps.appspot.com"
+    "project_number": "583321860696",
+    "firebase_url": "https://acpm-b6dec-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "acpm-b6dec",
+    "storage_bucket": "acpm-b6dec.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:675503401155:android:fe3cea78f9e09f01581a76",
-        "android_client_info": {
-          "package_name": "com.mycompany.anugrahcahayaputramandiri"
-        }
-      },
-      "oauth_client": [],
-      "api_key": [
-        {
-          "current_key": "AIzaSyAW6N6gKizk010G7CruKf1w7pqlXAu_PvE"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": []
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:675503401155:android:0dfff75afd0c0326581a76",
+        "mobilesdk_app_id": "1:583321860696:android:2f26f0458ba4a83283e82d",
         "android_client_info": {
           "package_name": "com.mycompany.anugrahcahayaputramandiriapps"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "583321860696-uop278jikb89a5s4b4e7facmuic93as4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mycompany.anugrahcahayaputramandiriapps",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
+        {
+          "client_id": "583321860696-r4j3sf5nm01kafeqacg5ka4n7ama5imh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
-          "current_key": "AIzaSyAW6N6gKizk010G7CruKf1w7pqlXAu_PvE"
+          "current_key": "AIzaSyAxIgiI-5eEgLkzGRkq4o4vmoaM8J6ijV0"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "583321860696-r4j3sf5nm01kafeqacg5ka4n7ama5imh.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "583321860696-ma63ekfpejmcf145jj1v9gvld7hm8cb1.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.mycompany.anugrahcahayaputramandiriapps"
+              }
+            }
+          ]
         }
       }
     }
