@@ -125,19 +125,10 @@ class _MesinAMDKWidgetState extends State<MesinAMDKWidget> {
         appBar: AppBar(
           backgroundColor: Color(0xFF0099FF),
           automaticallyImplyLeading: false,
-          leading: InkWell(
-            splashColor: Colors.transparent,
-            focusColor: Colors.transparent,
-            hoverColor: Colors.transparent,
-            highlightColor: Colors.transparent,
-            onTap: () async {
-              context.pushNamed('null');
-            },
-            child: Icon(
-              Icons.arrow_back_rounded,
-              color: FlutterFlowTheme.of(context).secondaryText,
-              size: 24.0,
-            ),
+          leading: Icon(
+            Icons.arrow_back_rounded,
+            color: FlutterFlowTheme.of(context).secondaryText,
+            size: 24.0,
           ),
           title: Text(
             'List Mesin RO',
