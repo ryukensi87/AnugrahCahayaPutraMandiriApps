@@ -164,7 +164,7 @@ class _PemasanganDepotWidgetState extends State<PemasanganDepotWidget>
             hoverColor: Colors.transparent,
             highlightColor: Colors.transparent,
             onTap: () async {
-              context.pushNamed('HomePage');
+              context.pushNamed('null');
             },
             child: Icon(
               Icons.arrow_back_rounded,

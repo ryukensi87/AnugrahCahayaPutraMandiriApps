@@ -131,7 +131,7 @@ class _MesinROWidgetState extends State<MesinROWidget> {
             hoverColor: Colors.transparent,
             highlightColor: Colors.transparent,
             onTap: () async {
-              context.pushNamed('MesinAir');
+              context.pushNamed('null');
             },
             child: Icon(
               Icons.arrow_back_rounded,

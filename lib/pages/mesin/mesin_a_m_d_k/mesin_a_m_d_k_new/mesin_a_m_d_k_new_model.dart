@@ -1,9 +1,11 @@
 import '/auth/base_auth_user_provider.dart';
+import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_expanded_image_view.dart';
+import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'mesin_air_widget.dart' show MesinAirWidget;
+import 'mesin_a_m_d_k_new_widget.dart' show MesinAMDKNewWidget;
 import 'package:smooth_page_indicator/smooth_page_indicator.dart'
     as smooth_page_indicator;
 import 'package:flutter/material.dart';
@@ -13,25 +15,17 @@ import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class MesinAirModel extends FlutterFlowModel<MesinAirWidget> {
+class MesinAMDKNewModel extends FlutterFlowModel<MesinAMDKNewWidget> {
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();
   // State field(s) for PageView widget.
-  PageController? pageViewController1;
+  PageController? pageViewController;
 
-  int get pageViewCurrentIndex1 => pageViewController1 != null &&
-          pageViewController1!.hasClients &&
-          pageViewController1!.page != null
-      ? pageViewController1!.page!.round()
-      : 0;
-  // State field(s) for PageView widget.
-  PageController? pageViewController2;
-
-  int get pageViewCurrentIndex2 => pageViewController2 != null &&
-          pageViewController2!.hasClients &&
-          pageViewController2!.page != null
-      ? pageViewController2!.page!.round()
+  int get pageViewCurrentIndex => pageViewController != null &&
+          pageViewController!.hasClients &&
+          pageViewController!.page != null
+      ? pageViewController!.page!.round()
       : 0;
 
   /// Initialization and disposal methods.
