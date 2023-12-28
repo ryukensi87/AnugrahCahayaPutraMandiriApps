@@ -79,13 +79,14 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
       errorBuilder: (context, state) =>
-          appStateNotifier.loggedIn ? HomePageWidget() : HomePageWidget(),
+          appStateNotifier.loggedIn ? HomePageNewWidget() : HomePageNewWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
-          builder: (context, _) =>
-              appStateNotifier.loggedIn ? HomePageWidget() : HomePageWidget(),
+          builder: (context, _) => appStateNotifier.loggedIn
+              ? HomePageNewWidget()
+              : HomePageNewWidget(),
         ),
         FFRoute(
           name: 'HomePage',
@@ -129,6 +130,26 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             dokumen3: params.getParam('dokumen3', ParamType.String),
             dokumen4: params.getParam('dokumen4', ParamType.String),
           ),
+        ),
+        FFRoute(
+          name: 'HomePageNew',
+          path: '/homePageLogin',
+          builder: (context, params) => HomePageNewWidget(),
+        ),
+        FFRoute(
+          name: 'ProduklistNew',
+          path: '/produklistNew',
+          builder: (context, params) => ProduklistNewWidget(),
+        ),
+        FFRoute(
+          name: 'PemasanganDepotNew',
+          path: '/pemasanganDepotNew',
+          builder: (context, params) => PemasanganDepotNewWidget(),
+        ),
+        FFRoute(
+          name: 'MesinAirNew',
+          path: '/mesinAirNew',
+          builder: (context, params) => MesinAirNewWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
@@ -295,7 +316,7 @@ class FFRoute {
 
           if (requireAuth && !appStateNotifier.loggedIn) {
             appStateNotifier.setRedirectLocationIfUnset(state.location);
-            return '/homePage';
+            return '/homePageLogin';
           }
           return null;
         },
