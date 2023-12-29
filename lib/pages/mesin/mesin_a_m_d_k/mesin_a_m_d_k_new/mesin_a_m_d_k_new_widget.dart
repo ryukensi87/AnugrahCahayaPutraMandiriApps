@@ -142,7 +142,7 @@ class _MesinAMDKNewWidgetState extends State<MesinAMDKNewWidget> {
             },
           ),
           title: Text(
-            'List Mesin RO',
+            'List Mesin AMDK',
             style: FlutterFlowTheme.of(context).displaySmall.override(
                   fontFamily: 'Outfit',
                   color: FlutterFlowTheme.of(context).primaryText,
@@ -671,63 +671,62 @@ class _MesinAMDKNewWidgetState extends State<MesinAMDKNewWidget> {
                               ],
                             ),
                           ),
-                          StreamBuilder<List<ListMesinAmdkRecord>>(
-                            stream: queryListMesinAmdkRecord(),
-                            builder: (context, snapshot) {
-                              // Customize what your widget looks like when it's loading.
-                              if (!snapshot.hasData) {
-                                return Center(
-                                  child: SizedBox(
-                                    width: 50.0,
-                                    height: 50.0,
-                                    child: CircularProgressIndicator(
-                                      valueColor: AlwaysStoppedAnimation<Color>(
-                                        FlutterFlowTheme.of(context).primary,
+                          Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(
+                                10.0, 10.0, 10.0, 10.0),
+                            child: StreamBuilder<List<ListMesinAmdkRecord>>(
+                              stream: queryListMesinAmdkRecord(),
+                              builder: (context, snapshot) {
+                                // Customize what your widget looks like when it's loading.
+                                if (!snapshot.hasData) {
+                                  return Center(
+                                    child: SizedBox(
+                                      width: 50.0,
+                                      height: 50.0,
+                                      child: CircularProgressIndicator(
+                                        valueColor:
+                                            AlwaysStoppedAnimation<Color>(
+                                          FlutterFlowTheme.of(context).primary,
+                                        ),
                                       ),
                                     ),
-                                  ),
-                                );
-                              }
-                              List<ListMesinAmdkRecord>
-                                  columnListMesinAmdkRecordList =
-                                  snapshot.data!;
-                              return Column(
-                                mainAxisSize: MainAxisSize.max,
-                                children: List.generate(
-                                    columnListMesinAmdkRecordList.length,
-                                    (columnIndex) {
-                                  final columnListMesinAmdkRecord =
-                                      columnListMesinAmdkRecordList[
-                                          columnIndex];
-                                  return Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        10.0, 10.0, 10.0, 10.0),
-                                    child: Row(
-                                      mainAxisSize: MainAxisSize.max,
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceBetween,
-                                      children: [
-                                        Text(
-                                          columnListMesinAmdkRecord.namaMesin,
-                                          style: FlutterFlowTheme.of(context)
-                                              .bodyMedium
-                                              .override(
-                                                fontFamily: 'Readex Pro',
-                                                fontWeight: FontWeight.bold,
-                                              ),
-                                        ),
-                                        Text(
-                                          columnListMesinAmdkRecord
-                                              .kapasitasMesin,
-                                          style: FlutterFlowTheme.of(context)
-                                              .bodyMedium,
-                                        ),
-                                      ],
-                                    ),
                                   );
-                                }),
-                              );
-                            },
+                                }
+                                List<ListMesinAmdkRecord>
+                                    columnListMesinAmdkRecordList =
+                                    snapshot.data!;
+                                return Column(
+                                  mainAxisSize: MainAxisSize.max,
+                                  children: List.generate(
+                                      columnListMesinAmdkRecordList.length,
+                                      (columnIndex) {
+                                    final columnListMesinAmdkRecord =
+                                        columnListMesinAmdkRecordList[
+                                            columnIndex];
+                                    return Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          0.0, 5.0, 0.0, 0.0),
+                                      child: Row(
+                                        mainAxisSize: MainAxisSize.max,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          Text(
+                                            columnListMesinAmdkRecord.namaMesin,
+                                            style: FlutterFlowTheme.of(context)
+                                                .bodyMedium
+                                                .override(
+                                                  fontFamily: 'Readex Pro',
+                                                  fontWeight: FontWeight.bold,
+                                                ),
+                                          ),
+                                        ],
+                                      ),
+                                    );
+                                  }),
+                                );
+                              },
+                            ),
                           ),
                         ],
                       ),
