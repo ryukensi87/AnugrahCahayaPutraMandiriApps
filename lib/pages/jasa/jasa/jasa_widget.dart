@@ -225,7 +225,7 @@ class _JasaWidgetState extends State<JasaWidget> {
                       ),
                       Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 5.0),
+                            EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 5.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
                           mainAxisAlignment: MainAxisAlignment.center,
@@ -235,7 +235,13 @@ class _JasaWidgetState extends State<JasaWidget> {
                                 widget.nama,
                                 'nama',
                               ),
-                              style: FlutterFlowTheme.of(context).bodyMedium,
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyMedium
+                                  .override(
+                                    fontFamily: 'Readex Pro',
+                                    fontSize: 18.0,
+                                    fontWeight: FontWeight.bold,
+                                  ),
                             ),
                           ],
                         ),
@@ -253,13 +259,16 @@ class _JasaWidgetState extends State<JasaWidget> {
                                   color: FlutterFlowTheme.of(context)
                                       .secondaryBackground,
                                 ),
-                                child: Text(
-                                  valueOrDefault<String>(
-                                    widget.alamat,
-                                    'alamat',
+                                child: Align(
+                                  alignment: AlignmentDirectional(0.0, 0.0),
+                                  child: Text(
+                                    valueOrDefault<String>(
+                                      widget.alamat,
+                                      'alamat',
+                                    ),
+                                    style:
+                                        FlutterFlowTheme.of(context).bodyMedium,
                                   ),
-                                  style:
-                                      FlutterFlowTheme.of(context).bodyMedium,
                                 ),
                               ),
                             ),

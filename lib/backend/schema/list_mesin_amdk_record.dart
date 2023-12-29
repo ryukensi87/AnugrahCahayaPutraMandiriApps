@@ -36,11 +36,17 @@ class ListMesinAmdkRecord extends FirestoreRecord {
   double get hargaMesin => _hargaMesin ?? 0.0;
   bool hasHargaMesin() => _hargaMesin != null;
 
+  // "noid" field.
+  int? _noid;
+  int get noid => _noid ?? 0;
+  bool hasNoid() => _noid != null;
+
   void _initializeFields() {
     _namaMesin = snapshotData['nama_mesin'] as String?;
     _gambarMesin = snapshotData['gambar_mesin'] as String?;
     _kapasitasMesin = snapshotData['kapasitas_mesin'] as String?;
     _hargaMesin = castToType<double>(snapshotData['harga_mesin']);
+    _noid = castToType<int>(snapshotData['noid']);
   }
 
   static CollectionReference get collection =>
@@ -82,6 +88,7 @@ Map<String, dynamic> createListMesinAmdkRecordData({
   String? gambarMesin,
   String? kapasitasMesin,
   double? hargaMesin,
+  int? noid,
 }) {
   final firestoreData = mapToFirestore(
     <String, dynamic>{
@@ -89,6 +96,7 @@ Map<String, dynamic> createListMesinAmdkRecordData({
       'gambar_mesin': gambarMesin,
       'kapasitas_mesin': kapasitasMesin,
       'harga_mesin': hargaMesin,
+      'noid': noid,
     }.withoutNulls,
   );
 
@@ -104,12 +112,18 @@ class ListMesinAmdkRecordDocumentEquality
     return e1?.namaMesin == e2?.namaMesin &&
         e1?.gambarMesin == e2?.gambarMesin &&
         e1?.kapasitasMesin == e2?.kapasitasMesin &&
-        e1?.hargaMesin == e2?.hargaMesin;
+        e1?.hargaMesin == e2?.hargaMesin &&
+        e1?.noid == e2?.noid;
   }
 
   @override
-  int hash(ListMesinAmdkRecord? e) => const ListEquality()
-      .hash([e?.namaMesin, e?.gambarMesin, e?.kapasitasMesin, e?.hargaMesin]);
+  int hash(ListMesinAmdkRecord? e) => const ListEquality().hash([
+        e?.namaMesin,
+        e?.gambarMesin,
+        e?.kapasitasMesin,
+        e?.hargaMesin,
+        e?.noid
+      ]);
 
   @override
   bool isValidKey(Object? o) => o is ListMesinAmdkRecord;

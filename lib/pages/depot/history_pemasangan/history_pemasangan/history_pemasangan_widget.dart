@@ -280,6 +280,25 @@ class _HistoryPemasanganWidgetState extends State<HistoryPemasanganWidget> {
                                         CrossAxisAlignment.center,
                                     children: [
                                       Text(
+                                        formatNumber(
+                                          columnHistoryPemasanganDepotRecord
+                                              .noid,
+                                          formatType: FormatType.decimal,
+                                          decimalType: DecimalType.automatic,
+                                        ),
+                                        style: FlutterFlowTheme.of(context)
+                                            .bodyMedium,
+                                      ),
+                                      Padding(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                            0.0, 0.0, 5.0, 0.0),
+                                        child: Text(
+                                          '.',
+                                          style: FlutterFlowTheme.of(context)
+                                              .bodyMedium,
+                                        ),
+                                      ),
+                                      Text(
                                         columnHistoryPemasanganDepotRecord
                                             .namapemasang,
                                         style: FlutterFlowTheme.of(context)

@@ -31,10 +31,16 @@ class DesignDepotRecord extends FirestoreRecord {
   DateTime? get createdate => _createdate;
   bool hasCreatedate() => _createdate != null;
 
+  // "noid" field.
+  int? _noid;
+  int get noid => _noid ?? 0;
+  bool hasNoid() => _noid != null;
+
   void _initializeFields() {
     _namadesign = snapshotData['namadesign'] as String?;
     _gambar = snapshotData['gambar'] as String?;
     _createdate = snapshotData['createdate'] as DateTime?;
+    _noid = castToType<int>(snapshotData['noid']);
   }
 
   static CollectionReference get collection =>
@@ -75,12 +81,14 @@ Map<String, dynamic> createDesignDepotRecordData({
   String? namadesign,
   String? gambar,
   DateTime? createdate,
+  int? noid,
 }) {
   final firestoreData = mapToFirestore(
     <String, dynamic>{
       'namadesign': namadesign,
       'gambar': gambar,
       'createdate': createdate,
+      'noid': noid,
     }.withoutNulls,
   );
 
@@ -94,12 +102,13 @@ class DesignDepotRecordDocumentEquality implements Equality<DesignDepotRecord> {
   bool equals(DesignDepotRecord? e1, DesignDepotRecord? e2) {
     return e1?.namadesign == e2?.namadesign &&
         e1?.gambar == e2?.gambar &&
-        e1?.createdate == e2?.createdate;
+        e1?.createdate == e2?.createdate &&
+        e1?.noid == e2?.noid;
   }
 
   @override
-  int hash(DesignDepotRecord? e) =>
-      const ListEquality().hash([e?.namadesign, e?.gambar, e?.createdate]);
+  int hash(DesignDepotRecord? e) => const ListEquality()
+      .hash([e?.namadesign, e?.gambar, e?.createdate, e?.noid]);
 
   @override
   bool isValidKey(Object? o) => o is DesignDepotRecord;

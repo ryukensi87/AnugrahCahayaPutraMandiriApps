@@ -46,6 +46,11 @@ class ListProdukRecord extends FirestoreRecord {
   DateTime? get createdate => _createdate;
   bool hasCreatedate() => _createdate != null;
 
+  // "noid" field.
+  int? _noid;
+  int get noid => _noid ?? 0;
+  bool hasNoid() => _noid != null;
+
   void _initializeFields() {
     _namaProduk = snapshotData['nama_produk'] as String?;
     _stokProduk = castToType<int>(snapshotData['stok_produk']);
@@ -53,6 +58,7 @@ class ListProdukRecord extends FirestoreRecord {
     _gambarProduk = snapshotData['gambar_produk'] as String?;
     _createby = snapshotData['createby'] as String?;
     _createdate = snapshotData['createdate'] as DateTime?;
+    _noid = castToType<int>(snapshotData['noid']);
   }
 
   static CollectionReference get collection =>
@@ -96,6 +102,7 @@ Map<String, dynamic> createListProdukRecordData({
   String? gambarProduk,
   String? createby,
   DateTime? createdate,
+  int? noid,
 }) {
   final firestoreData = mapToFirestore(
     <String, dynamic>{
@@ -105,6 +112,7 @@ Map<String, dynamic> createListProdukRecordData({
       'gambar_produk': gambarProduk,
       'createby': createby,
       'createdate': createdate,
+      'noid': noid,
     }.withoutNulls,
   );
 
@@ -121,7 +129,8 @@ class ListProdukRecordDocumentEquality implements Equality<ListProdukRecord> {
         e1?.hargaProduk == e2?.hargaProduk &&
         e1?.gambarProduk == e2?.gambarProduk &&
         e1?.createby == e2?.createby &&
-        e1?.createdate == e2?.createdate;
+        e1?.createdate == e2?.createdate &&
+        e1?.noid == e2?.noid;
   }
 
   @override
@@ -131,7 +140,8 @@ class ListProdukRecordDocumentEquality implements Equality<ListProdukRecord> {
         e?.hargaProduk,
         e?.gambarProduk,
         e?.createby,
-        e?.createdate
+        e?.createdate,
+        e?.noid
       ]);
 
   @override

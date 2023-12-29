@@ -253,6 +253,24 @@ class _DesigndepotWidgetState extends State<DesigndepotWidget> {
                                         CrossAxisAlignment.center,
                                     children: [
                                       Text(
+                                        formatNumber(
+                                          columnDesignDepotRecord.noid,
+                                          formatType: FormatType.decimal,
+                                          decimalType: DecimalType.automatic,
+                                        ),
+                                        style: FlutterFlowTheme.of(context)
+                                            .bodyMedium,
+                                      ),
+                                      Padding(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                            0.0, 0.0, 5.0, 0.0),
+                                        child: Text(
+                                          '.',
+                                          style: FlutterFlowTheme.of(context)
+                                              .bodyMedium,
+                                        ),
+                                      ),
+                                      Text(
                                         columnDesignDepotRecord.namadesign,
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium,
