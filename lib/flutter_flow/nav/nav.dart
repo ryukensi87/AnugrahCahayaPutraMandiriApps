@@ -89,16 +89,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               : HomePageNewWidget(),
         ),
         FFRoute(
-          name: 'MesinRO',
-          path: '/mesinRO',
-          builder: (context, params) => MesinROWidget(),
-        ),
-        FFRoute(
-          name: 'MesinAMDK',
-          path: '/mesinAMDK',
-          builder: (context, params) => MesinAMDKWidget(),
-        ),
-        FFRoute(
           name: 'Produklist',
           path: '/produklist',
           builder: (context, params) => ProduklistWidget(),
