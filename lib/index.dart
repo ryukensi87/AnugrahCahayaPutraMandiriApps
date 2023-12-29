@@ -13,11 +13,11 @@ export '/pages/depot/pemasangan_depot_new/pemasangan_depot_new_widget.dart'
     show PemasanganDepotNewWidget;
 export '/pages/mesin/mesin_air_new/mesin_air_new_widget.dart'
     show MesinAirNewWidget;
-export '/pages/mesin/mesin_r_o/mesin_r_o_new/mesin_r_o_new_widget.dart'
-    show MesinRONewWidget;
 export '/pages/mesin/mesin_a_m_d_k/mesin_a_m_d_k_new/mesin_a_m_d_k_new_widget.dart'
     show MesinAMDKNewWidget;
 export '/pages/mesin/mesin_r_o/detail_mesin_r_o/detail_mesin_r_o_widget.dart'
     show DetailMesinROWidget;
-export '/pages/mesin/mesin_a_m_d_k/detail_pemasangan_copy_copy/detail_pemasangan_copy_copy_widget.dart'
-    show DetailPemasanganCopyCopyWidget;
+export '/pages/mesin/mesin_a_m_d_k/detail_mesin_a_m_d_k/detail_mesin_a_m_d_k_widget.dart'
+    show DetailMesinAMDKWidget;
+export '/pages/mesin/mesin_r_o/mesin_r_o_new/mesin_r_o_new_widget.dart'
+    show MesinRONewWidget;

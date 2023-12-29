@@ -705,22 +705,83 @@ class _MesinAMDKNewWidgetState extends State<MesinAMDKNewWidget> {
                                             columnIndex];
                                     return Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
-                                          0.0, 5.0, 0.0, 0.0),
-                                      child: Row(
-                                        mainAxisSize: MainAxisSize.max,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.spaceBetween,
-                                        children: [
-                                          Text(
-                                            columnListMesinAmdkRecord.namaMesin,
-                                            style: FlutterFlowTheme.of(context)
-                                                .bodyMedium
-                                                .override(
-                                                  fontFamily: 'Readex Pro',
-                                                  fontWeight: FontWeight.bold,
-                                                ),
+                                          0.0, 0.0, 0.0, 5.0),
+                                      child: Container(
+                                        width: double.infinity,
+                                        height: 50.0,
+                                        decoration: BoxDecoration(
+                                          color: FlutterFlowTheme.of(context)
+                                              .secondaryBackground,
+                                          boxShadow: [
+                                            BoxShadow(
+                                              blurRadius: 4.0,
+                                              color: Color(0x33000000),
+                                              offset: Offset(0.0, 2.0),
+                                            )
+                                          ],
+                                          borderRadius: BorderRadius.only(
+                                            bottomLeft: Radius.circular(10.0),
+                                            bottomRight: Radius.circular(10.0),
+                                            topLeft: Radius.circular(10.0),
+                                            topRight: Radius.circular(10.0),
                                           ),
-                                        ],
+                                        ),
+                                        child: Padding(
+                                          padding:
+                                              EdgeInsetsDirectional.fromSTEB(
+                                                  5.0, 5.0, 5.0, 5.0),
+                                          child: Row(
+                                            mainAxisSize: MainAxisSize.max,
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.spaceBetween,
+                                            children: [
+                                              InkWell(
+                                                splashColor: Colors.transparent,
+                                                focusColor: Colors.transparent,
+                                                hoverColor: Colors.transparent,
+                                                highlightColor:
+                                                    Colors.transparent,
+                                                onTap: () async {
+                                                  context.pushNamed(
+                                                    'DetailMesinAMDK',
+                                                    queryParameters: {
+                                                      'nama': serializeParam(
+                                                        columnListMesinAmdkRecord
+                                                            .namaMesin,
+                                                        ParamType.String,
+                                                      ),
+                                                      'gambarmesin':
+                                                          serializeParam(
+                                                        columnListMesinAmdkRecord
+                                                            .gambarMesin,
+                                                        ParamType.String,
+                                                      ),
+                                                      'kapasitasmesin':
+                                                          serializeParam(
+                                                        columnListMesinAmdkRecord
+                                                            .kapasitasMesin,
+                                                        ParamType.String,
+                                                      ),
+                                                    }.withoutNulls,
+                                                  );
+                                                },
+                                                child: Text(
+                                                  columnListMesinAmdkRecord
+                                                      .namaMesin,
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
+                                                      .bodyMedium
+                                                      .override(
+                                                        fontFamily:
+                                                            'Readex Pro',
+                                                        fontWeight:
+                                                            FontWeight.normal,
+                                                      ),
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        ),
                                       ),
                                     );
                                   }),

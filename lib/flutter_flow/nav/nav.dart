@@ -142,11 +142,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => MesinAirNewWidget(),
         ),
         FFRoute(
-          name: 'MesinRONew',
-          path: '/mesinRONew',
-          builder: (context, params) => MesinRONewWidget(),
-        ),
-        FFRoute(
           name: 'MesinAMDKNew',
           path: '/mesinAMDKNew',
           builder: (context, params) => MesinAMDKNewWidget(),
@@ -161,17 +156,18 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           ),
         ),
         FFRoute(
-          name: 'DetailPemasanganCopyCopy',
-          path: '/detailPemasanganCopyCopy',
-          builder: (context, params) => DetailPemasanganCopyCopyWidget(
+          name: 'DetailMesinAMDK',
+          path: '/detailMesinAMDK',
+          builder: (context, params) => DetailMesinAMDKWidget(
             nama: params.getParam('nama', ParamType.String),
-            alamat: params.getParam('alamat', ParamType.String),
-            tglpemasangan: params.getParam('tglpemasangan', ParamType.DateTime),
-            dokumen1: params.getParam('dokumen1', ParamType.String),
-            dokumen2: params.getParam('dokumen2', ParamType.String),
-            dokumen3: params.getParam('dokumen3', ParamType.String),
-            dokumen4: params.getParam('dokumen4', ParamType.String),
+            gambarmesin: params.getParam('gambarmesin', ParamType.String),
+            kapasitasmesin: params.getParam('kapasitasmesin', ParamType.String),
           ),
+        ),
+        FFRoute(
+          name: 'MesinRONew',
+          path: '/mesinRONew',
+          builder: (context, params) => MesinRONewWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

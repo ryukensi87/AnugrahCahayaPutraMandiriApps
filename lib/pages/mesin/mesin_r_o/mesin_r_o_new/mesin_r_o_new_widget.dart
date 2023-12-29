@@ -628,58 +628,90 @@ class _MesinRONewWidgetState extends State<MesinRONewWidget> {
                                         columnListMesinRecordList[columnIndex];
                                     return Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
-                                          0.0, 5.0, 0.0, 0.0),
-                                      child: Row(
-                                        mainAxisSize: MainAxisSize.max,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.spaceBetween,
-                                        children: [
-                                          InkWell(
-                                            splashColor: Colors.transparent,
-                                            focusColor: Colors.transparent,
-                                            hoverColor: Colors.transparent,
-                                            highlightColor: Colors.transparent,
-                                            onTap: () async {
-                                              context.pushNamed(
-                                                'DetailMesinRO',
-                                                queryParameters: {
-                                                  'nama': serializeParam(
-                                                    columnListMesinRecord
-                                                        .namaMesin,
-                                                    ParamType.String,
-                                                  ),
-                                                  'gambarmesin': serializeParam(
-                                                    columnListMesinRecord
-                                                        .gambarMesin,
-                                                    ParamType.String,
-                                                  ),
-                                                  'kapasitasmesin':
-                                                      serializeParam(
-                                                    columnListMesinRecord
-                                                        .kapasitasMesin,
-                                                    ParamType.String,
-                                                  ),
-                                                }.withoutNulls,
-                                              );
-                                            },
-                                            child: Text(
-                                              columnListMesinRecord.namaMesin,
-                                              style: FlutterFlowTheme.of(
-                                                      context)
-                                                  .bodyMedium
-                                                  .override(
-                                                    fontFamily: 'Readex Pro',
-                                                    fontWeight: FontWeight.bold,
-                                                  ),
-                                            ),
+                                          0.0, 0.0, 0.0, 5.0),
+                                      child: Container(
+                                        width: double.infinity,
+                                        height: 50.0,
+                                        decoration: BoxDecoration(
+                                          color: FlutterFlowTheme.of(context)
+                                              .secondaryBackground,
+                                          boxShadow: [
+                                            BoxShadow(
+                                              blurRadius: 4.0,
+                                              color: Color(0x33000000),
+                                              offset: Offset(0.0, 2.0),
+                                            )
+                                          ],
+                                          borderRadius: BorderRadius.only(
+                                            bottomLeft: Radius.circular(10.0),
+                                            bottomRight: Radius.circular(10.0),
+                                            topLeft: Radius.circular(10.0),
+                                            topRight: Radius.circular(10.0),
                                           ),
-                                          Text(
-                                            columnListMesinRecord
-                                                .kapasitasMesin,
-                                            style: FlutterFlowTheme.of(context)
-                                                .bodyMedium,
+                                        ),
+                                        child: Padding(
+                                          padding:
+                                              EdgeInsetsDirectional.fromSTEB(
+                                                  5.0, 5.0, 5.0, 5.0),
+                                          child: Row(
+                                            mainAxisSize: MainAxisSize.max,
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.spaceBetween,
+                                            children: [
+                                              InkWell(
+                                                splashColor: Colors.transparent,
+                                                focusColor: Colors.transparent,
+                                                hoverColor: Colors.transparent,
+                                                highlightColor:
+                                                    Colors.transparent,
+                                                onTap: () async {
+                                                  context.pushNamed(
+                                                    'DetailMesinRO',
+                                                    queryParameters: {
+                                                      'nama': serializeParam(
+                                                        columnListMesinRecord
+                                                            .namaMesin,
+                                                        ParamType.String,
+                                                      ),
+                                                      'gambarmesin':
+                                                          serializeParam(
+                                                        columnListMesinRecord
+                                                            .gambarMesin,
+                                                        ParamType.String,
+                                                      ),
+                                                      'kapasitasmesin':
+                                                          serializeParam(
+                                                        columnListMesinRecord
+                                                            .kapasitasMesin,
+                                                        ParamType.String,
+                                                      ),
+                                                    }.withoutNulls,
+                                                  );
+                                                },
+                                                child: Text(
+                                                  columnListMesinRecord
+                                                      .namaMesin,
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
+                                                      .bodyMedium
+                                                      .override(
+                                                        fontFamily:
+                                                            'Readex Pro',
+                                                        fontWeight:
+                                                            FontWeight.normal,
+                                                      ),
+                                                ),
+                                              ),
+                                              Text(
+                                                columnListMesinRecord
+                                                    .kapasitasMesin,
+                                                style:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyMedium,
+                                              ),
+                                            ],
                                           ),
-                                        ],
+                                        ),
                                       ),
                                     );
                                   }),

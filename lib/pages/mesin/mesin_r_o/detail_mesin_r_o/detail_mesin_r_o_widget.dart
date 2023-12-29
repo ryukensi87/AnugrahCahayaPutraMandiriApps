@@ -197,6 +197,8 @@ class _DetailMesinROWidgetState extends State<DetailMesinROWidget> {
                                       0.0, 0.0, 0.0, 12.0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
                                     children: [
                                       Text(
                                         valueOrDefault<String>(
@@ -204,17 +206,12 @@ class _DetailMesinROWidgetState extends State<DetailMesinROWidget> {
                                           'nama',
                                         ),
                                         style: FlutterFlowTheme.of(context)
-                                            .titleLarge,
+                                            .titleLarge
+                                            .override(
+                                              fontFamily: 'Outfit',
+                                              fontSize: 18.0,
+                                            ),
                                       ),
-                                    ],
-                                  ),
-                                ),
-                                Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      0.0, 0.0, 0.0, 12.0),
-                                  child: Row(
-                                    mainAxisSize: MainAxisSize.max,
-                                    children: [
                                       Text(
                                         valueOrDefault<String>(
                                           widget.kapasitasmesin,
@@ -224,6 +221,7 @@ class _DetailMesinROWidgetState extends State<DetailMesinROWidget> {
                                             .bodyLarge
                                             .override(
                                               fontFamily: 'Readex Pro',
+                                              fontSize: 18.0,
                                               fontWeight: FontWeight.w500,
                                             ),
                                       ),

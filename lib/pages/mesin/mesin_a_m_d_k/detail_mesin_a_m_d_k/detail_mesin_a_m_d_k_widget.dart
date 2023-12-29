@@ -2,50 +2,38 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'package:smooth_page_indicator/smooth_page_indicator.dart'
-    as smooth_page_indicator;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
-import 'detail_pemasangan_copy_copy_model.dart';
-export 'detail_pemasangan_copy_copy_model.dart';
+import 'detail_mesin_a_m_d_k_model.dart';
+export 'detail_mesin_a_m_d_k_model.dart';
 
-class DetailPemasanganCopyCopyWidget extends StatefulWidget {
-  const DetailPemasanganCopyCopyWidget({
+class DetailMesinAMDKWidget extends StatefulWidget {
+  const DetailMesinAMDKWidget({
     Key? key,
     this.nama,
-    this.alamat,
-    this.tglpemasangan,
-    this.dokumen1,
-    required this.dokumen2,
-    required this.dokumen3,
-    this.dokumen4,
+    this.gambarmesin,
+    this.kapasitasmesin,
   }) : super(key: key);
 
   final String? nama;
-  final String? alamat;
-  final DateTime? tglpemasangan;
-  final String? dokumen1;
-  final String? dokumen2;
-  final String? dokumen3;
-  final String? dokumen4;
+  final String? gambarmesin;
+  final String? kapasitasmesin;
 
   @override
-  _DetailPemasanganCopyCopyWidgetState createState() =>
-      _DetailPemasanganCopyCopyWidgetState();
+  _DetailMesinAMDKWidgetState createState() => _DetailMesinAMDKWidgetState();
 }
 
-class _DetailPemasanganCopyCopyWidgetState
-    extends State<DetailPemasanganCopyCopyWidget> {
-  late DetailPemasanganCopyCopyModel _model;
+class _DetailMesinAMDKWidgetState extends State<DetailMesinAMDKWidget> {
+  late DetailMesinAMDKModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => DetailPemasanganCopyCopyModel());
+    _model = createModel(context, () => DetailMesinAMDKModel());
 
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
@@ -103,104 +91,13 @@ class _DetailPemasanganCopyCopyWidgetState
                                     .secondaryBackground,
                                 borderRadius: BorderRadius.circular(16.0),
                               ),
-                              child: Container(
-                                width: double.infinity,
-                                height: 500.0,
-                                child: Stack(
-                                  children: [
-                                    Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          0.0, 0.0, 0.0, 40.0),
-                                      child: PageView(
-                                        controller:
-                                            _model.pageViewController ??=
-                                                PageController(initialPage: 0),
-                                        scrollDirection: Axis.horizontal,
-                                        children: [
-                                          ClipRRect(
-                                            borderRadius:
-                                                BorderRadius.circular(8.0),
-                                            child: Image.network(
-                                              widget.dokumen1!,
-                                              width: 300.0,
-                                              height: 200.0,
-                                              fit: BoxFit.cover,
-                                            ),
-                                          ),
-                                          ClipRRect(
-                                            borderRadius:
-                                                BorderRadius.circular(8.0),
-                                            child: Image.network(
-                                              widget.dokumen2!,
-                                              width: 300.0,
-                                              height: 200.0,
-                                              fit: BoxFit.cover,
-                                            ),
-                                          ),
-                                          ClipRRect(
-                                            borderRadius:
-                                                BorderRadius.circular(8.0),
-                                            child: Image.network(
-                                              widget.dokumen3!,
-                                              width: 300.0,
-                                              height: 200.0,
-                                              fit: BoxFit.cover,
-                                            ),
-                                          ),
-                                          ClipRRect(
-                                            borderRadius:
-                                                BorderRadius.circular(8.0),
-                                            child: Image.network(
-                                              widget.dokumen4!,
-                                              width: 300.0,
-                                              height: 200.0,
-                                              fit: BoxFit.cover,
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                    Align(
-                                      alignment:
-                                          AlignmentDirectional(-1.0, 1.0),
-                                      child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            16.0, 0.0, 0.0, 16.0),
-                                        child: smooth_page_indicator
-                                            .SmoothPageIndicator(
-                                          controller: _model
-                                                  .pageViewController ??=
-                                              PageController(initialPage: 0),
-                                          count: 4,
-                                          axisDirection: Axis.horizontal,
-                                          onDotClicked: (i) async {
-                                            await _model.pageViewController!
-                                                .animateToPage(
-                                              i,
-                                              duration:
-                                                  Duration(milliseconds: 500),
-                                              curve: Curves.ease,
-                                            );
-                                          },
-                                          effect: smooth_page_indicator
-                                              .ExpandingDotsEffect(
-                                            expansionFactor: 3.0,
-                                            spacing: 8.0,
-                                            radius: 16.0,
-                                            dotWidth: 16.0,
-                                            dotHeight: 8.0,
-                                            dotColor:
-                                                FlutterFlowTheme.of(context)
-                                                    .accent1,
-                                            activeDotColor:
-                                                FlutterFlowTheme.of(context)
-                                                    .primary,
-                                            paintStyle: PaintingStyle.fill,
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  ],
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(8.0),
+                                child: Image.network(
+                                  'https://picsum.photos/seed/281/600',
+                                  width: 300.0,
+                                  height: 200.0,
+                                  fit: BoxFit.cover,
                                 ),
                               ),
                             ),
@@ -268,7 +165,7 @@ class _DetailPemasanganCopyCopyWidgetState
                                         MainAxisAlignment.spaceBetween,
                                     children: [
                                       Text(
-                                        'Detail Pemasangan',
+                                        'Mesin AMDK',
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
                                             .override(
@@ -297,7 +194,7 @@ class _DetailPemasanganCopyCopyWidgetState
                                 ),
                                 Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
-                                      0.0, 0.0, 0.0, 12.0),
+                                      0.0, 0.0, 0.0, 5.0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
@@ -320,44 +217,19 @@ class _DetailPemasanganCopyCopyWidgetState
                                     children: [
                                       Text(
                                         valueOrDefault<String>(
-                                          widget.alamat,
-                                          'alamat',
+                                          widget.kapasitasmesin,
+                                          '0',
                                         ),
                                         style: FlutterFlowTheme.of(context)
                                             .bodyLarge
                                             .override(
                                               fontFamily: 'Readex Pro',
+                                              fontSize: 14.0,
                                               fontWeight: FontWeight.w500,
                                             ),
                                       ),
                                     ],
                                   ),
-                                ),
-                                Row(
-                                  mainAxisSize: MainAxisSize.max,
-                                  children: [
-                                    Expanded(
-                                      child: Column(
-                                        mainAxisSize: MainAxisSize.max,
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        children: [
-                                          Padding(
-                                            padding:
-                                                EdgeInsetsDirectional.fromSTEB(
-                                                    0.0, 0.0, 0.0, 4.0),
-                                            child: Text(
-                                              dateTimeFormat('yMMMd',
-                                                  widget.tglpemasangan),
-                                              style:
-                                                  FlutterFlowTheme.of(context)
-                                                      .bodyMedium,
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ],
                                 ),
                               ],
                             ),
