@@ -11,6 +11,7 @@ import 'schema/list_mesin_amdk_record.dart';
 import 'schema/history_pemasangan_depot_record.dart';
 import 'schema/users_record.dart';
 import 'schema/design_depot_record.dart';
+import 'schema/owner_record.dart';
 
 export 'dart:async' show StreamSubscription;
 export 'package:cloud_firestore/cloud_firestore.dart';
@@ -24,6 +25,7 @@ export 'schema/list_mesin_amdk_record.dart';
 export 'schema/history_pemasangan_depot_record.dart';
 export 'schema/users_record.dart';
 export 'schema/design_depot_record.dart';
+export 'schema/owner_record.dart';
 
 /// Functions to query ListProdukRecords (as a Stream and as a Future).
 Future<int> queryListProdukRecordCount({
@@ -243,6 +245,43 @@ Future<List<DesignDepotRecord>> queryDesignDepotRecordOnce({
     queryCollectionOnce(
       DesignDepotRecord.collection,
       DesignDepotRecord.fromSnapshot,
+      queryBuilder: queryBuilder,
+      limit: limit,
+      singleRecord: singleRecord,
+    );
+
+/// Functions to query OwnerRecords (as a Stream and as a Future).
+Future<int> queryOwnerRecordCount({
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+}) =>
+    queryCollectionCount(
+      OwnerRecord.collection,
+      queryBuilder: queryBuilder,
+      limit: limit,
+    );
+
+Stream<List<OwnerRecord>> queryOwnerRecord({
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+  bool singleRecord = false,
+}) =>
+    queryCollection(
+      OwnerRecord.collection,
+      OwnerRecord.fromSnapshot,
+      queryBuilder: queryBuilder,
+      limit: limit,
+      singleRecord: singleRecord,
+    );
+
+Future<List<OwnerRecord>> queryOwnerRecordOnce({
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+  bool singleRecord = false,
+}) =>
+    queryCollectionOnce(
+      OwnerRecord.collection,
+      OwnerRecord.fromSnapshot,
       queryBuilder: queryBuilder,
       limit: limit,
       singleRecord: singleRecord,

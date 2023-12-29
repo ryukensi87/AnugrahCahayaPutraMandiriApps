@@ -25,3 +25,4 @@ export '/pages/depot/design_depot/designdepot/designdepot_widget.dart'
     show DesigndepotWidget;
 export '/pages/depot/design_depot/detail_design_depot/detail_design_depot_widget.dart'
     show DetailDesignDepotWidget;
+export '/pages/jasa/jasa/jasa_widget.dart' show JasaWidget;

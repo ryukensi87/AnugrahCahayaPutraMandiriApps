@@ -1,4 +1,5 @@
 import '/auth/base_auth_user_provider.dart';
+import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_expanded_image_view.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
@@ -393,7 +394,7 @@ class _HomePageNewWidgetState extends State<HomePageNewWidget>
                                                     child:
                                                         FlutterFlowExpandedImageView(
                                                       image: Image.asset(
-                                                        'assets/images/WhatsApp_Image_2019-05-27_at_3.57.59_AM.jpeg',
+                                                        'assets/images/WhatsApp_Image_2019-05-27_at_3.58.01_AM(1).jpeg',
                                                         fit: BoxFit.contain,
                                                       ),
                                                       allowRotation: true,
@@ -411,7 +412,7 @@ class _HomePageNewWidgetState extends State<HomePageNewWidget>
                                                       BorderRadius.circular(
                                                           8.0),
                                                   child: Image.asset(
-                                                    'assets/images/WhatsApp_Image_2019-05-27_at_3.57.59_AM.jpeg',
+                                                    'assets/images/WhatsApp_Image_2019-05-27_at_3.58.01_AM(1).jpeg',
                                                     width: 180.0,
                                                     height: 160.0,
                                                     fit: BoxFit.cover,
@@ -761,11 +762,73 @@ class _HomePageNewWidgetState extends State<HomePageNewWidget>
                                         ],
                                         shape: BoxShape.circle,
                                       ),
-                                      child: Icon(
-                                        Icons.hail,
-                                        color: FlutterFlowTheme.of(context)
-                                            .secondaryText,
-                                        size: 30.0,
+                                      child: StreamBuilder<List<OwnerRecord>>(
+                                        stream: queryOwnerRecord(
+                                          singleRecord: true,
+                                        ),
+                                        builder: (context, snapshot) {
+                                          // Customize what your widget looks like when it's loading.
+                                          if (!snapshot.hasData) {
+                                            return Center(
+                                              child: SizedBox(
+                                                width: 50.0,
+                                                height: 50.0,
+                                                child:
+                                                    CircularProgressIndicator(
+                                                  valueColor:
+                                                      AlwaysStoppedAnimation<
+                                                          Color>(
+                                                    FlutterFlowTheme.of(context)
+                                                        .primary,
+                                                  ),
+                                                ),
+                                              ),
+                                            );
+                                          }
+                                          List<OwnerRecord>
+                                              iconOwnerRecordList =
+                                              snapshot.data!;
+                                          final iconOwnerRecord =
+                                              iconOwnerRecordList.isNotEmpty
+                                                  ? iconOwnerRecordList.first
+                                                  : null;
+                                          return InkWell(
+                                            splashColor: Colors.transparent,
+                                            focusColor: Colors.transparent,
+                                            hoverColor: Colors.transparent,
+                                            highlightColor: Colors.transparent,
+                                            onTap: () async {
+                                              context.pushNamed(
+                                                'Jasa',
+                                                queryParameters: {
+                                                  'foto': serializeParam(
+                                                    iconOwnerRecord?.foto,
+                                                    ParamType.String,
+                                                  ),
+                                                  'nama': serializeParam(
+                                                    iconOwnerRecord?.nama,
+                                                    ParamType.String,
+                                                  ),
+                                                  'alamat': serializeParam(
+                                                    iconOwnerRecord?.alamat,
+                                                    ParamType.String,
+                                                  ),
+                                                  'notlp': serializeParam(
+                                                    iconOwnerRecord?.nomorTlp,
+                                                    ParamType.String,
+                                                  ),
+                                                }.withoutNulls,
+                                              );
+                                            },
+                                            child: Icon(
+                                              Icons.hail,
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .secondaryText,
+                                              size: 30.0,
+                                            ),
+                                          );
+                                        },
                                       ),
                                     ),
                                   ),

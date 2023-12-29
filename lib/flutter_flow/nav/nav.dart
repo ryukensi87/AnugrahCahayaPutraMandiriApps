@@ -182,6 +182,16 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             tglpemasangan: params.getParam('tglpemasangan', ParamType.DateTime),
             dokumen1: params.getParam('dokumen1', ParamType.String),
           ),
+        ),
+        FFRoute(
+          name: 'Jasa',
+          path: '/jasa',
+          builder: (context, params) => JasaWidget(
+            foto: params.getParam('foto', ParamType.String),
+            nama: params.getParam('nama', ParamType.String),
+            alamat: params.getParam('alamat', ParamType.String),
+            notlp: params.getParam('notlp', ParamType.String),
+          ),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

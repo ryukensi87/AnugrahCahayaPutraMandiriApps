@@ -4,15 +4,15 @@ service cloud.firestore {
     match /list_produk/{document} {
       allow create: if true;
       allow read: if true;
-      allow write: if true;
-      allow delete: if true;
+      allow write: if false;
+      allow delete: if false;
     }
 
     match /list_mesin/{document} {
       allow create: if true;
       allow read: if true;
-      allow write: if true;
-      allow delete: if true;
+      allow write: if false;
+      allow delete: if false;
     }
 
     match /list_mesin_amdk/{document} {
@@ -37,6 +37,13 @@ service cloud.firestore {
     }
 
     match /DesignDepot/{document} {
+      allow create: if true;
+      allow read: if true;
+      allow write: if false;
+      allow delete: if false;
+    }
+
+    match /Owner/{document} {
       allow create: if true;
       allow read: if true;
       allow write: if true;
