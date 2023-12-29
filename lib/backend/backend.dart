@@ -10,6 +10,7 @@ import 'schema/list_mesin_record.dart';
 import 'schema/list_mesin_amdk_record.dart';
 import 'schema/history_pemasangan_depot_record.dart';
 import 'schema/users_record.dart';
+import 'schema/design_depot_record.dart';
 
 export 'dart:async' show StreamSubscription;
 export 'package:cloud_firestore/cloud_firestore.dart';
@@ -22,6 +23,7 @@ export 'schema/list_mesin_record.dart';
 export 'schema/list_mesin_amdk_record.dart';
 export 'schema/history_pemasangan_depot_record.dart';
 export 'schema/users_record.dart';
+export 'schema/design_depot_record.dart';
 
 /// Functions to query ListProdukRecords (as a Stream and as a Future).
 Future<int> queryListProdukRecordCount({
@@ -204,6 +206,43 @@ Future<List<UsersRecord>> queryUsersRecordOnce({
     queryCollectionOnce(
       UsersRecord.collection,
       UsersRecord.fromSnapshot,
+      queryBuilder: queryBuilder,
+      limit: limit,
+      singleRecord: singleRecord,
+    );
+
+/// Functions to query DesignDepotRecords (as a Stream and as a Future).
+Future<int> queryDesignDepotRecordCount({
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+}) =>
+    queryCollectionCount(
+      DesignDepotRecord.collection,
+      queryBuilder: queryBuilder,
+      limit: limit,
+    );
+
+Stream<List<DesignDepotRecord>> queryDesignDepotRecord({
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+  bool singleRecord = false,
+}) =>
+    queryCollection(
+      DesignDepotRecord.collection,
+      DesignDepotRecord.fromSnapshot,
+      queryBuilder: queryBuilder,
+      limit: limit,
+      singleRecord: singleRecord,
+    );
+
+Future<List<DesignDepotRecord>> queryDesignDepotRecordOnce({
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+  bool singleRecord = false,
+}) =>
+    queryCollectionOnce(
+      DesignDepotRecord.collection,
+      DesignDepotRecord.fromSnapshot,
       queryBuilder: queryBuilder,
       limit: limit,
       singleRecord: singleRecord,

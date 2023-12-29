@@ -1,49 +1,43 @@
+import '/flutter_flow/flutter_flow_expanded_image_view.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'package:smooth_page_indicator/smooth_page_indicator.dart'
-    as smooth_page_indicator;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
-import 'detail_pemasangan_model.dart';
-export 'detail_pemasangan_model.dart';
+import 'detail_produk_model.dart';
+export 'detail_produk_model.dart';
 
-class DetailPemasanganWidget extends StatefulWidget {
-  const DetailPemasanganWidget({
+class DetailProdukWidget extends StatefulWidget {
+  const DetailProdukWidget({
     Key? key,
     this.nama,
-    this.alamat,
-    this.tglpemasangan,
-    this.dokumen1,
-    required this.dokumen2,
-    required this.dokumen3,
-    this.dokumen4,
+    this.harga,
+    this.stok,
+    required this.gambar,
   }) : super(key: key);
 
   final String? nama;
-  final String? alamat;
-  final DateTime? tglpemasangan;
-  final String? dokumen1;
-  final String? dokumen2;
-  final String? dokumen3;
-  final String? dokumen4;
+  final double? harga;
+  final int? stok;
+  final String? gambar;
 
   @override
-  _DetailPemasanganWidgetState createState() => _DetailPemasanganWidgetState();
+  _DetailProdukWidgetState createState() => _DetailProdukWidgetState();
 }
 
-class _DetailPemasanganWidgetState extends State<DetailPemasanganWidget> {
-  late DetailPemasanganModel _model;
+class _DetailProdukWidgetState extends State<DetailProdukWidget> {
+  late DetailProdukModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => DetailPemasanganModel());
+    _model = createModel(context, () => DetailProdukModel());
 
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
@@ -101,104 +95,40 @@ class _DetailPemasanganWidgetState extends State<DetailPemasanganWidget> {
                                     .secondaryBackground,
                                 borderRadius: BorderRadius.circular(16.0),
                               ),
-                              child: Container(
-                                width: double.infinity,
-                                height: 500.0,
-                                child: Stack(
-                                  children: [
-                                    Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          0.0, 0.0, 0.0, 40.0),
-                                      child: PageView(
-                                        controller:
-                                            _model.pageViewController ??=
-                                                PageController(initialPage: 0),
-                                        scrollDirection: Axis.horizontal,
-                                        children: [
-                                          ClipRRect(
-                                            borderRadius:
-                                                BorderRadius.circular(8.0),
-                                            child: Image.network(
-                                              widget.dokumen1!,
-                                              width: 300.0,
-                                              height: 200.0,
-                                              fit: BoxFit.cover,
-                                            ),
-                                          ),
-                                          ClipRRect(
-                                            borderRadius:
-                                                BorderRadius.circular(8.0),
-                                            child: Image.network(
-                                              widget.dokumen2!,
-                                              width: 300.0,
-                                              height: 200.0,
-                                              fit: BoxFit.cover,
-                                            ),
-                                          ),
-                                          ClipRRect(
-                                            borderRadius:
-                                                BorderRadius.circular(8.0),
-                                            child: Image.network(
-                                              widget.dokumen3!,
-                                              width: 300.0,
-                                              height: 200.0,
-                                              fit: BoxFit.cover,
-                                            ),
-                                          ),
-                                          ClipRRect(
-                                            borderRadius:
-                                                BorderRadius.circular(8.0),
-                                            child: Image.network(
-                                              widget.dokumen4!,
-                                              width: 300.0,
-                                              height: 200.0,
-                                              fit: BoxFit.cover,
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                    Align(
-                                      alignment:
-                                          AlignmentDirectional(-1.0, 1.0),
-                                      child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            16.0, 0.0, 0.0, 16.0),
-                                        child: smooth_page_indicator
-                                            .SmoothPageIndicator(
-                                          controller: _model
-                                                  .pageViewController ??=
-                                              PageController(initialPage: 0),
-                                          count: 4,
-                                          axisDirection: Axis.horizontal,
-                                          onDotClicked: (i) async {
-                                            await _model.pageViewController!
-                                                .animateToPage(
-                                              i,
-                                              duration:
-                                                  Duration(milliseconds: 500),
-                                              curve: Curves.ease,
-                                            );
-                                          },
-                                          effect: smooth_page_indicator
-                                              .ExpandingDotsEffect(
-                                            expansionFactor: 3.0,
-                                            spacing: 8.0,
-                                            radius: 16.0,
-                                            dotWidth: 16.0,
-                                            dotHeight: 8.0,
-                                            dotColor:
-                                                FlutterFlowTheme.of(context)
-                                                    .accent1,
-                                            activeDotColor:
-                                                FlutterFlowTheme.of(context)
-                                                    .primary,
-                                            paintStyle: PaintingStyle.fill,
-                                          ),
+                              child: InkWell(
+                                splashColor: Colors.transparent,
+                                focusColor: Colors.transparent,
+                                hoverColor: Colors.transparent,
+                                highlightColor: Colors.transparent,
+                                onTap: () async {
+                                  await Navigator.push(
+                                    context,
+                                    PageTransition(
+                                      type: PageTransitionType.fade,
+                                      child: FlutterFlowExpandedImageView(
+                                        image: Image.network(
+                                          widget.gambar!,
+                                          fit: BoxFit.contain,
                                         ),
+                                        allowRotation: true,
+                                        tag: widget.gambar!,
+                                        useHeroAnimation: true,
                                       ),
                                     ),
-                                  ],
+                                  );
+                                },
+                                child: Hero(
+                                  tag: widget.gambar!,
+                                  transitionOnUserGestures: true,
+                                  child: ClipRRect(
+                                    borderRadius: BorderRadius.circular(8.0),
+                                    child: Image.network(
+                                      widget.gambar!,
+                                      width: 300.0,
+                                      height: 200.0,
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
                                 ),
                               ),
                             ),
@@ -267,7 +197,7 @@ class _DetailPemasanganWidgetState extends State<DetailPemasanganWidget> {
                                         MainAxisAlignment.spaceBetween,
                                     children: [
                                       Text(
-                                        'Detail Pemasangan',
+                                        'Produk',
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
                                             .override(
@@ -299,33 +229,46 @@ class _DetailPemasanganWidgetState extends State<DetailPemasanganWidget> {
                                     widget.nama,
                                     'nama',
                                   ),
-                                  style:
-                                      FlutterFlowTheme.of(context).titleLarge,
+                                  style: FlutterFlowTheme.of(context)
+                                      .titleLarge
+                                      .override(
+                                        fontFamily: 'Outfit',
+                                        fontSize: 20.0,
+                                      ),
                                 ),
-                                Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      0.0, 5.0, 0.0, 0.0),
-                                  child: Text(
-                                    valueOrDefault<String>(
-                                      widget.alamat,
-                                      'alamat',
+                                Align(
+                                  alignment: AlignmentDirectional(1.0, 0.0),
+                                  child: Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        0.0, 5.0, 0.0, 0.0),
+                                    child: Text(
+                                      formatNumber(
+                                        widget.stok,
+                                        formatType: FormatType.decimal,
+                                        decimalType: DecimalType.automatic,
+                                      ),
+                                      style: FlutterFlowTheme.of(context)
+                                          .bodyLarge
+                                          .override(
+                                            fontFamily: 'Readex Pro',
+                                            fontSize: 14.0,
+                                            fontWeight: FontWeight.normal,
+                                          ),
                                     ),
-                                    style: FlutterFlowTheme.of(context)
-                                        .bodyLarge
-                                        .override(
-                                          fontFamily: 'Readex Pro',
-                                          fontWeight: FontWeight.w500,
-                                        ),
                                   ),
                                 ),
                                 Align(
                                   alignment: AlignmentDirectional(1.0, 0.0),
                                   child: Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
-                                        0.0, 0.0, 0.0, 4.0),
+                                        0.0, 5.0, 0.0, 4.0),
                                     child: Text(
-                                      dateTimeFormat(
-                                          'yMMMd', widget.tglpemasangan),
+                                      formatNumber(
+                                        widget.harga,
+                                        formatType: FormatType.decimal,
+                                        decimalType: DecimalType.periodDecimal,
+                                        currency: 'Rp. ',
+                                      ),
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium,
                                     ),

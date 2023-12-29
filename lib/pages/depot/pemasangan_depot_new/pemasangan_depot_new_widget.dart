@@ -202,81 +202,92 @@ class _PemasanganDepotNewWidgetState extends State<PemasanganDepotNewWidget> {
                               child: Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     10.0, 5.0, 10.0, 5.0),
-                                child: Row(
-                                  mainAxisSize: MainAxisSize.max,
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    Column(
-                                      mainAxisSize: MainAxisSize.max,
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                      children: [
-                                        Padding(
-                                          padding:
-                                              EdgeInsetsDirectional.fromSTEB(
-                                                  5.0, 0.0, 5.0, 0.0),
-                                          child: Container(
-                                            width: 50.0,
-                                            height: 50.0,
-                                            decoration: BoxDecoration(
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .secondaryBackground,
-                                            ),
-                                            child: ClipRRect(
-                                              borderRadius:
-                                                  BorderRadius.circular(8.0),
-                                              child: Image.asset(
-                                                'assets/images/6316109-removebg-preview.png',
-                                                width: 300.0,
-                                                height: 200.0,
-                                                fit: BoxFit.cover,
-                                              ),
-                                            ),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                    Column(
-                                      mainAxisSize: MainAxisSize.max,
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Text(
-                                          'Design Depot',
-                                          style: FlutterFlowTheme.of(context)
-                                              .bodyMedium
-                                              .override(
-                                                fontFamily: 'Readex Pro',
-                                                fontSize: 16.0,
-                                                fontWeight: FontWeight.bold,
-                                              ),
-                                        ),
-                                        Text(
-                                          'Design depot yang ada \ndidalam galeri kami',
-                                          style: FlutterFlowTheme.of(context)
-                                              .bodyMedium,
-                                        ),
-                                      ],
-                                    ),
-                                    Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          90.0, 0.0, 0.0, 0.0),
-                                      child: Stack(
+                                child: InkWell(
+                                  splashColor: Colors.transparent,
+                                  focusColor: Colors.transparent,
+                                  hoverColor: Colors.transparent,
+                                  highlightColor: Colors.transparent,
+                                  onTap: () async {
+                                    context.pushNamed('Designdepot');
+                                  },
+                                  child: Row(
+                                    mainAxisSize: MainAxisSize.max,
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    children: [
+                                      Column(
+                                        mainAxisSize: MainAxisSize.max,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
                                         children: [
-                                          Icon(
-                                            Icons.chevron_right,
-                                            color: FlutterFlowTheme.of(context)
-                                                .secondaryText,
-                                            size: 24.0,
+                                          Padding(
+                                            padding:
+                                                EdgeInsetsDirectional.fromSTEB(
+                                                    5.0, 0.0, 5.0, 0.0),
+                                            child: Container(
+                                              width: 50.0,
+                                              height: 50.0,
+                                              decoration: BoxDecoration(
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .secondaryBackground,
+                                              ),
+                                              child: ClipRRect(
+                                                borderRadius:
+                                                    BorderRadius.circular(8.0),
+                                                child: Image.asset(
+                                                  'assets/images/6316109-removebg-preview.png',
+                                                  width: 300.0,
+                                                  height: 200.0,
+                                                  fit: BoxFit.cover,
+                                                ),
+                                              ),
+                                            ),
                                           ),
                                         ],
                                       ),
-                                    ),
-                                  ],
+                                      Column(
+                                        mainAxisSize: MainAxisSize.max,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Text(
+                                            'Design Depot',
+                                            style: FlutterFlowTheme.of(context)
+                                                .bodyMedium
+                                                .override(
+                                                  fontFamily: 'Readex Pro',
+                                                  fontSize: 16.0,
+                                                  fontWeight: FontWeight.bold,
+                                                ),
+                                          ),
+                                          Text(
+                                            'Design depot yang ada \ndidalam galeri kami',
+                                            style: FlutterFlowTheme.of(context)
+                                                .bodyMedium,
+                                          ),
+                                        ],
+                                      ),
+                                      Padding(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                            90.0, 0.0, 0.0, 0.0),
+                                        child: Stack(
+                                          children: [
+                                            Icon(
+                                              Icons.chevron_right,
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .secondaryText,
+                                              size: 24.0,
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                    ],
+                                  ),
                                 ),
                               ),
                             ),
@@ -314,83 +325,96 @@ class _PemasanganDepotNewWidgetState extends State<PemasanganDepotNewWidget> {
                                 child: Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       10.0, 5.0, 10.0, 5.0),
-                                  child: Row(
-                                    mainAxisSize: MainAxisSize.max,
-                                    mainAxisAlignment: MainAxisAlignment.start,
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.center,
-                                    children: [
-                                      Column(
-                                        mainAxisSize: MainAxisSize.max,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                        children: [
-                                          Padding(
-                                            padding:
-                                                EdgeInsetsDirectional.fromSTEB(
-                                                    5.0, 0.0, 5.0, 0.0),
-                                            child: Container(
-                                              width: 50.0,
-                                              height: 50.0,
-                                              decoration: BoxDecoration(
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .secondaryBackground,
-                                              ),
-                                              child: ClipRRect(
-                                                borderRadius:
-                                                    BorderRadius.circular(8.0),
-                                                child: Image.asset(
-                                                  'assets/images/history2-removebg-preview.png',
-                                                  width: 300.0,
-                                                  height: 200.0,
-                                                  fit: BoxFit.cover,
-                                                ),
-                                              ),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                      Column(
-                                        mainAxisSize: MainAxisSize.max,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        children: [
-                                          Text(
-                                            'History Pemasangan',
-                                            style: FlutterFlowTheme.of(context)
-                                                .bodyMedium
-                                                .override(
-                                                  fontFamily: 'Readex Pro',
-                                                  fontSize: 16.0,
-                                                  fontWeight: FontWeight.bold,
-                                                ),
-                                          ),
-                                          Text(
-                                            'History Pemasangan Depot ',
-                                            style: FlutterFlowTheme.of(context)
-                                                .bodyMedium,
-                                          ),
-                                        ],
-                                      ),
-                                      Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            60.0, 0.0, 0.0, 0.0),
-                                        child: Stack(
+                                  child: InkWell(
+                                    splashColor: Colors.transparent,
+                                    focusColor: Colors.transparent,
+                                    hoverColor: Colors.transparent,
+                                    highlightColor: Colors.transparent,
+                                    onTap: () async {
+                                      context.pushNamed('HistoryPemasangan');
+                                    },
+                                    child: Row(
+                                      mainAxisSize: MainAxisSize.max,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.start,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
+                                      children: [
+                                        Column(
+                                          mainAxisSize: MainAxisSize.max,
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.center,
                                           children: [
-                                            Icon(
-                                              Icons.chevron_right,
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .secondaryText,
-                                              size: 24.0,
+                                            Padding(
+                                              padding: EdgeInsetsDirectional
+                                                  .fromSTEB(5.0, 0.0, 5.0, 0.0),
+                                              child: Container(
+                                                width: 50.0,
+                                                height: 50.0,
+                                                decoration: BoxDecoration(
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .secondaryBackground,
+                                                ),
+                                                child: ClipRRect(
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          8.0),
+                                                  child: Image.asset(
+                                                    'assets/images/history2-removebg-preview.png',
+                                                    width: 300.0,
+                                                    height: 200.0,
+                                                    fit: BoxFit.cover,
+                                                  ),
+                                                ),
+                                              ),
                                             ),
                                           ],
                                         ),
-                                      ),
-                                    ],
+                                        Column(
+                                          mainAxisSize: MainAxisSize.max,
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.center,
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: [
+                                            Text(
+                                              'History Pemasangan',
+                                              style: FlutterFlowTheme.of(
+                                                      context)
+                                                  .bodyMedium
+                                                  .override(
+                                                    fontFamily: 'Readex Pro',
+                                                    fontSize: 16.0,
+                                                    fontWeight: FontWeight.bold,
+                                                  ),
+                                            ),
+                                            Text(
+                                              'History Pemasangan Depot ',
+                                              style:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMedium,
+                                            ),
+                                          ],
+                                        ),
+                                        Padding(
+                                          padding:
+                                              EdgeInsetsDirectional.fromSTEB(
+                                                  60.0, 0.0, 0.0, 0.0),
+                                          child: Stack(
+                                            children: [
+                                              Icon(
+                                                Icons.chevron_right,
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .secondaryText,
+                                                size: 24.0,
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                      ],
+                                    ),
                                   ),
                                 ),
                               ),

@@ -89,16 +89,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               : HomePageNewWidget(),
         ),
         FFRoute(
-          name: 'Produklist',
-          path: '/produklist',
-          builder: (context, params) => ProduklistWidget(),
-        ),
-        FFRoute(
-          name: 'PemasanganDepot',
-          path: '/pemasanganDepot',
-          builder: (context, params) => PemasanganDepotWidget(),
-        ),
-        FFRoute(
           name: 'HomePageNew',
           path: '/homePageLogin',
           builder: (context, params) => HomePageNewWidget(),
@@ -163,6 +153,35 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'HistoryPemasangan',
           path: '/historyPemasangan',
           builder: (context, params) => HistoryPemasanganWidget(),
+        ),
+        FFRoute(
+          name: 'Produk',
+          path: '/produk',
+          builder: (context, params) => ProdukWidget(),
+        ),
+        FFRoute(
+          name: 'DetailProduk',
+          path: '/detailProduk',
+          builder: (context, params) => DetailProdukWidget(
+            nama: params.getParam('nama', ParamType.String),
+            harga: params.getParam('harga', ParamType.double),
+            stok: params.getParam('stok', ParamType.int),
+            gambar: params.getParam('gambar', ParamType.String),
+          ),
+        ),
+        FFRoute(
+          name: 'Designdepot',
+          path: '/designdepot',
+          builder: (context, params) => DesigndepotWidget(),
+        ),
+        FFRoute(
+          name: 'DetailDesignDepot',
+          path: '/detailDesignDepot',
+          builder: (context, params) => DetailDesignDepotWidget(
+            nama: params.getParam('nama', ParamType.String),
+            tglpemasangan: params.getParam('tglpemasangan', ParamType.DateTime),
+            dokumen1: params.getParam('dokumen1', ParamType.String),
+          ),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

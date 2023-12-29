@@ -1,3 +1,4 @@
+import '/flutter_flow/flutter_flow_expanded_image_view.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -6,6 +7,7 @@ import 'detail_mesin_a_m_d_k_widget.dart' show DetailMesinAMDKWidget;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
 
 class DetailMesinAMDKModel extends FlutterFlowModel<DetailMesinAMDKWidget> {

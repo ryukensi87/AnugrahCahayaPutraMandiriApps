@@ -1,16 +1,17 @@
-import '/flutter_flow/flutter_flow_expanded_image_view.dart';
+import '/auth/base_auth_user_provider.dart';
+import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'detail_mesin_r_o_widget.dart' show DetailMesinROWidget;
+import 'produk_widget.dart' show ProdukWidget;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
+import 'package:url_launcher/url_launcher.dart';
 
-class DetailMesinROModel extends FlutterFlowModel<DetailMesinROWidget> {
+class ProdukModel extends FlutterFlowModel<ProdukWidget> {
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();

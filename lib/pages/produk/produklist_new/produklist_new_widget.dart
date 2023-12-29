@@ -201,81 +201,92 @@ class _ProduklistNewWidgetState extends State<ProduklistNewWidget> {
                               child: Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     10.0, 5.0, 10.0, 5.0),
-                                child: Row(
-                                  mainAxisSize: MainAxisSize.max,
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    Column(
-                                      mainAxisSize: MainAxisSize.max,
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                      children: [
-                                        Padding(
-                                          padding:
-                                              EdgeInsetsDirectional.fromSTEB(
-                                                  5.0, 0.0, 5.0, 0.0),
-                                          child: Container(
-                                            width: 50.0,
-                                            height: 50.0,
-                                            decoration: BoxDecoration(
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .secondaryBackground,
-                                            ),
-                                            child: ClipRRect(
-                                              borderRadius:
-                                                  BorderRadius.circular(8.0),
-                                              child: Image.asset(
-                                                'assets/images/Produk-removebg-preview.png',
-                                                width: 300.0,
-                                                height: 200.0,
-                                                fit: BoxFit.contain,
-                                              ),
-                                            ),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                    Column(
-                                      mainAxisSize: MainAxisSize.max,
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Text(
-                                          'Produk',
-                                          style: FlutterFlowTheme.of(context)
-                                              .bodyMedium
-                                              .override(
-                                                fontFamily: 'Readex Pro',
-                                                fontSize: 16.0,
-                                                fontWeight: FontWeight.bold,
-                                              ),
-                                        ),
-                                        Text(
-                                          'Barang-barang yang tersedia \nditoko kami',
-                                          style: FlutterFlowTheme.of(context)
-                                              .bodyMedium,
-                                        ),
-                                      ],
-                                    ),
-                                    Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          60.0, 0.0, 0.0, 0.0),
-                                      child: Stack(
+                                child: InkWell(
+                                  splashColor: Colors.transparent,
+                                  focusColor: Colors.transparent,
+                                  hoverColor: Colors.transparent,
+                                  highlightColor: Colors.transparent,
+                                  onTap: () async {
+                                    context.pushNamed('Produk');
+                                  },
+                                  child: Row(
+                                    mainAxisSize: MainAxisSize.max,
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    children: [
+                                      Column(
+                                        mainAxisSize: MainAxisSize.max,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
                                         children: [
-                                          Icon(
-                                            Icons.chevron_right,
-                                            color: FlutterFlowTheme.of(context)
-                                                .secondaryText,
-                                            size: 24.0,
+                                          Padding(
+                                            padding:
+                                                EdgeInsetsDirectional.fromSTEB(
+                                                    5.0, 0.0, 5.0, 0.0),
+                                            child: Container(
+                                              width: 50.0,
+                                              height: 50.0,
+                                              decoration: BoxDecoration(
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .secondaryBackground,
+                                              ),
+                                              child: ClipRRect(
+                                                borderRadius:
+                                                    BorderRadius.circular(8.0),
+                                                child: Image.asset(
+                                                  'assets/images/Produk-removebg-preview.png',
+                                                  width: 300.0,
+                                                  height: 200.0,
+                                                  fit: BoxFit.contain,
+                                                ),
+                                              ),
+                                            ),
                                           ),
                                         ],
                                       ),
-                                    ),
-                                  ],
+                                      Column(
+                                        mainAxisSize: MainAxisSize.max,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Text(
+                                            'Produk',
+                                            style: FlutterFlowTheme.of(context)
+                                                .bodyMedium
+                                                .override(
+                                                  fontFamily: 'Readex Pro',
+                                                  fontSize: 16.0,
+                                                  fontWeight: FontWeight.bold,
+                                                ),
+                                          ),
+                                          Text(
+                                            'Barang-barang yang tersedia \nditoko kami',
+                                            style: FlutterFlowTheme.of(context)
+                                                .bodyMedium,
+                                          ),
+                                        ],
+                                      ),
+                                      Padding(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                            60.0, 0.0, 0.0, 0.0),
+                                        child: Stack(
+                                          children: [
+                                            Icon(
+                                              Icons.chevron_right,
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .secondaryText,
+                                              size: 24.0,
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                    ],
+                                  ),
                                 ),
                               ),
                             ),

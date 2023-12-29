@@ -8,34 +8,35 @@ import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
-import 'detail_mesin_r_o_model.dart';
-export 'detail_mesin_r_o_model.dart';
+import 'detail_design_depot_model.dart';
+export 'detail_design_depot_model.dart';
 
-class DetailMesinROWidget extends StatefulWidget {
-  const DetailMesinROWidget({
+class DetailDesignDepotWidget extends StatefulWidget {
+  const DetailDesignDepotWidget({
     Key? key,
     this.nama,
-    this.gambarmesin,
-    this.kapasitasmesin,
+    this.tglpemasangan,
+    this.dokumen1,
   }) : super(key: key);
 
   final String? nama;
-  final String? gambarmesin;
-  final String? kapasitasmesin;
+  final DateTime? tglpemasangan;
+  final String? dokumen1;
 
   @override
-  _DetailMesinROWidgetState createState() => _DetailMesinROWidgetState();
+  _DetailDesignDepotWidgetState createState() =>
+      _DetailDesignDepotWidgetState();
 }
 
-class _DetailMesinROWidgetState extends State<DetailMesinROWidget> {
-  late DetailMesinROModel _model;
+class _DetailDesignDepotWidgetState extends State<DetailDesignDepotWidget> {
+  late DetailDesignDepotModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => DetailMesinROModel());
+    _model = createModel(context, () => DetailDesignDepotModel());
 
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
@@ -105,23 +106,23 @@ class _DetailMesinROWidgetState extends State<DetailMesinROWidget> {
                                       type: PageTransitionType.fade,
                                       child: FlutterFlowExpandedImageView(
                                         image: Image.network(
-                                          widget.gambarmesin!,
+                                          widget.dokumen1!,
                                           fit: BoxFit.contain,
                                         ),
                                         allowRotation: true,
-                                        tag: widget.gambarmesin!,
+                                        tag: widget.dokumen1!,
                                         useHeroAnimation: true,
                                       ),
                                     ),
                                   );
                                 },
                                 child: Hero(
-                                  tag: widget.gambarmesin!,
+                                  tag: widget.dokumen1!,
                                   transitionOnUserGestures: true,
                                   child: ClipRRect(
                                     borderRadius: BorderRadius.circular(8.0),
                                     child: Image.network(
-                                      widget.gambarmesin!,
+                                      widget.dokumen1!,
                                       width: 300.0,
                                       height: 200.0,
                                       fit: BoxFit.cover,
@@ -184,6 +185,7 @@ class _DetailMesinROWidgetState extends State<DetailMesinROWidget> {
                             padding: EdgeInsets.all(16.0),
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
+                              crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
@@ -194,7 +196,7 @@ class _DetailMesinROWidgetState extends State<DetailMesinROWidget> {
                                         MainAxisAlignment.spaceBetween,
                                     children: [
                                       Text(
-                                        'Mesin RO',
+                                        'Design Depot',
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
                                             .override(
@@ -221,40 +223,25 @@ class _DetailMesinROWidgetState extends State<DetailMesinROWidget> {
                                     ],
                                   ),
                                 ),
-                                Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      0.0, 0.0, 0.0, 12.0),
-                                  child: Row(
-                                    mainAxisSize: MainAxisSize.max,
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Text(
-                                        valueOrDefault<String>(
-                                          widget.nama,
-                                          'nama',
-                                        ),
-                                        style: FlutterFlowTheme.of(context)
-                                            .titleLarge
-                                            .override(
-                                              fontFamily: 'Outfit',
-                                              fontSize: 18.0,
-                                            ),
-                                      ),
-                                      Text(
-                                        valueOrDefault<String>(
-                                          widget.kapasitasmesin,
-                                          '0',
-                                        ),
-                                        style: FlutterFlowTheme.of(context)
-                                            .bodyLarge
-                                            .override(
-                                              fontFamily: 'Readex Pro',
-                                              fontSize: 18.0,
-                                              fontWeight: FontWeight.w500,
-                                            ),
-                                      ),
-                                    ],
+                                Text(
+                                  valueOrDefault<String>(
+                                    widget.nama,
+                                    'nama',
+                                  ),
+                                  style:
+                                      FlutterFlowTheme.of(context).titleLarge,
+                                ),
+                                Align(
+                                  alignment: AlignmentDirectional(1.0, 0.0),
+                                  child: Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        0.0, 0.0, 0.0, 4.0),
+                                    child: Text(
+                                      dateTimeFormat(
+                                          'yMMMd', widget.tglpemasangan),
+                                      style: FlutterFlowTheme.of(context)
+                                          .bodyMedium,
+                                    ),
                                   ),
                                 ),
                               ],

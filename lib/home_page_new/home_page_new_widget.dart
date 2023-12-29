@@ -614,8 +614,8 @@ class _HomePageNewWidgetState extends State<HomePageNewWidget>
                                   Padding(
                                     padding: EdgeInsets.all(8.0),
                                     child: Container(
-                                      width: 60.0,
-                                      height: 60.0,
+                                      width: 50.0,
+                                      height: 50.0,
                                       decoration: BoxDecoration(
                                         color: FlutterFlowTheme.of(context)
                                             .secondaryBackground,
@@ -640,7 +640,7 @@ class _HomePageNewWidgetState extends State<HomePageNewWidget>
                                           Icons.shopping_bag,
                                           color: FlutterFlowTheme.of(context)
                                               .secondaryText,
-                                          size: 35.0,
+                                          size: 30.0,
                                         ),
                                       ),
                                     ),
@@ -658,8 +658,8 @@ class _HomePageNewWidgetState extends State<HomePageNewWidget>
                                   Padding(
                                     padding: EdgeInsets.all(8.0),
                                     child: Container(
-                                      width: 60.0,
-                                      height: 60.0,
+                                      width: 50.0,
+                                      height: 50.0,
                                       decoration: BoxDecoration(
                                         color: FlutterFlowTheme.of(context)
                                             .secondaryBackground,
@@ -685,7 +685,7 @@ class _HomePageNewWidgetState extends State<HomePageNewWidget>
                                           Icons.maps_home_work_outlined,
                                           color: FlutterFlowTheme.of(context)
                                               .secondaryText,
-                                          size: 35.0,
+                                          size: 30.0,
                                         ),
                                       ),
                                     ),
@@ -703,8 +703,8 @@ class _HomePageNewWidgetState extends State<HomePageNewWidget>
                                   Padding(
                                     padding: EdgeInsets.all(8.0),
                                     child: Container(
-                                      width: 60.0,
-                                      height: 60.0,
+                                      width: 50.0,
+                                      height: 50.0,
                                       decoration: BoxDecoration(
                                         color: FlutterFlowTheme.of(context)
                                             .secondaryBackground,
@@ -729,7 +729,7 @@ class _HomePageNewWidgetState extends State<HomePageNewWidget>
                                           Icons.water_drop_outlined,
                                           color: FlutterFlowTheme.of(context)
                                               .secondaryText,
-                                          size: 35.0,
+                                          size: 30.0,
                                         ),
                                       ),
                                     ),
@@ -747,8 +747,8 @@ class _HomePageNewWidgetState extends State<HomePageNewWidget>
                                   Padding(
                                     padding: EdgeInsets.all(8.0),
                                     child: Container(
-                                      width: 60.0,
-                                      height: 60.0,
+                                      width: 50.0,
+                                      height: 50.0,
                                       decoration: BoxDecoration(
                                         color: FlutterFlowTheme.of(context)
                                             .secondaryBackground,
@@ -765,7 +765,7 @@ class _HomePageNewWidgetState extends State<HomePageNewWidget>
                                         Icons.hail,
                                         color: FlutterFlowTheme.of(context)
                                             .secondaryText,
-                                        size: 35.0,
+                                        size: 30.0,
                                       ),
                                     ),
                                   ),
@@ -781,7 +781,7 @@ class _HomePageNewWidgetState extends State<HomePageNewWidget>
                         ),
                         Padding(
                           padding: EdgeInsetsDirectional.fromSTEB(
-                              16.0, 20.0, 16.0, 0.0),
+                              10.0, 20.0, 10.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,

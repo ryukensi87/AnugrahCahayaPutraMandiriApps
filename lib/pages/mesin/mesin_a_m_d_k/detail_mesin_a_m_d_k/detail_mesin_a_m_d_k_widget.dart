@@ -1,3 +1,4 @@
+import '/flutter_flow/flutter_flow_expanded_image_view.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -5,6 +6,7 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
 import 'detail_mesin_a_m_d_k_model.dart';
 export 'detail_mesin_a_m_d_k_model.dart';
@@ -91,13 +93,40 @@ class _DetailMesinAMDKWidgetState extends State<DetailMesinAMDKWidget> {
                                     .secondaryBackground,
                                 borderRadius: BorderRadius.circular(16.0),
                               ),
-                              child: ClipRRect(
-                                borderRadius: BorderRadius.circular(8.0),
-                                child: Image.network(
-                                  widget.gambarmesin!,
-                                  width: 300.0,
-                                  height: 200.0,
-                                  fit: BoxFit.cover,
+                              child: InkWell(
+                                splashColor: Colors.transparent,
+                                focusColor: Colors.transparent,
+                                hoverColor: Colors.transparent,
+                                highlightColor: Colors.transparent,
+                                onTap: () async {
+                                  await Navigator.push(
+                                    context,
+                                    PageTransition(
+                                      type: PageTransitionType.fade,
+                                      child: FlutterFlowExpandedImageView(
+                                        image: Image.network(
+                                          widget.gambarmesin!,
+                                          fit: BoxFit.contain,
+                                        ),
+                                        allowRotation: true,
+                                        tag: widget.gambarmesin!,
+                                        useHeroAnimation: true,
+                                      ),
+                                    ),
+                                  );
+                                },
+                                child: Hero(
+                                  tag: widget.gambarmesin!,
+                                  transitionOnUserGestures: true,
+                                  child: ClipRRect(
+                                    borderRadius: BorderRadius.circular(8.0),
+                                    child: Image.network(
+                                      widget.gambarmesin!,
+                                      width: 300.0,
+                                      height: 200.0,
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
                                 ),
                               ),
                             ),
