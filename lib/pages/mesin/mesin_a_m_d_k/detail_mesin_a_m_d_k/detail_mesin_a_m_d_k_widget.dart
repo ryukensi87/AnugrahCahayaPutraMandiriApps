@@ -94,7 +94,7 @@ class _DetailMesinAMDKWidgetState extends State<DetailMesinAMDKWidget> {
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(8.0),
                                 child: Image.network(
-                                  'https://picsum.photos/seed/281/600',
+                                  widget.gambarmesin!,
                                   width: 300.0,
                                   height: 200.0,
                                   fit: BoxFit.cover,
