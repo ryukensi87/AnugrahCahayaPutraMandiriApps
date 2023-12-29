@@ -99,19 +99,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => PemasanganDepotWidget(),
         ),
         FFRoute(
-          name: 'DetailPemasangan',
-          path: '/detailPemasangan',
-          builder: (context, params) => DetailPemasanganWidget(
-            nama: params.getParam('nama', ParamType.String),
-            alamat: params.getParam('alamat', ParamType.String),
-            tglpemasangan: params.getParam('tglpemasangan', ParamType.DateTime),
-            dokumen1: params.getParam('dokumen1', ParamType.String),
-            dokumen2: params.getParam('dokumen2', ParamType.String),
-            dokumen3: params.getParam('dokumen3', ParamType.String),
-            dokumen4: params.getParam('dokumen4', ParamType.String),
-          ),
-        ),
-        FFRoute(
           name: 'HomePageNew',
           path: '/homePageLogin',
           builder: (context, params) => HomePageNewWidget(),
@@ -158,6 +145,24 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'MesinRONew',
           path: '/mesinRONew',
           builder: (context, params) => MesinRONewWidget(),
+        ),
+        FFRoute(
+          name: 'DetailPemasangan',
+          path: '/detailPemasangan',
+          builder: (context, params) => DetailPemasanganWidget(
+            nama: params.getParam('nama', ParamType.String),
+            alamat: params.getParam('alamat', ParamType.String),
+            tglpemasangan: params.getParam('tglpemasangan', ParamType.DateTime),
+            dokumen1: params.getParam('dokumen1', ParamType.String),
+            dokumen2: params.getParam('dokumen2', ParamType.String),
+            dokumen3: params.getParam('dokumen3', ParamType.String),
+            dokumen4: params.getParam('dokumen4', ParamType.String),
+          ),
+        ),
+        FFRoute(
+          name: 'HistoryPemasangan',
+          path: '/historyPemasangan',
+          builder: (context, params) => HistoryPemasanganWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

@@ -636,78 +636,21 @@ class _PemasanganDepotWidgetState extends State<PemasanganDepotWidget>
                                                 padding: EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         0.0, 0.0, 0.0, 5.0),
-                                                child: InkWell(
-                                                  splashColor:
-                                                      Colors.transparent,
-                                                  focusColor:
-                                                      Colors.transparent,
-                                                  hoverColor:
-                                                      Colors.transparent,
-                                                  highlightColor:
-                                                      Colors.transparent,
-                                                  onTap: () async {
-                                                    context.pushNamed(
-                                                      'DetailPemasangan',
-                                                      queryParameters: {
-                                                        'nama': serializeParam(
-                                                          columnHistoryPemasanganDepotRecord
-                                                              .namapemasang,
-                                                          ParamType.String,
-                                                        ),
-                                                        'alamat':
-                                                            serializeParam(
-                                                          columnHistoryPemasanganDepotRecord
-                                                              .alamatpemasang,
-                                                          ParamType.String,
-                                                        ),
-                                                        'tglpemasangan':
-                                                            serializeParam(
-                                                          columnHistoryPemasanganDepotRecord
-                                                              .tanggalpemasangan,
-                                                          ParamType.DateTime,
-                                                        ),
-                                                        'dokumen1':
-                                                            serializeParam(
-                                                          columnHistoryPemasanganDepotRecord
-                                                              .dokumen1,
-                                                          ParamType.String,
-                                                        ),
-                                                        'dokumen2':
-                                                            serializeParam(
-                                                          columnHistoryPemasanganDepotRecord
-                                                              .dokumen2,
-                                                          ParamType.String,
-                                                        ),
-                                                        'dokumen3':
-                                                            serializeParam(
-                                                          columnHistoryPemasanganDepotRecord
-                                                              .dokumen3,
-                                                          ParamType.String,
-                                                        ),
-                                                        'dokumen4':
-                                                            serializeParam(
-                                                          columnHistoryPemasanganDepotRecord
-                                                              .dokumen4,
-                                                          ParamType.String,
-                                                        ),
-                                                      }.withoutNulls,
-                                                    );
-                                                  },
-                                                  child: Text(
-                                                    columnHistoryPemasanganDepotRecord
-                                                        .namapemasang,
-                                                    style: FlutterFlowTheme.of(
-                                                            context)
-                                                        .bodyMedium
-                                                        .override(
-                                                          fontFamily:
-                                                              'Readex Pro',
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .alternate,
-                                                          fontSize: 16.0,
-                                                        ),
-                                                  ),
+                                                child: Text(
+                                                  columnHistoryPemasanganDepotRecord
+                                                      .namapemasang,
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
+                                                      .bodyMedium
+                                                      .override(
+                                                        fontFamily:
+                                                            'Readex Pro',
+                                                        color:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .alternate,
+                                                        fontSize: 16.0,
+                                                      ),
                                                 ),
                                               ),
                                             ],
