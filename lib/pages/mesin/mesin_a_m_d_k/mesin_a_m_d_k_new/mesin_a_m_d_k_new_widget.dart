@@ -675,7 +675,10 @@ class _MesinAMDKNewWidgetState extends State<MesinAMDKNewWidget> {
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 10.0, 10.0, 10.0, 10.0),
                             child: StreamBuilder<List<ListMesinAmdkRecord>>(
-                              stream: queryListMesinAmdkRecord(),
+                              stream: queryListMesinAmdkRecord(
+                                queryBuilder: (listMesinAmdkRecord) =>
+                                    listMesinAmdkRecord.orderBy('noid'),
+                              ),
                               builder: (context, snapshot) {
                                 // Customize what your widget looks like when it's loading.
                                 if (!snapshot.hasData) {

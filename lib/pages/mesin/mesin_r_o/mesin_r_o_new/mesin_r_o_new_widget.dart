@@ -600,7 +600,10 @@ class _MesinRONewWidgetState extends State<MesinRONewWidget> {
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 10.0, 10.0, 10.0, 10.0),
                             child: StreamBuilder<List<ListMesinRecord>>(
-                              stream: queryListMesinRecord(),
+                              stream: queryListMesinRecord(
+                                queryBuilder: (listMesinRecord) =>
+                                    listMesinRecord.orderBy('noid'),
+                              ),
                               builder: (context, snapshot) {
                                 // Customize what your widget looks like when it's loading.
                                 if (!snapshot.hasData) {

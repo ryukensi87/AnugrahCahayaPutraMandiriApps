@@ -172,7 +172,10 @@ class _DesigndepotWidgetState extends State<DesigndepotWidget> {
                   padding:
                       EdgeInsetsDirectional.fromSTEB(10.0, 10.0, 10.0, 10.0),
                   child: StreamBuilder<List<DesignDepotRecord>>(
-                    stream: queryDesignDepotRecord(),
+                    stream: queryDesignDepotRecord(
+                      queryBuilder: (designDepotRecord) =>
+                          designDepotRecord.orderBy('noid'),
+                    ),
                     builder: (context, snapshot) {
                       // Customize what your widget looks like when it's loading.
                       if (!snapshot.hasData) {

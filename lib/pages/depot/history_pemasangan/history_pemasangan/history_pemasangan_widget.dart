@@ -173,7 +173,10 @@ class _HistoryPemasanganWidgetState extends State<HistoryPemasanganWidget> {
                   padding:
                       EdgeInsetsDirectional.fromSTEB(10.0, 10.0, 10.0, 10.0),
                   child: StreamBuilder<List<HistoryPemasanganDepotRecord>>(
-                    stream: queryHistoryPemasanganDepotRecord(),
+                    stream: queryHistoryPemasanganDepotRecord(
+                      queryBuilder: (historyPemasanganDepotRecord) =>
+                          historyPemasanganDepotRecord.orderBy('noid'),
+                    ),
                     builder: (context, snapshot) {
                       // Customize what your widget looks like when it's loading.
                       if (!snapshot.hasData) {
