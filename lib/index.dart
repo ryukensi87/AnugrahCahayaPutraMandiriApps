@@ -26,3 +26,7 @@ export '/pages/depot/design_depot/designdepot/designdepot_widget.dart'
 export '/pages/depot/design_depot/detail_design_depot/detail_design_depot_widget.dart'
     show DetailDesignDepotWidget;
 export '/pages/jasa/jasa/jasa_widget.dart' show JasaWidget;
+export '/pages/depot/jasa_service/jasa_service/jasa_service_widget.dart'
+    show JasaServiceWidget;
+export '/pages/depot/jasa_service/detail_jasa_service/detail_jasa_service_widget.dart'
+    show DetailJasaServiceWidget;

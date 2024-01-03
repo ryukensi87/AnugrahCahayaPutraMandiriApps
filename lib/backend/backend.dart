@@ -12,6 +12,7 @@ import 'schema/history_pemasangan_depot_record.dart';
 import 'schema/users_record.dart';
 import 'schema/design_depot_record.dart';
 import 'schema/owner_record.dart';
+import 'schema/jasa_pemasangan_record.dart';
 
 export 'dart:async' show StreamSubscription;
 export 'package:cloud_firestore/cloud_firestore.dart';
@@ -26,6 +27,7 @@ export 'schema/history_pemasangan_depot_record.dart';
 export 'schema/users_record.dart';
 export 'schema/design_depot_record.dart';
 export 'schema/owner_record.dart';
+export 'schema/jasa_pemasangan_record.dart';
 
 /// Functions to query ListProdukRecords (as a Stream and as a Future).
 Future<int> queryListProdukRecordCount({
@@ -282,6 +284,43 @@ Future<List<OwnerRecord>> queryOwnerRecordOnce({
     queryCollectionOnce(
       OwnerRecord.collection,
       OwnerRecord.fromSnapshot,
+      queryBuilder: queryBuilder,
+      limit: limit,
+      singleRecord: singleRecord,
+    );
+
+/// Functions to query JasaPemasanganRecords (as a Stream and as a Future).
+Future<int> queryJasaPemasanganRecordCount({
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+}) =>
+    queryCollectionCount(
+      JasaPemasanganRecord.collection,
+      queryBuilder: queryBuilder,
+      limit: limit,
+    );
+
+Stream<List<JasaPemasanganRecord>> queryJasaPemasanganRecord({
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+  bool singleRecord = false,
+}) =>
+    queryCollection(
+      JasaPemasanganRecord.collection,
+      JasaPemasanganRecord.fromSnapshot,
+      queryBuilder: queryBuilder,
+      limit: limit,
+      singleRecord: singleRecord,
+    );
+
+Future<List<JasaPemasanganRecord>> queryJasaPemasanganRecordOnce({
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+  bool singleRecord = false,
+}) =>
+    queryCollectionOnce(
+      JasaPemasanganRecord.collection,
+      JasaPemasanganRecord.fromSnapshot,
       queryBuilder: queryBuilder,
       limit: limit,
       singleRecord: singleRecord,

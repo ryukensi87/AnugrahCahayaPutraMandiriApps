@@ -322,7 +322,7 @@ class _PemasanganDepotNewWidgetState extends State<PemasanganDepotNewWidget> {
                                     hoverColor: Colors.transparent,
                                     highlightColor: Colors.transparent,
                                     onTap: () async {
-                                      context.pushNamed('HistoryPemasangan');
+                                      context.pushNamed('JasaService');
                                     },
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -374,7 +374,7 @@ class _PemasanganDepotNewWidgetState extends State<PemasanganDepotNewWidget> {
                                                 CrossAxisAlignment.start,
                                             children: [
                                               Text(
-                                                'Jasa Pindah Depot',
+                                                'Jasa Service',
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .bodyMedium
@@ -387,7 +387,7 @@ class _PemasanganDepotNewWidgetState extends State<PemasanganDepotNewWidget> {
                                                         ),
                                               ),
                                               Text(
-                                                'History Perpindahan Depot',
+                                                'History Service, Perpindahan Depot',
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .bodyMedium,
