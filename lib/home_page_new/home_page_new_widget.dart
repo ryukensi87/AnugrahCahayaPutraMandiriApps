@@ -220,10 +220,10 @@ class _HomePageNewWidgetState extends State<HomePageNewWidget>
                               10.0, 0.0, 10.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
-                            mainAxisAlignment: MainAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Container(
-                                width: 100.0,
+                                width: 250.0,
                                 height: 100.0,
                                 decoration: BoxDecoration(
                                   color: FlutterFlowTheme.of(context)
@@ -232,36 +232,11 @@ class _HomePageNewWidgetState extends State<HomePageNewWidget>
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(8.0),
                                   child: Image.asset(
-                                    'assets/images/WhatsApp_Image_2023-11-10_at_10.52.09-removebg-preview.png',
-                                    width: 300.0,
+                                    'assets/images/4-removebg-preview.png',
+                                    width: 338.0,
                                     height: 200.0,
-                                    fit: BoxFit.contain,
+                                    fit: BoxFit.cover,
                                   ),
-                                ),
-                              ),
-                              Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
-                                    5.0, 0.0, 0.0, 0.0),
-                                child: Column(
-                                  mainAxisSize: MainAxisSize.max,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      'ACPM',
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .override(
-                                            fontFamily: 'Readex Pro',
-                                            fontSize: 18.0,
-                                            fontWeight: FontWeight.bold,
-                                          ),
-                                    ),
-                                    Text(
-                                      'Water Treatment',
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyMedium,
-                                    ),
-                                  ],
                                 ),
                               ),
                             ],

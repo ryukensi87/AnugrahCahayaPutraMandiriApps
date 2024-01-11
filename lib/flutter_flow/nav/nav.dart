@@ -392,7 +392,7 @@ class FFRoute {
               ? Container(
                   color: Colors.transparent,
                   child: Image.asset(
-                    'assets/images/New_Logo_ACPM.png',
+                    'assets/images/4-removebg-preview.png',
                     fit: BoxFit.contain,
                   ),
                 )
