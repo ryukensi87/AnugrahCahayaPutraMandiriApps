@@ -30,3 +30,6 @@ export '/pages/depot/jasa_service/jasa_service/jasa_service_widget.dart'
     show JasaServiceWidget;
 export '/pages/depot/jasa_service/detail_jasa_service/detail_jasa_service_widget.dart'
     show DetailJasaServiceWidget;
+export '/pages/jasa/profil_owner/profil_owner_widget.dart'
+    show ProfilOwnerWidget;
+export '/pages/jasa/snk/snk_widget.dart' show SnkWidget;

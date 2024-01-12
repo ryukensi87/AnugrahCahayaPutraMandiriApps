@@ -210,6 +210,26 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             dokumen3: params.getParam('dokumen3', ParamType.String),
             dokumen4: params.getParam('dokumen4', ParamType.String),
           ),
+        ),
+        FFRoute(
+          name: 'ProfilOwner',
+          path: '/profilOwner',
+          builder: (context, params) => ProfilOwnerWidget(
+            foto: params.getParam('foto', ParamType.String),
+            nama: params.getParam('nama', ParamType.String),
+            alamat: params.getParam('alamat', ParamType.String),
+            notlp: params.getParam('notlp', ParamType.String),
+          ),
+        ),
+        FFRoute(
+          name: 'SNK',
+          path: '/snk',
+          builder: (context, params) => SnkWidget(
+            foto: params.getParam('foto', ParamType.String),
+            nama: params.getParam('nama', ParamType.String),
+            alamat: params.getParam('alamat', ParamType.String),
+            notlp: params.getParam('notlp', ParamType.String),
+          ),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

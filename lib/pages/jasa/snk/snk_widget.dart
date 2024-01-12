@@ -8,11 +8,11 @@ import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'jasa_model.dart';
-export 'jasa_model.dart';
+import 'snk_model.dart';
+export 'snk_model.dart';
 
-class JasaWidget extends StatefulWidget {
-  const JasaWidget({
+class SnkWidget extends StatefulWidget {
+  const SnkWidget({
     Key? key,
     this.foto,
     this.nama,
@@ -26,18 +26,18 @@ class JasaWidget extends StatefulWidget {
   final String? notlp;
 
   @override
-  _JasaWidgetState createState() => _JasaWidgetState();
+  _SnkWidgetState createState() => _SnkWidgetState();
 }
 
-class _JasaWidgetState extends State<JasaWidget> {
-  late JasaModel _model;
+class _SnkWidgetState extends State<SnkWidget> {
+  late SnkModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => JasaModel());
+    _model = createModel(context, () => SnkModel());
 
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
@@ -204,64 +204,10 @@ class _JasaWidgetState extends State<JasaWidget> {
                             topRight: Radius.circular(5.0),
                           ),
                         ),
-                        child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
-                              20.0, 5.0, 5.0, 5.0),
-                          child: InkWell(
-                            splashColor: Colors.transparent,
-                            focusColor: Colors.transparent,
-                            hoverColor: Colors.transparent,
-                            highlightColor: Colors.transparent,
-                            onTap: () async {
-                              context.pushNamed('ProfilOwner');
-                            },
-                            child: Row(
-                              mainAxisSize: MainAxisSize.max,
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              children: [
-                                Icon(
-                                  Icons.location_history_rounded,
-                                  color: FlutterFlowTheme.of(context)
-                                      .secondaryText,
-                                  size: 35.0,
-                                ),
-                                Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      20.0, 0.0, 0.0, 0.0),
-                                  child: Text(
-                                    'Owner',
-                                    style:
-                                        FlutterFlowTheme.of(context).bodyMedium,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
+                        child: Text(
+                          ' Selamat datang di aplikasi mobile ACPM Apps (selanjutnya disebut \"Aplikasi\") yang dikelola oleh PT.ACPM (selanjutnya disebut \"Perusahaan\"). Dengan menggunakan Aplikasi ini, Anda setuju untuk terikat dengan syarat dan ketentuan ini. Jika Anda tidak setuju dengan syarat dan ketentuan ini, harap segera berhenti menggunakan Aplikasi.\n\n1. Penggunaan Aplikasi\n\nAnda setuju untuk menggunakan Aplikasi ini hanya untuk tujuan yang sah, sesuai dengan aturan yang berlaku, dan dengan tidak melanggar hak pihak ketiga.\n\n2. Privasi dan Data Pengguna\n\nKami menghormati privasi Anda. Data pengguna yang dikumpulkan dan digunakan oleh Aplikasi diatur oleh Kebijakan Privasi yang terpisah dan tersedia di Aplikasi.\n\n3. Hak Kekayaan Intelektual\n\nAplikasi ini dan semua kontennya, termasuk tetapi tidak terbatas pada teks, gambar, suara, video, dan perangkat lunak, dilindungi oleh hak cipta dan hak kekayaan intelektual lainnya yang dimiliki oleh Perusahaan. Anda tidak diizinkan untuk mereproduksi, mendistribusikan, atau menggandakan konten Aplikasi tanpa izin tertulis dari Perusahaan.\n\n4. Pembatasan Tanggung Jawab\n\nAplikasi ini disediakan \"apa adanya\" dan \"sebagaimana tersedia.\" Perusahaan tidak bertanggung jawab atas kerugian, cedera, atau kerusakan yang mungkin timbul dari penggunaan Aplikasi.\n\n5. Perubahan Syarat dan Ketentuan\n\nPerusahaan berhak untuk mengubah syarat dan ketentuan ini setiap saat. Perubahan tersebut akan diumumkan di Aplikasi dan berlaku segera setelah diumumkan. Anda dianggap menerima perubahan tersebut dengan melanjutkan penggunaan Aplikasi.\n\n6. Penutupan Akun\n\nPerusahaan berhak menutup akun pengguna dan menghentikan akses ke Aplikasi jika ditemukan pelanggaran terhadap syarat dan ketentuan ini atau aturan yang berlaku.\n\n7. Hukum yang Berlaku\n\nSyarat dan ketentuan ini diatur oleh hukum yang berlaku di Indonesia dan setiap sengketa yang timbul akan diselesaikan dalam yurisdiksi yang relevan.\n\nTerima kasih telah menggunakan Aplikasi kami. Jika Anda memiliki pertanyaan atau masalah terkait dengan syarat dan ketentuan ini, silakan hubungi kami di acpm@support.com.\n\n01 Desember 2023',
+                          style: FlutterFlowTheme.of(context).bodyMedium,
                         ),
-                      ),
-                      Row(
-                        mainAxisSize: MainAxisSize.max,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          InkWell(
-                            splashColor: Colors.transparent,
-                            focusColor: Colors.transparent,
-                            hoverColor: Colors.transparent,
-                            highlightColor: Colors.transparent,
-                            onTap: () async {
-                              context.pushNamed('SNK');
-                            },
-                            child: Text(
-                              'Syarat & Ketentuan',
-                              style: FlutterFlowTheme.of(context)
-                                  .bodyMedium
-                                  .override(
-                                    fontFamily: 'Readex Pro',
-                                    color: FlutterFlowTheme.of(context).primary,
-                                  ),
-                            ),
-                          ),
-                        ],
                       ),
                     ],
                   ),
