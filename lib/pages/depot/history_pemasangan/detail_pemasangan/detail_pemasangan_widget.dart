@@ -6,7 +6,6 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart'
     as smooth_page_indicator;
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
@@ -15,7 +14,7 @@ export 'detail_pemasangan_model.dart';
 
 class DetailPemasanganWidget extends StatefulWidget {
   const DetailPemasanganWidget({
-    Key? key,
+    super.key,
     this.nama,
     this.alamat,
     this.tglpemasangan,
@@ -23,7 +22,8 @@ class DetailPemasanganWidget extends StatefulWidget {
     required this.dokumen2,
     required this.dokumen3,
     this.dokumen4,
-  }) : super(key: key);
+    this.nimonalpem,
+  });
 
   final String? nama;
   final String? alamat;
@@ -32,9 +32,10 @@ class DetailPemasanganWidget extends StatefulWidget {
   final String? dokumen2;
   final String? dokumen3;
   final String? dokumen4;
+  final double? nimonalpem;
 
   @override
-  _DetailPemasanganWidgetState createState() => _DetailPemasanganWidgetState();
+  State<DetailPemasanganWidget> createState() => _DetailPemasanganWidgetState();
 }
 
 class _DetailPemasanganWidgetState extends State<DetailPemasanganWidget> {
@@ -59,15 +60,6 @@ class _DetailPemasanganWidgetState extends State<DetailPemasanganWidget> {
 
   @override
   Widget build(BuildContext context) {
-    if (isiOS) {
-      SystemChrome.setSystemUIOverlayStyle(
-        SystemUiOverlayStyle(
-          statusBarBrightness: Theme.of(context).brightness,
-          systemStatusBarContrastEnforced: true,
-        ),
-      );
-    }
-
     context.watch<FFAppState>();
 
     return GestureDetector(
@@ -348,17 +340,41 @@ class _DetailPemasanganWidgetState extends State<DetailPemasanganWidget> {
                                         ),
                                   ),
                                 ),
-                                Align(
-                                  alignment: AlignmentDirectional(1.0, 0.0),
-                                  child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        0.0, 0.0, 0.0, 4.0),
-                                    child: Text(
-                                      dateTimeFormat(
-                                          'yMMMd', widget.tglpemasangan),
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyMedium,
-                                    ),
+                                Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      0.0, 5.0, 0.0, 0.0),
+                                  child: Row(
+                                    mainAxisSize: MainAxisSize.max,
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Text(
+                                        formatNumber(
+                                          widget.nimonalpem,
+                                          formatType: FormatType.decimal,
+                                          decimalType:
+                                              DecimalType.periodDecimal,
+                                          currency: 'Rp. ',
+                                        ),
+                                        style: FlutterFlowTheme.of(context)
+                                            .bodyMedium,
+                                      ),
+                                      Align(
+                                        alignment:
+                                            AlignmentDirectional(1.0, 0.0),
+                                        child: Padding(
+                                          padding:
+                                              EdgeInsetsDirectional.fromSTEB(
+                                                  0.0, 0.0, 0.0, 4.0),
+                                          child: Text(
+                                            dateTimeFormat(
+                                                'yMMMd', widget.tglpemasangan),
+                                            style: FlutterFlowTheme.of(context)
+                                                .bodyMedium,
+                                          ),
+                                        ),
+                                      ),
+                                    ],
                                   ),
                                 ),
                               ],

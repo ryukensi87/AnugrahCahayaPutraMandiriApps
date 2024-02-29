@@ -4,7 +4,6 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
@@ -13,18 +12,18 @@ export 'produk_detail_model.dart';
 
 class ProdukDetailWidget extends StatefulWidget {
   const ProdukDetailWidget({
-    Key? key,
+    super.key,
     this.fotoprdk,
     this.namaprdk,
     this.hargaprdk,
-  }) : super(key: key);
+  });
 
   final String? fotoprdk;
   final String? namaprdk;
   final double? hargaprdk;
 
   @override
-  _ProdukDetailWidgetState createState() => _ProdukDetailWidgetState();
+  State<ProdukDetailWidget> createState() => _ProdukDetailWidgetState();
 }
 
 class _ProdukDetailWidgetState extends State<ProdukDetailWidget> {

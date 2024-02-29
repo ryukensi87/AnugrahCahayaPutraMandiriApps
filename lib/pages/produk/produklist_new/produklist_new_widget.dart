@@ -4,7 +4,6 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -12,10 +11,10 @@ import 'produklist_new_model.dart';
 export 'produklist_new_model.dart';
 
 class ProduklistNewWidget extends StatefulWidget {
-  const ProduklistNewWidget({Key? key}) : super(key: key);
+  const ProduklistNewWidget({super.key});
 
   @override
-  _ProduklistNewWidgetState createState() => _ProduklistNewWidgetState();
+  State<ProduklistNewWidget> createState() => _ProduklistNewWidgetState();
 }
 
 class _ProduklistNewWidgetState extends State<ProduklistNewWidget> {
@@ -40,15 +39,6 @@ class _ProduklistNewWidgetState extends State<ProduklistNewWidget> {
 
   @override
   Widget build(BuildContext context) {
-    if (isiOS) {
-      SystemChrome.setSystemUIOverlayStyle(
-        SystemUiOverlayStyle(
-          statusBarBrightness: Theme.of(context).brightness,
-          systemStatusBarContrastEnforced: true,
-        ),
-      );
-    }
-
     context.watch<FFAppState>();
 
     return GestureDetector(

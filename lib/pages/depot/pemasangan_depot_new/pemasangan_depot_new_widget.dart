@@ -4,7 +4,6 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -12,10 +11,10 @@ import 'pemasangan_depot_new_model.dart';
 export 'pemasangan_depot_new_model.dart';
 
 class PemasanganDepotNewWidget extends StatefulWidget {
-  const PemasanganDepotNewWidget({Key? key}) : super(key: key);
+  const PemasanganDepotNewWidget({super.key});
 
   @override
-  _PemasanganDepotNewWidgetState createState() =>
+  State<PemasanganDepotNewWidget> createState() =>
       _PemasanganDepotNewWidgetState();
 }
 
@@ -41,15 +40,6 @@ class _PemasanganDepotNewWidgetState extends State<PemasanganDepotNewWidget> {
 
   @override
   Widget build(BuildContext context) {
-    if (isiOS) {
-      SystemChrome.setSystemUIOverlayStyle(
-        SystemUiOverlayStyle(
-          statusBarBrightness: Theme.of(context).brightness,
-          systemStatusBarContrastEnforced: true,
-        ),
-      );
-    }
-
     context.watch<FFAppState>();
 
     return GestureDetector(

@@ -6,7 +6,6 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart'
     as smooth_page_indicator;
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
@@ -15,7 +14,7 @@ export 'detail_jasa_service_model.dart';
 
 class DetailJasaServiceWidget extends StatefulWidget {
   const DetailJasaServiceWidget({
-    Key? key,
+    super.key,
     this.nama,
     this.alamat,
     this.tglpemasangan,
@@ -23,7 +22,7 @@ class DetailJasaServiceWidget extends StatefulWidget {
     required this.dokumen2,
     required this.dokumen3,
     this.dokumen4,
-  }) : super(key: key);
+  });
 
   final String? nama;
   final String? alamat;
@@ -34,7 +33,7 @@ class DetailJasaServiceWidget extends StatefulWidget {
   final String? dokumen4;
 
   @override
-  _DetailJasaServiceWidgetState createState() =>
+  State<DetailJasaServiceWidget> createState() =>
       _DetailJasaServiceWidgetState();
 }
 
@@ -60,15 +59,6 @@ class _DetailJasaServiceWidgetState extends State<DetailJasaServiceWidget> {
 
   @override
   Widget build(BuildContext context) {
-    if (isiOS) {
-      SystemChrome.setSystemUIOverlayStyle(
-        SystemUiOverlayStyle(
-          statusBarBrightness: Theme.of(context).brightness,
-          systemStatusBarContrastEnforced: true,
-        ),
-      );
-    }
-
     context.watch<FFAppState>();
 
     return GestureDetector(

@@ -5,7 +5,6 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -13,10 +12,10 @@ import 'produk_model.dart';
 export 'produk_model.dart';
 
 class ProdukWidget extends StatefulWidget {
-  const ProdukWidget({Key? key}) : super(key: key);
+  const ProdukWidget({super.key});
 
   @override
-  _ProdukWidgetState createState() => _ProdukWidgetState();
+  State<ProdukWidget> createState() => _ProdukWidgetState();
 }
 
 class _ProdukWidgetState extends State<ProdukWidget> {
@@ -41,15 +40,6 @@ class _ProdukWidgetState extends State<ProdukWidget> {
 
   @override
   Widget build(BuildContext context) {
-    if (isiOS) {
-      SystemChrome.setSystemUIOverlayStyle(
-        SystemUiOverlayStyle(
-          statusBarBrightness: Theme.of(context).brightness,
-          systemStatusBarContrastEnforced: true,
-        ),
-      );
-    }
-
     context.watch<FFAppState>();
 
     return GestureDetector(

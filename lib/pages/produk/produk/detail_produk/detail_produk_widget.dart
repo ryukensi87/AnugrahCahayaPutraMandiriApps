@@ -4,7 +4,6 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
@@ -13,12 +12,12 @@ export 'detail_produk_model.dart';
 
 class DetailProdukWidget extends StatefulWidget {
   const DetailProdukWidget({
-    Key? key,
+    super.key,
     this.nama,
     this.harga,
     this.stok,
     required this.gambar,
-  }) : super(key: key);
+  });
 
   final String? nama;
   final double? harga;
@@ -26,7 +25,7 @@ class DetailProdukWidget extends StatefulWidget {
   final String? gambar;
 
   @override
-  _DetailProdukWidgetState createState() => _DetailProdukWidgetState();
+  State<DetailProdukWidget> createState() => _DetailProdukWidgetState();
 }
 
 class _DetailProdukWidgetState extends State<DetailProdukWidget> {
@@ -51,15 +50,6 @@ class _DetailProdukWidgetState extends State<DetailProdukWidget> {
 
   @override
   Widget build(BuildContext context) {
-    if (isiOS) {
-      SystemChrome.setSystemUIOverlayStyle(
-        SystemUiOverlayStyle(
-          statusBarBrightness: Theme.of(context).brightness,
-          systemStatusBarContrastEnforced: true,
-        ),
-      );
-    }
-
     context.watch<FFAppState>();
 
     return GestureDetector(

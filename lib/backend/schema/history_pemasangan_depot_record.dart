@@ -56,6 +56,11 @@ class HistoryPemasanganDepotRecord extends FirestoreRecord {
   int get noid => _noid ?? 0;
   bool hasNoid() => _noid != null;
 
+  // "Harga" field.
+  double? _harga;
+  double get harga => _harga ?? 0.0;
+  bool hasHarga() => _harga != null;
+
   void _initializeFields() {
     _namapemasang = snapshotData['namapemasang'] as String?;
     _alamatpemasang = snapshotData['alamatpemasang'] as String?;
@@ -65,6 +70,7 @@ class HistoryPemasanganDepotRecord extends FirestoreRecord {
     _dokumen3 = snapshotData['dokumen3'] as String?;
     _dokumen4 = snapshotData['dokumen4'] as String?;
     _noid = castToType<int>(snapshotData['noid']);
+    _harga = castToType<double>(snapshotData['Harga']);
   }
 
   static CollectionReference get collection =>
@@ -112,6 +118,7 @@ Map<String, dynamic> createHistoryPemasanganDepotRecordData({
   String? dokumen3,
   String? dokumen4,
   int? noid,
+  double? harga,
 }) {
   final firestoreData = mapToFirestore(
     <String, dynamic>{
@@ -123,6 +130,7 @@ Map<String, dynamic> createHistoryPemasanganDepotRecordData({
       'dokumen3': dokumen3,
       'dokumen4': dokumen4,
       'noid': noid,
+      'Harga': harga,
     }.withoutNulls,
   );
 
@@ -143,7 +151,8 @@ class HistoryPemasanganDepotRecordDocumentEquality
         e1?.dokumen2 == e2?.dokumen2 &&
         e1?.dokumen3 == e2?.dokumen3 &&
         e1?.dokumen4 == e2?.dokumen4 &&
-        e1?.noid == e2?.noid;
+        e1?.noid == e2?.noid &&
+        e1?.harga == e2?.harga;
   }
 
   @override
@@ -155,7 +164,8 @@ class HistoryPemasanganDepotRecordDocumentEquality
         e?.dokumen2,
         e?.dokumen3,
         e?.dokumen4,
-        e?.noid
+        e?.noid,
+        e?.harga
       ]);
 
   @override

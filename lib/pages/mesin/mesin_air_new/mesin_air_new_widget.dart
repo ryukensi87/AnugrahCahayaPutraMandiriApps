@@ -4,7 +4,6 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -12,10 +11,10 @@ import 'mesin_air_new_model.dart';
 export 'mesin_air_new_model.dart';
 
 class MesinAirNewWidget extends StatefulWidget {
-  const MesinAirNewWidget({Key? key}) : super(key: key);
+  const MesinAirNewWidget({super.key});
 
   @override
-  _MesinAirNewWidgetState createState() => _MesinAirNewWidgetState();
+  State<MesinAirNewWidget> createState() => _MesinAirNewWidgetState();
 }
 
 class _MesinAirNewWidgetState extends State<MesinAirNewWidget> {
@@ -40,15 +39,6 @@ class _MesinAirNewWidgetState extends State<MesinAirNewWidget> {
 
   @override
   Widget build(BuildContext context) {
-    if (isiOS) {
-      SystemChrome.setSystemUIOverlayStyle(
-        SystemUiOverlayStyle(
-          statusBarBrightness: Theme.of(context).brightness,
-          systemStatusBarContrastEnforced: true,
-        ),
-      );
-    }
-
     context.watch<FFAppState>();
 
     return GestureDetector(

@@ -147,6 +147,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             dokumen2: params.getParam('dokumen2', ParamType.String),
             dokumen3: params.getParam('dokumen3', ParamType.String),
             dokumen4: params.getParam('dokumen4', ParamType.String),
+            nimonalpem: params.getParam('nimonalpem', ParamType.double),
           ),
         ),
         FFRoute(
@@ -401,6 +402,7 @@ class FFRoute {
           return null;
         },
         pageBuilder: (context, state) {
+          fixStatusBarOniOS16AndBelow(context);
           final ffParams = FFParameters(state, asyncParams);
           final page = ffParams.hasFutures
               ? FutureBuilder(

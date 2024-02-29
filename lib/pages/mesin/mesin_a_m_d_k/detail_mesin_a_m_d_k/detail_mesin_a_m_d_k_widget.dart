@@ -4,7 +4,6 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
@@ -13,18 +12,18 @@ export 'detail_mesin_a_m_d_k_model.dart';
 
 class DetailMesinAMDKWidget extends StatefulWidget {
   const DetailMesinAMDKWidget({
-    Key? key,
+    super.key,
     this.nama,
     this.gambarmesin,
     this.kapasitasmesin,
-  }) : super(key: key);
+  });
 
   final String? nama;
   final String? gambarmesin;
   final String? kapasitasmesin;
 
   @override
-  _DetailMesinAMDKWidgetState createState() => _DetailMesinAMDKWidgetState();
+  State<DetailMesinAMDKWidget> createState() => _DetailMesinAMDKWidgetState();
 }
 
 class _DetailMesinAMDKWidgetState extends State<DetailMesinAMDKWidget> {
@@ -49,15 +48,6 @@ class _DetailMesinAMDKWidgetState extends State<DetailMesinAMDKWidget> {
 
   @override
   Widget build(BuildContext context) {
-    if (isiOS) {
-      SystemChrome.setSystemUIOverlayStyle(
-        SystemUiOverlayStyle(
-          statusBarBrightness: Theme.of(context).brightness,
-          systemStatusBarContrastEnforced: true,
-        ),
-      );
-    }
-
     context.watch<FFAppState>();
 
     return GestureDetector(

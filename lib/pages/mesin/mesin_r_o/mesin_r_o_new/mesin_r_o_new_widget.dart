@@ -8,7 +8,6 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart'
     as smooth_page_indicator;
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
@@ -17,10 +16,10 @@ import 'mesin_r_o_new_model.dart';
 export 'mesin_r_o_new_model.dart';
 
 class MesinRONewWidget extends StatefulWidget {
-  const MesinRONewWidget({Key? key}) : super(key: key);
+  const MesinRONewWidget({super.key});
 
   @override
-  _MesinRONewWidgetState createState() => _MesinRONewWidgetState();
+  State<MesinRONewWidget> createState() => _MesinRONewWidgetState();
 }
 
 class _MesinRONewWidgetState extends State<MesinRONewWidget> {
@@ -45,15 +44,6 @@ class _MesinRONewWidgetState extends State<MesinRONewWidget> {
 
   @override
   Widget build(BuildContext context) {
-    if (isiOS) {
-      SystemChrome.setSystemUIOverlayStyle(
-        SystemUiOverlayStyle(
-          statusBarBrightness: Theme.of(context).brightness,
-          systemStatusBarContrastEnforced: true,
-        ),
-      );
-    }
-
     context.watch<FFAppState>();
 
     return GestureDetector(

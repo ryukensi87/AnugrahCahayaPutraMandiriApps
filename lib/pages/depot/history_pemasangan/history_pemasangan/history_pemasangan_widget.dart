@@ -5,7 +5,6 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -13,10 +12,10 @@ import 'history_pemasangan_model.dart';
 export 'history_pemasangan_model.dart';
 
 class HistoryPemasanganWidget extends StatefulWidget {
-  const HistoryPemasanganWidget({Key? key}) : super(key: key);
+  const HistoryPemasanganWidget({super.key});
 
   @override
-  _HistoryPemasanganWidgetState createState() =>
+  State<HistoryPemasanganWidget> createState() =>
       _HistoryPemasanganWidgetState();
 }
 
@@ -42,15 +41,6 @@ class _HistoryPemasanganWidgetState extends State<HistoryPemasanganWidget> {
 
   @override
   Widget build(BuildContext context) {
-    if (isiOS) {
-      SystemChrome.setSystemUIOverlayStyle(
-        SystemUiOverlayStyle(
-          statusBarBrightness: Theme.of(context).brightness,
-          systemStatusBarContrastEnforced: true,
-        ),
-      );
-    }
-
     context.watch<FFAppState>();
 
     return GestureDetector(
@@ -272,6 +262,11 @@ class _HistoryPemasanganWidgetState extends State<HistoryPemasanganWidget> {
                                           columnHistoryPemasanganDepotRecord
                                               .dokumen4,
                                           ParamType.String,
+                                        ),
+                                        'nimonalpem': serializeParam(
+                                          columnHistoryPemasanganDepotRecord
+                                              .harga,
+                                          ParamType.double,
                                         ),
                                       }.withoutNulls,
                                     );

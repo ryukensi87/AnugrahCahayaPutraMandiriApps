@@ -4,7 +4,6 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -13,12 +12,12 @@ export 'snk_model.dart';
 
 class SnkWidget extends StatefulWidget {
   const SnkWidget({
-    Key? key,
+    super.key,
     this.foto,
     this.nama,
     this.alamat,
     this.notlp,
-  }) : super(key: key);
+  });
 
   final String? foto;
   final String? nama;
@@ -26,7 +25,7 @@ class SnkWidget extends StatefulWidget {
   final String? notlp;
 
   @override
-  _SnkWidgetState createState() => _SnkWidgetState();
+  State<SnkWidget> createState() => _SnkWidgetState();
 }
 
 class _SnkWidgetState extends State<SnkWidget> {
@@ -51,15 +50,6 @@ class _SnkWidgetState extends State<SnkWidget> {
 
   @override
   Widget build(BuildContext context) {
-    if (isiOS) {
-      SystemChrome.setSystemUIOverlayStyle(
-        SystemUiOverlayStyle(
-          statusBarBrightness: Theme.of(context).brightness,
-          systemStatusBarContrastEnforced: true,
-        ),
-      );
-    }
-
     context.watch<FFAppState>();
 
     return GestureDetector(

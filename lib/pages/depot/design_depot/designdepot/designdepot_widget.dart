@@ -5,7 +5,6 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -13,10 +12,10 @@ import 'designdepot_model.dart';
 export 'designdepot_model.dart';
 
 class DesigndepotWidget extends StatefulWidget {
-  const DesigndepotWidget({Key? key}) : super(key: key);
+  const DesigndepotWidget({super.key});
 
   @override
-  _DesigndepotWidgetState createState() => _DesigndepotWidgetState();
+  State<DesigndepotWidget> createState() => _DesigndepotWidgetState();
 }
 
 class _DesigndepotWidgetState extends State<DesigndepotWidget> {
@@ -41,15 +40,6 @@ class _DesigndepotWidgetState extends State<DesigndepotWidget> {
 
   @override
   Widget build(BuildContext context) {
-    if (isiOS) {
-      SystemChrome.setSystemUIOverlayStyle(
-        SystemUiOverlayStyle(
-          statusBarBrightness: Theme.of(context).brightness,
-          systemStatusBarContrastEnforced: true,
-        ),
-      );
-    }
-
     context.watch<FFAppState>();
 
     return GestureDetector(

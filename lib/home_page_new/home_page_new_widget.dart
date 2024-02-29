@@ -8,7 +8,6 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:page_transition/page_transition.dart';
@@ -18,10 +17,10 @@ import 'home_page_new_model.dart';
 export 'home_page_new_model.dart';
 
 class HomePageNewWidget extends StatefulWidget {
-  const HomePageNewWidget({Key? key}) : super(key: key);
+  const HomePageNewWidget({super.key});
 
   @override
-  _HomePageNewWidgetState createState() => _HomePageNewWidgetState();
+  State<HomePageNewWidget> createState() => _HomePageNewWidgetState();
 }
 
 class _HomePageNewWidgetState extends State<HomePageNewWidget>
@@ -121,15 +120,6 @@ class _HomePageNewWidgetState extends State<HomePageNewWidget>
 
   @override
   Widget build(BuildContext context) {
-    if (isiOS) {
-      SystemChrome.setSystemUIOverlayStyle(
-        SystemUiOverlayStyle(
-          statusBarBrightness: Theme.of(context).brightness,
-          systemStatusBarContrastEnforced: true,
-        ),
-      );
-    }
-
     context.watch<FFAppState>();
 
     return GestureDetector(

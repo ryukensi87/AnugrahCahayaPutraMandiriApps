@@ -4,7 +4,6 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
@@ -12,10 +11,10 @@ import 'mesin_r_o_detail_model.dart';
 export 'mesin_r_o_detail_model.dart';
 
 class MesinRODetailWidget extends StatefulWidget {
-  const MesinRODetailWidget({Key? key}) : super(key: key);
+  const MesinRODetailWidget({super.key});
 
   @override
-  _MesinRODetailWidgetState createState() => _MesinRODetailWidgetState();
+  State<MesinRODetailWidget> createState() => _MesinRODetailWidgetState();
 }
 
 class _MesinRODetailWidgetState extends State<MesinRODetailWidget> {

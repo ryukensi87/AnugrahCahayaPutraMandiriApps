@@ -4,7 +4,6 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
@@ -13,18 +12,18 @@ export 'detail_design_depot_model.dart';
 
 class DetailDesignDepotWidget extends StatefulWidget {
   const DetailDesignDepotWidget({
-    Key? key,
+    super.key,
     this.nama,
     this.tglpemasangan,
     this.dokumen1,
-  }) : super(key: key);
+  });
 
   final String? nama;
   final DateTime? tglpemasangan;
   final String? dokumen1;
 
   @override
-  _DetailDesignDepotWidgetState createState() =>
+  State<DetailDesignDepotWidget> createState() =>
       _DetailDesignDepotWidgetState();
 }
 
@@ -50,15 +49,6 @@ class _DetailDesignDepotWidgetState extends State<DetailDesignDepotWidget> {
 
   @override
   Widget build(BuildContext context) {
-    if (isiOS) {
-      SystemChrome.setSystemUIOverlayStyle(
-        SystemUiOverlayStyle(
-          statusBarBrightness: Theme.of(context).brightness,
-          systemStatusBarContrastEnforced: true,
-        ),
-      );
-    }
-
     context.watch<FFAppState>();
 
     return GestureDetector(

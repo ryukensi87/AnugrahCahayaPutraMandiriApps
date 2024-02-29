@@ -5,7 +5,6 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -13,10 +12,10 @@ import 'jasa_service_model.dart';
 export 'jasa_service_model.dart';
 
 class JasaServiceWidget extends StatefulWidget {
-  const JasaServiceWidget({Key? key}) : super(key: key);
+  const JasaServiceWidget({super.key});
 
   @override
-  _JasaServiceWidgetState createState() => _JasaServiceWidgetState();
+  State<JasaServiceWidget> createState() => _JasaServiceWidgetState();
 }
 
 class _JasaServiceWidgetState extends State<JasaServiceWidget> {
@@ -41,15 +40,6 @@ class _JasaServiceWidgetState extends State<JasaServiceWidget> {
 
   @override
   Widget build(BuildContext context) {
-    if (isiOS) {
-      SystemChrome.setSystemUIOverlayStyle(
-        SystemUiOverlayStyle(
-          statusBarBrightness: Theme.of(context).brightness,
-          systemStatusBarContrastEnforced: true,
-        ),
-      );
-    }
-
     context.watch<FFAppState>();
 
     return GestureDetector(

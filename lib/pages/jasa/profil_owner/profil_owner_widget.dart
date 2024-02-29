@@ -4,7 +4,6 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -13,12 +12,12 @@ export 'profil_owner_model.dart';
 
 class ProfilOwnerWidget extends StatefulWidget {
   const ProfilOwnerWidget({
-    Key? key,
+    super.key,
     this.foto,
     this.nama,
     this.alamat,
     this.notlp,
-  }) : super(key: key);
+  });
 
   final String? foto;
   final String? nama;
@@ -26,7 +25,7 @@ class ProfilOwnerWidget extends StatefulWidget {
   final String? notlp;
 
   @override
-  _ProfilOwnerWidgetState createState() => _ProfilOwnerWidgetState();
+  State<ProfilOwnerWidget> createState() => _ProfilOwnerWidgetState();
 }
 
 class _ProfilOwnerWidgetState extends State<ProfilOwnerWidget> {
@@ -51,15 +50,6 @@ class _ProfilOwnerWidgetState extends State<ProfilOwnerWidget> {
 
   @override
   Widget build(BuildContext context) {
-    if (isiOS) {
-      SystemChrome.setSystemUIOverlayStyle(
-        SystemUiOverlayStyle(
-          statusBarBrightness: Theme.of(context).brightness,
-          systemStatusBarContrastEnforced: true,
-        ),
-      );
-    }
-
     context.watch<FFAppState>();
 
     return GestureDetector(
@@ -288,48 +278,45 @@ class _ProfilOwnerWidgetState extends State<ProfilOwnerWidget> {
                                         mainAxisAlignment:
                                             MainAxisAlignment.center,
                                         children: [
-                                          Align(
-                                            alignment:
-                                                AlignmentDirectional(0.0, 0.0),
-                                            child: Padding(
-                                              padding: EdgeInsetsDirectional
-                                                  .fromSTEB(0.0, 5.0, 0.0, 5.0),
-                                              child: Text(
-                                                valueOrDefault<String>(
-                                                  widget.alamat,
-                                                  'alamat',
-                                                ),
-                                                textAlign: TextAlign.center,
-                                                style:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyMedium,
-                                              ),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                    Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          0.0, 5.0, 0.0, 5.0),
-                                      child: Row(
-                                        mainAxisSize: MainAxisSize.max,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                        children: [
                                           Padding(
                                             padding:
                                                 EdgeInsetsDirectional.fromSTEB(
-                                                    0.0, 5.0, 0.0, 5.0),
-                                            child: Text(
-                                              valueOrDefault<String>(
-                                                widget.notlp,
-                                                'notlp',
+                                                    0.0, 5.0, 0.0, 0.0),
+                                            child: Container(
+                                              width: 350.0,
+                                              decoration: BoxDecoration(
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .secondaryBackground,
+                                                borderRadius: BorderRadius.only(
+                                                  bottomLeft:
+                                                      Radius.circular(5.0),
+                                                  bottomRight:
+                                                      Radius.circular(5.0),
+                                                  topLeft: Radius.circular(5.0),
+                                                  topRight:
+                                                      Radius.circular(5.0),
+                                                ),
                                               ),
-                                              textAlign: TextAlign.center,
-                                              style:
-                                                  FlutterFlowTheme.of(context)
-                                                      .bodyMedium,
+                                              child: Align(
+                                                alignment: AlignmentDirectional(
+                                                    0.0, 0.0),
+                                                child: Padding(
+                                                  padding: EdgeInsetsDirectional
+                                                      .fromSTEB(
+                                                          0.0, 5.0, 0.0, 5.0),
+                                                  child: Text(
+                                                    valueOrDefault<String>(
+                                                      widget.alamat,
+                                                      'alamat',
+                                                    ),
+                                                    textAlign: TextAlign.center,
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
+                                                        .bodyMedium,
+                                                  ),
+                                                ),
+                                              ),
                                             ),
                                           ),
                                         ],
