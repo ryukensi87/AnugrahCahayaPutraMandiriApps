@@ -2,11 +2,7 @@ import '/flutter_flow/flutter_flow_expanded_image_view.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:page_transition/page_transition.dart';
-import 'package:provider/provider.dart';
 import 'detail_mesin_a_m_d_k_model.dart';
 export 'detail_mesin_a_m_d_k_model.dart';
 
@@ -48,8 +44,6 @@ class _DetailMesinAMDKWidgetState extends State<DetailMesinAMDKWidget> {
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
-
     return GestureDetector(
       onTap: () => _model.unfocusNode.canRequestFocus
           ? FocusScope.of(context).requestFocus(_model.unfocusNode)
@@ -68,7 +62,7 @@ class _DetailMesinAMDKWidgetState extends State<DetailMesinAMDKWidget> {
             child: Stack(
               children: [
                 Padding(
-                  padding: EdgeInsets.all(12.0),
+                  padding: const EdgeInsets.all(12.0),
                   child: SingleChildScrollView(
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
@@ -123,9 +117,9 @@ class _DetailMesinAMDKWidgetState extends State<DetailMesinAMDKWidget> {
                             Container(
                               width: double.infinity,
                               height: 50.0,
-                              decoration: BoxDecoration(),
+                              decoration: const BoxDecoration(),
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     12.0, 8.0, 12.0, 0.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -169,14 +163,14 @@ class _DetailMesinAMDKWidgetState extends State<DetailMesinAMDKWidget> {
                         ),
                         Container(
                           width: double.infinity,
-                          decoration: BoxDecoration(),
+                          decoration: const BoxDecoration(),
                           child: Padding(
-                            padding: EdgeInsets.all(16.0),
+                            padding: const EdgeInsets.all(16.0),
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
                               children: [
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 12.0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
@@ -212,7 +206,7 @@ class _DetailMesinAMDKWidgetState extends State<DetailMesinAMDKWidget> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       5.0, 5.0, 5.0, 5.0),
                                   child: Container(
                                     width: double.infinity,
@@ -220,7 +214,7 @@ class _DetailMesinAMDKWidgetState extends State<DetailMesinAMDKWidget> {
                                     decoration: BoxDecoration(
                                       color: FlutterFlowTheme.of(context)
                                           .secondaryBackground,
-                                      boxShadow: [
+                                      boxShadow: const [
                                         BoxShadow(
                                           blurRadius: 4.0,
                                           color: Color(0x33000000),
@@ -229,7 +223,7 @@ class _DetailMesinAMDKWidgetState extends State<DetailMesinAMDKWidget> {
                                       ],
                                     ),
                                     child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           10.0, 10.0, 10.0, 10.0),
                                       child: Column(
                                         mainAxisSize: MainAxisSize.max,
@@ -250,7 +244,7 @@ class _DetailMesinAMDKWidgetState extends State<DetailMesinAMDKWidget> {
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 12.0, 0.0, 0.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -283,7 +277,7 @@ class _DetailMesinAMDKWidgetState extends State<DetailMesinAMDKWidget> {
                             ),
                           ),
                         ),
-                      ].addToEnd(SizedBox(height: 100.0)),
+                      ].addToEnd(const SizedBox(height: 100.0)),
                     ),
                   ),
                 ),

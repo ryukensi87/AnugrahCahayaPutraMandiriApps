@@ -4,9 +4,6 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:page_transition/page_transition.dart';
-import 'package:provider/provider.dart';
 import 'produk_detail_model.dart';
 export 'produk_detail_model.dart';
 
@@ -52,8 +49,6 @@ class _ProdukDetailWidgetState extends State<ProdukDetailWidget> {
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
-
     return Container(
       width: double.infinity,
       height: double.infinity,
@@ -71,7 +66,7 @@ class _ProdukDetailWidgetState extends State<ProdukDetailWidget> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
                 child: Container(
                   width: 400.0,
                   height: 370.0,
@@ -88,7 +83,7 @@ class _ProdukDetailWidgetState extends State<ProdukDetailWidget> {
                         height: 50.0,
                         decoration: BoxDecoration(
                           color: FlutterFlowTheme.of(context).primary,
-                          borderRadius: BorderRadius.only(
+                          borderRadius: const BorderRadius.only(
                             bottomLeft: Radius.circular(0.0),
                             bottomRight: Radius.circular(0.0),
                             topLeft: Radius.circular(10.0),
@@ -96,7 +91,7 @@ class _ProdukDetailWidgetState extends State<ProdukDetailWidget> {
                           ),
                         ),
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               20.0, 0.0, 20.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -115,7 +110,7 @@ class _ProdukDetailWidgetState extends State<ProdukDetailWidget> {
                                     ),
                               ),
                               FlutterFlowIconButton(
-                                borderColor: Color(0x00FFFFFF),
+                                borderColor: const Color(0x00FFFFFF),
                                 borderRadius: 20.0,
                                 borderWidth: 1.0,
                                 buttonSize: 40.0,
@@ -136,7 +131,7 @@ class _ProdukDetailWidgetState extends State<ProdukDetailWidget> {
                       Expanded(
                         child: Container(
                           width: double.infinity,
-                          decoration: BoxDecoration(),
+                          decoration: const BoxDecoration(),
                           child: ListView(
                             padding: EdgeInsets.zero,
                             scrollDirection: Axis.vertical,
@@ -145,7 +140,7 @@ class _ProdukDetailWidgetState extends State<ProdukDetailWidget> {
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 20.0, 0.0, 10.0),
                                     child: InkWell(
                                       splashColor: Colors.transparent,
@@ -188,11 +183,11 @@ class _ProdukDetailWidgetState extends State<ProdukDetailWidget> {
                                   Container(
                                     width: double.infinity,
                                     height: 100.0,
-                                    decoration: BoxDecoration(
+                                    decoration: const BoxDecoration(
                                       color: Color(0x00FFFFFF),
                                     ),
                                     child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           10.0, 0.0, 10.0, 10.0),
                                       child: Column(
                                         mainAxisSize: MainAxisSize.max,
@@ -226,7 +221,7 @@ class _ProdukDetailWidgetState extends State<ProdukDetailWidget> {
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 10.0, 0.0, 0.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,

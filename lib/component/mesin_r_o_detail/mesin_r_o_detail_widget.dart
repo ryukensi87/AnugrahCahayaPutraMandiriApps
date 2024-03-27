@@ -4,9 +4,6 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:page_transition/page_transition.dart';
-import 'package:provider/provider.dart';
 import 'mesin_r_o_detail_model.dart';
 export 'mesin_r_o_detail_model.dart';
 
@@ -43,8 +40,6 @@ class _MesinRODetailWidgetState extends State<MesinRODetailWidget> {
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
-
     return Container(
       width: double.infinity,
       height: double.infinity,
@@ -62,7 +57,7 @@ class _MesinRODetailWidgetState extends State<MesinRODetailWidget> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
                 child: Container(
                   width: 400.0,
                   height: 380.0,
@@ -79,7 +74,7 @@ class _MesinRODetailWidgetState extends State<MesinRODetailWidget> {
                         height: 50.0,
                         decoration: BoxDecoration(
                           color: FlutterFlowTheme.of(context).primary,
-                          borderRadius: BorderRadius.only(
+                          borderRadius: const BorderRadius.only(
                             bottomLeft: Radius.circular(0.0),
                             bottomRight: Radius.circular(0.0),
                             topLeft: Radius.circular(10.0),
@@ -87,7 +82,7 @@ class _MesinRODetailWidgetState extends State<MesinRODetailWidget> {
                           ),
                         ),
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               20.0, 0.0, 20.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -106,7 +101,7 @@ class _MesinRODetailWidgetState extends State<MesinRODetailWidget> {
                                     ),
                               ),
                               FlutterFlowIconButton(
-                                borderColor: Color(0x00FFFFFF),
+                                borderColor: const Color(0x00FFFFFF),
                                 borderRadius: 20.0,
                                 borderWidth: 1.0,
                                 buttonSize: 40.0,
@@ -127,7 +122,7 @@ class _MesinRODetailWidgetState extends State<MesinRODetailWidget> {
                       Expanded(
                         child: Container(
                           width: double.infinity,
-                          decoration: BoxDecoration(),
+                          decoration: const BoxDecoration(),
                           child: ListView(
                             padding: EdgeInsets.zero,
                             scrollDirection: Axis.vertical,
@@ -136,7 +131,7 @@ class _MesinRODetailWidgetState extends State<MesinRODetailWidget> {
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 20.0, 0.0, 10.0),
                                     child: InkWell(
                                       splashColor: Colors.transparent,
@@ -179,11 +174,11 @@ class _MesinRODetailWidgetState extends State<MesinRODetailWidget> {
                                   Container(
                                     width: double.infinity,
                                     height: 100.0,
-                                    decoration: BoxDecoration(
+                                    decoration: const BoxDecoration(
                                       color: Color(0x00FFFFFF),
                                     ),
                                     child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           10.0, 0.0, 10.0, 10.0),
                                       child: Column(
                                         mainAxisSize: MainAxisSize.max,
@@ -214,7 +209,7 @@ class _MesinRODetailWidgetState extends State<MesinRODetailWidget> {
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 10.0, 0.0, 0.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -233,7 +228,7 @@ class _MesinRODetailWidgetState extends State<MesinRODetailWidget> {
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 0.0, 10.0),
                                             child: Text(
                                               'Hello World',

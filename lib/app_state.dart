@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import '/backend/backend.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'flutter_flow/flutter_flow_util.dart';
 
 class FFAppState extends ChangeNotifier {
   static FFAppState _instance = FFAppState._internal();
@@ -40,78 +38,78 @@ class FFAppState extends ChangeNotifier {
 
   String _barang = '';
   String get barang => _barang;
-  set barang(String _value) {
-    _barang = _value;
-    prefs.setString('ff_barang', _value);
+  set barang(String value) {
+    _barang = value;
+    prefs.setString('ff_barang', value);
   }
 
   List<String> _cartnamabarang = [];
   List<String> get cartnamabarang => _cartnamabarang;
-  set cartnamabarang(List<String> _value) {
-    _cartnamabarang = _value;
-    prefs.setStringList('ff_cartnamabarang', _value);
+  set cartnamabarang(List<String> value) {
+    _cartnamabarang = value;
+    prefs.setStringList('ff_cartnamabarang', value);
   }
 
-  void addToCartnamabarang(String _value) {
-    _cartnamabarang.add(_value);
+  void addToCartnamabarang(String value) {
+    _cartnamabarang.add(value);
     prefs.setStringList('ff_cartnamabarang', _cartnamabarang);
   }
 
-  void removeFromCartnamabarang(String _value) {
-    _cartnamabarang.remove(_value);
+  void removeFromCartnamabarang(String value) {
+    _cartnamabarang.remove(value);
     prefs.setStringList('ff_cartnamabarang', _cartnamabarang);
   }
 
-  void removeAtIndexFromCartnamabarang(int _index) {
-    _cartnamabarang.removeAt(_index);
+  void removeAtIndexFromCartnamabarang(int index) {
+    _cartnamabarang.removeAt(index);
     prefs.setStringList('ff_cartnamabarang', _cartnamabarang);
   }
 
   void updateCartnamabarangAtIndex(
-    int _index,
+    int index,
     String Function(String) updateFn,
   ) {
-    _cartnamabarang[_index] = updateFn(_cartnamabarang[_index]);
+    _cartnamabarang[index] = updateFn(_cartnamabarang[index]);
     prefs.setStringList('ff_cartnamabarang', _cartnamabarang);
   }
 
-  void insertAtIndexInCartnamabarang(int _index, String _value) {
-    _cartnamabarang.insert(_index, _value);
+  void insertAtIndexInCartnamabarang(int index, String value) {
+    _cartnamabarang.insert(index, value);
     prefs.setStringList('ff_cartnamabarang', _cartnamabarang);
   }
 
   List<String> _cargambarbarang = [];
   List<String> get cargambarbarang => _cargambarbarang;
-  set cargambarbarang(List<String> _value) {
-    _cargambarbarang = _value;
-    prefs.setStringList('ff_cargambarbarang', _value);
+  set cargambarbarang(List<String> value) {
+    _cargambarbarang = value;
+    prefs.setStringList('ff_cargambarbarang', value);
   }
 
-  void addToCargambarbarang(String _value) {
-    _cargambarbarang.add(_value);
+  void addToCargambarbarang(String value) {
+    _cargambarbarang.add(value);
     prefs.setStringList('ff_cargambarbarang', _cargambarbarang);
   }
 
-  void removeFromCargambarbarang(String _value) {
-    _cargambarbarang.remove(_value);
+  void removeFromCargambarbarang(String value) {
+    _cargambarbarang.remove(value);
     prefs.setStringList('ff_cargambarbarang', _cargambarbarang);
   }
 
-  void removeAtIndexFromCargambarbarang(int _index) {
-    _cargambarbarang.removeAt(_index);
+  void removeAtIndexFromCargambarbarang(int index) {
+    _cargambarbarang.removeAt(index);
     prefs.setStringList('ff_cargambarbarang', _cargambarbarang);
   }
 
   void updateCargambarbarangAtIndex(
-    int _index,
+    int index,
     String Function(String) updateFn,
   ) {
-    _cargambarbarang[_index] = updateFn(_cargambarbarang[_index]);
+    _cargambarbarang[index] = updateFn(_cargambarbarang[index]);
     prefs.setStringList('ff_cargambarbarang', _cargambarbarang);
   }
 
-  void insertAtIndexInCargambarbarang(int _index, String _value) {
-    _cargambarbarang.insert(_index, _value);
+  void insertAtIndexInCargambarbarang(int index, String value) {
+    _cargambarbarang.insert(index, value);
     prefs.setStringList('ff_cargambarbarang', _cargambarbarang);
   }
 }

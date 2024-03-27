@@ -4,13 +4,9 @@ import '/flutter_flow/flutter_flow_expanded_image_view.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart'
     as smooth_page_indicator;
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:page_transition/page_transition.dart';
-import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'mesin_a_m_d_k_new_model.dart';
 export 'mesin_a_m_d_k_new_model.dart';
@@ -44,8 +40,6 @@ class _MesinAMDKNewWidgetState extends State<MesinAMDKNewWidget> {
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
-
     return GestureDetector(
       onTap: () => _model.unfocusNode.canRequestFocus
           ? FocusScope.of(context).requestFocus(_model.unfocusNode)
@@ -63,7 +57,7 @@ class _MesinAMDKNewWidgetState extends State<MesinAMDKNewWidget> {
             mainAxisSize: MainAxisSize.max,
             children: [
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
                 child: InkWell(
                   splashColor: Colors.transparent,
                   focusColor: Colors.transparent,
@@ -83,7 +77,7 @@ class _MesinAMDKNewWidgetState extends State<MesinAMDKNewWidget> {
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
                 child: InkWell(
                   splashColor: Colors.transparent,
                   focusColor: Colors.transparent,
@@ -125,7 +119,7 @@ class _MesinAMDKNewWidgetState extends State<MesinAMDKNewWidget> {
             icon: Icon(
               Icons.arrow_back_rounded,
               color: FlutterFlowTheme.of(context).primaryText,
-              size: 25.0,
+              size: 30.0,
             ),
             onPressed: () async {
               context.pop();
@@ -139,7 +133,7 @@ class _MesinAMDKNewWidgetState extends State<MesinAMDKNewWidget> {
                   fontSize: 25.0,
                 ),
           ),
-          actions: [],
+          actions: const [],
           centerTitle: true,
           elevation: 2.0,
         ),
@@ -157,7 +151,7 @@ class _MesinAMDKNewWidgetState extends State<MesinAMDKNewWidget> {
                   children: [
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(10.0, 10.0, 10.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(10.0, 10.0, 10.0, 0.0),
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
                         children: [
@@ -171,7 +165,7 @@ class _MesinAMDKNewWidgetState extends State<MesinAMDKNewWidget> {
                                   decoration: BoxDecoration(
                                     color: FlutterFlowTheme.of(context)
                                         .secondaryBackground,
-                                    boxShadow: [
+                                    boxShadow: const [
                                       BoxShadow(
                                         blurRadius: 4.0,
                                         color: Color(0x33000000),
@@ -181,15 +175,15 @@ class _MesinAMDKNewWidgetState extends State<MesinAMDKNewWidget> {
                                     borderRadius: BorderRadius.circular(15.0),
                                   ),
                                   child: Padding(
-                                    padding: EdgeInsets.all(10.0),
-                                    child: Container(
+                                    padding: const EdgeInsets.all(10.0),
+                                    child: SizedBox(
                                       width: double.infinity,
                                       height: 500.0,
                                       child: Stack(
                                         children: [
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 0.0, 40.0),
                                             child: PageView(
                                               controller:
@@ -525,9 +519,9 @@ class _MesinAMDKNewWidgetState extends State<MesinAMDKNewWidget> {
                                           ),
                                           Align(
                                             alignment:
-                                                AlignmentDirectional(-1.0, 1.0),
+                                                const AlignmentDirectional(-1.0, 1.0),
                                             child: Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       16.0, 0.0, 0.0, 16.0),
                                               child: smooth_page_indicator
@@ -543,7 +537,7 @@ class _MesinAMDKNewWidgetState extends State<MesinAMDKNewWidget> {
                                                       .pageViewController!
                                                       .animateToPage(
                                                     i,
-                                                    duration: Duration(
+                                                    duration: const Duration(
                                                         milliseconds: 500),
                                                     curve: Curves.ease,
                                                   );
@@ -577,7 +571,7 @@ class _MesinAMDKNewWidgetState extends State<MesinAMDKNewWidget> {
                             ],
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 10.0, 10.0, 10.0, 0.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
@@ -594,7 +588,7 @@ class _MesinAMDKNewWidgetState extends State<MesinAMDKNewWidget> {
                                       ),
                                 ),
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       10.0, 0.0, 0.0, 0.0),
                                   child: Container(
                                     width: 100.0,
@@ -611,7 +605,7 @@ class _MesinAMDKNewWidgetState extends State<MesinAMDKNewWidget> {
                                       children: [
                                         Align(
                                           alignment:
-                                              AlignmentDirectional(0.0, 0.0),
+                                              const AlignmentDirectional(0.0, 0.0),
                                           child: FutureBuilder<int>(
                                             future:
                                                 queryListMesinAmdkRecordCount(),
@@ -662,7 +656,7 @@ class _MesinAMDKNewWidgetState extends State<MesinAMDKNewWidget> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 10.0, 10.0, 10.0, 10.0),
                             child: StreamBuilder<List<ListMesinAmdkRecord>>(
                               stream: queryListMesinAmdkRecord(
@@ -697,7 +691,7 @@ class _MesinAMDKNewWidgetState extends State<MesinAMDKNewWidget> {
                                         columnListMesinAmdkRecordList[
                                             columnIndex];
                                     return Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 0.0, 0.0, 5.0),
                                       child: Container(
                                         width: double.infinity,
@@ -705,14 +699,14 @@ class _MesinAMDKNewWidgetState extends State<MesinAMDKNewWidget> {
                                         decoration: BoxDecoration(
                                           color: FlutterFlowTheme.of(context)
                                               .secondaryBackground,
-                                          boxShadow: [
+                                          boxShadow: const [
                                             BoxShadow(
                                               blurRadius: 4.0,
                                               color: Color(0x33000000),
                                               offset: Offset(0.0, 2.0),
                                             )
                                           ],
-                                          borderRadius: BorderRadius.only(
+                                          borderRadius: const BorderRadius.only(
                                             bottomLeft: Radius.circular(10.0),
                                             bottomRight: Radius.circular(10.0),
                                             topLeft: Radius.circular(10.0),
@@ -721,7 +715,7 @@ class _MesinAMDKNewWidgetState extends State<MesinAMDKNewWidget> {
                                         ),
                                         child: Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   5.0, 5.0, 5.0, 5.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
@@ -742,7 +736,7 @@ class _MesinAMDKNewWidgetState extends State<MesinAMDKNewWidget> {
                                                         .bodyMedium,
                                               ),
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         0.0, 0.0, 5.0, 0.0),
                                                 child: Text(
